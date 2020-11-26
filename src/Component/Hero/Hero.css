@@ -2,6 +2,10 @@
   font-size: 1.4em;
 }
 
+span {
+  color: rgb(161, 118, 247);
+}
+
 p {
   color: white;
 }
