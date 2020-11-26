@@ -9,13 +9,11 @@ const NavBar = () => {
             <div className="logo">
                 NoSmallStreamer
             </div>
-            <div>
             <ul>
                 <li>Search</li>
                 <li>Profile</li>
                 <li>Signin</li>
             </ul>
-            </div>
         </div>
     )
 }

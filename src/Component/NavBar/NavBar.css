@@ -6,6 +6,7 @@
 
 .logo {
   display: flex;
+  align-items: center;
 }
 
 ul {
@@ -14,8 +15,4 @@ ul {
   list-style: none;
   justify-content: space-between;
   flex-direction: row;
-}
-
-li {
-  /* margin-left: 18px; */
 }
