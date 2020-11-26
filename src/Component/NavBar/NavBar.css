@@ -4,9 +4,18 @@
   flex-direction: row;
 }
 
+.logo {
+  display: flex;
+}
+
 ul {
+  width: 50%;
   display: flex;
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
+}
+
+li {
+  /* margin-left: 18px; */
 }
