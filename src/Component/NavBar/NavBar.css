@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  border-bottom: 2px solid black;
+  background-color: rgb(24, 24, 27);
+  color: rgb(161, 118, 247);
 }
 
 .logo {
