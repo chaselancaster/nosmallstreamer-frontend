@@ -1,0 +1,12 @@
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
