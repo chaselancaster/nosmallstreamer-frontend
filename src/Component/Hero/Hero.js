@@ -5,13 +5,13 @@ import './Hero.css';
 const Hero = () => {
     return (
         <div className="hero-parent">
-            <div>
+            <div className="text-container">
                 <p className="welcome">Welcome to <span>NoSmallStreamer.</span></p>
                 <p>A place to discover hard working, growing streamers.</p>
             </div>
-            <div className="logo">
+            {/* <div className="logo">
 
-            </div>
+            </div> */}
         </div>
     )
 }
