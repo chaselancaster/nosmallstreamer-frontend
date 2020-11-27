@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid red;
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
 }
 
 /* .text-container {
@@ -14,6 +15,7 @@
 
 .welcome {
   font-size: 1.4em;
+  margin-bottom: 1px;
 }
 
 span {
@@ -22,6 +24,16 @@ span {
 
 p {
   color: white;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   text-align: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 25%;
+  height: 25%;
 }
