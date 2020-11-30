@@ -36,3 +36,37 @@ span {
 }
 
 /* Info Section */
+.info-parent {
+  display: flex;
+  border-bottom: 2px solid white;
+  padding-bottom: 30px;
+}
+
+.info-img-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+.info-img {
+  width: 70px;
+  height: 70px;
+  /* border: 2px solid red; */
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 2px solid red; */
+  text-align: center;
+  width: 100%;
+  /* max-width: 500px; */
+}
+
+.info p {
+  color: white;
+  /* border: 2px solid red; */
+}
