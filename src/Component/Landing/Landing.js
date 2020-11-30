@@ -1,9 +1,9 @@
 import React from 'react';
 import image from './streamer.png';
 
-import './Hero.css';
+import './Landing.css';
 
-const Hero = () => {
+const Landing = () => {
     return (
         <div className="hero-parent">
             <p className="welcome">Welcome to <span>NoSmallStreamer.</span></p>
@@ -16,4 +16,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default Landing;
