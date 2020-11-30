@@ -3,9 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-bottom: 2px solid white;
   padding-bottom: 15px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .welcome {
@@ -23,13 +24,14 @@ span {
   color: white;
   text-align: center;
   font-size: 1.2em;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 260px;
 }
 
 .hero-logo {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .hero-img {
