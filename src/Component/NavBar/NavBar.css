@@ -7,9 +7,10 @@
   color: rgb(161, 118, 247);
 }
 
-.logo {
+.title {
   display: flex;
   align-items: center;
+  border: 2px solid red;
 }
 
 ul {

@@ -6,7 +6,7 @@ import './NavBar.css';
 const NavBar = () => {
     return (
         <div className="nav-container">
-            <div className="logo">
+            <div className="title">
                 NoSmallStreamer
             </div>
             <ul>
