@@ -3,28 +3,22 @@
   flex-direction: column;
   justify-content: center;
   border-bottom: 2px solid white;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
-/* .text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid red;
-} */
-
 .welcome {
+  color: white;
   font-size: 2em;
-  margin-bottom: 1px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 span {
   color: rgb(161, 118, 247);
 }
 
-p {
+.hero-p {
   color: white;
-  /* border: 2px solid red; */
   text-align: center;
   font-size: 1.2em;
 }
@@ -34,7 +28,8 @@ p {
   justify-content: center;
 }
 
-img {
+.hero-img {
   width: 20%;
   height: 20%;
+  margin-bottom: 10px;
 }

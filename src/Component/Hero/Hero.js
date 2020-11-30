@@ -7,10 +7,11 @@ const Hero = () => {
     return (
         <div className="hero-parent">
             <p className="welcome">Welcome to <span>NoSmallStreamer.</span></p>
-            <p>A place to discover hard working, growing streamers.</p>
             <div className="logo">
-              <img src={image} />
+              <img className="hero-img" src={image} />
             </div>
+            <p className="hero-p">A place to discover hard working, growing streamers.</p>
+            
         </div>
     )
 }
