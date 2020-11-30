@@ -5,6 +5,7 @@
   justify-content: center;
   border-bottom: 2px solid white;
   padding-bottom: 15px;
+  border: 2px solid red;
 }
 
 .welcome {
@@ -22,6 +23,8 @@ span {
   color: white;
   text-align: center;
   font-size: 1.2em;
+  border: 2px solid red;
+  /* width: 260px; */
 }
 
 .hero-logo {
@@ -67,3 +70,23 @@ span {
 }
 
 /* Get Started Section */
+.get-started-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.get-started-parent p {
+  color: white;
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+button {
+  background-color: rgb(161, 118, 247);
+  font-size: 25px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+}
