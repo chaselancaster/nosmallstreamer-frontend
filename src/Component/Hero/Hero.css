@@ -14,7 +14,7 @@
 } */
 
 .welcome {
-  font-size: 1.4em;
+  font-size: 2em;
   margin-bottom: 1px;
 }
 
@@ -26,6 +26,7 @@ p {
   color: white;
   /* border: 2px solid red; */
   text-align: center;
+  font-size: 1.2em;
 }
 
 .logo {
