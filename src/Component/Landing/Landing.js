@@ -4,22 +4,23 @@ import streamerImg from './assets/streamer.png';
 import handshakeImg from './assets/hand-shake.png';
 import magnifyingImg from './assets/magnifying.png';
 import twitchImg from './assets/twitch.png';
-import magnifierImg from './assets/magnifier.png';
 
 import './Landing.css';
 
 const Landing = () => {
     return (
     <div>
-        // Hero Section
+        {/* Hero Section */}
         <div className="hero-parent">
             <p className="welcome">Welcome to <span>NoSmallStreamer.</span></p>
             <div className="hero-logo">
               <img className="hero-img" src={streamerImg} alt="streamer"/>
             </div>
-            <p className="hero-p">A place to discover hard working, growing streamers.</p>
+            <div>
+                <p className="hero-p">A place to discover hard working, growing streamers.</p>
+            </div>
         </div>
-        // Info Section
+        {/* Info Section */}
         <div className="info-parent">
             <div className="info-img-container">
                 <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
@@ -32,7 +33,7 @@ const Landing = () => {
                 <p>Direct links to a user's channel!</p>
             </div>
         </div>
-        // Get Started Section
+        {/* Get Started Section */}
         <div className="get-started-parent">
             <p>Ready to get started?</p>
             <button>Register Now!</button>

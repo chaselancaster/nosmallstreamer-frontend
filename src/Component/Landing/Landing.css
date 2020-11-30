@@ -24,7 +24,7 @@ span {
   text-align: center;
   font-size: 1.2em;
   border: 2px solid red;
-  /* width: 260px; */
+  width: 260px;
 }
 
 .hero-logo {
