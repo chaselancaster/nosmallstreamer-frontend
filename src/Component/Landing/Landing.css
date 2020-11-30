@@ -11,7 +11,7 @@
 
 .welcome {
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -78,17 +78,18 @@ span {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .get-started-parent p {
   color: white;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 25px;
 }
 
 button {
   background-color: rgb(161, 118, 247);
-  font-size: 25px;
+  font-size: 22px;
   width: 200px;
   border: none;
   border-radius: 20px;
