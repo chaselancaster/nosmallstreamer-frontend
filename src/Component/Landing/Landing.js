@@ -1,5 +1,9 @@
 import React from 'react';
+
 import streamerImg from './assets/streamer.png';
+import handshakeImg from './assets/hand-shake.png';
+import magnifyingImg from './assets/magnifying.png';
+import twitchImg from './assets/twitch.png';
 
 import './Landing.css';
 
