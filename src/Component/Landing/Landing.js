@@ -31,18 +31,11 @@ const Landing = () => {
                 <p>Help new streamers grow!</p>
                 <p>Direct links to a user's channel!</p>
             </div>
-            {/* <div className="info">
-                <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
-                <p>Find streamers hidden in popular categories!</p>
-            </div>
-            <div className="info">
-                <img className="info-img" src={handshakeImg} alt="handshake"/>
-                <p>Help new streamers grow!</p>
-            </div>
-            <div className="info">
-                <img className="info-img" src={twitchImg} alt="twitch logo"/>
-                <p>Direct links to a user's channel!</p>
-            </div> */}
+        </div>
+        // Get Started Section
+        <div className="get-started-parent">
+            <p>Ready to get started?</p>
+            <button>Register Now!</button>
         </div>
     </div>
       
