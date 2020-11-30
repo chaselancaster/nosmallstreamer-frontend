@@ -11,7 +11,7 @@
 
 .welcome {
   color: white;
-  font-size: 2em;
+  font-size: 35px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -44,6 +44,7 @@ span {
 .info-parent {
   display: flex;
   border-bottom: 2px solid white;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 
@@ -82,7 +83,7 @@ span {
 .get-started-parent p {
   color: white;
   font-size: 30px;
-  margin-top: 8px;
+  margin-top: 25px;
 }
 
 button {
