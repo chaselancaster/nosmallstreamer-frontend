@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero-parent {
   display: flex;
   flex-direction: column;
@@ -33,3 +34,5 @@ span {
   height: 20%;
   margin-bottom: 10px;
 }
+
+/* Info Section */
