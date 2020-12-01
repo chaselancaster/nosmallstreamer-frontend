@@ -1,3 +1,9 @@
+/* .nav-holder {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid red;
+} */
+
 .nav-container {
   display: flex;
   justify-content: space-evenly;
@@ -25,9 +31,9 @@ ul {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
+  width: 20px;
+  height: 20px;
+  left: 335px;
   top: 36px;
 }
 
@@ -66,6 +72,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgb(24, 24, 27);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  overflow: hidden;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -88,4 +95,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
