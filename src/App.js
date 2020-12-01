@@ -1,17 +1,26 @@
 import './App.css';
 import React, { Component } from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import NavBar from './Component/NavBar/NavBar';
 import Landing from './Component/Landing/Landing';
 
-function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Landing />
-    </div>
-  );
+import * as routes from "./constants/routes";
+
+class App extends Component {
+  render () {
+    return (
+      <div className="App">
+        <NavBar />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path={routes.LANDING} render={() => <Landing />} />
+          </Switch>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
+  
 
 export default App;
