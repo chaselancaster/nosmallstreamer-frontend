@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import NavBar from './Component/NavBar/NavBar';
 import Landing from './Component/Landing/Landing';
+import Login from './Component/Login/Login'
 
 import * as routes from "./constants/routes";
 
@@ -15,6 +16,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing />} />
+            <Route exact path={routes.LOGIN} render={() => <Login />} />
           </Switch>
         </BrowserRouter>
       </div>
