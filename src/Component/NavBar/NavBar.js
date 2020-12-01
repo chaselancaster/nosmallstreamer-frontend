@@ -7,9 +7,9 @@ import './NavBar.css';
 const NavBar = () => {
     return (
         <Menu right>
-            <a id="home" className="menu-item" href="/">Search</a>
-            <a id="about" className="menu-item" href="/about">Profile</a>
-            <a id="contact" className="menu-item" href="/contact">Signin</a>
+            <a id="search" className="menu-item" href="/">Search</a>
+            <a id="profile" className="menu-item" href="/about">Profile</a>
+            <a id="signin" className="menu-item" href="/contact">Signin</a>
         </Menu>
         // <div className="nav-container">
         //     <div className="title">
