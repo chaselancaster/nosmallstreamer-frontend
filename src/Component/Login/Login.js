@@ -23,13 +23,13 @@ class Login extends Component {
             <div>
                 <h1>Login:</h1>
                 <form>
-                    <h3>Username:</h3>
+                    <h2>Username:</h2>
                     <input type="text" name="username" value={username} onChange={this.changeHandler}/>
-                    <h3>Password:</h3>
+                    <h2>Password:</h2>
                     <input type="password" name="password" value={password} onChange={this.changeHandler} />
-                    <button type="submit">Submit</button>
-                    <p>Not yet registered?</p>
-                    <button>Register Here!</button>
+                    <button type="submit" className="login-button">Submit</button>
+                    <h3>Not yet registered?</h3>
+                    <p>Register Here!</p>
                 </form>
             </div>
         )

@@ -5,3 +5,11 @@ h1 {
 form {
   background-color: gray;
 }
+
+.login-button {
+  background-color: rgb(161, 118, 247);
+  font-size: 22px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+}
