@@ -11,7 +11,7 @@ class Register extends Component {
         logged: false
     }
 
-    changeHander = e => {
+    changeHandler = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
