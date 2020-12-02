@@ -20,6 +20,7 @@ class App extends Component {
             <Route exact path={routes.LANDING} render={() => <Landing />} />
             <Route exact path={routes.LOGIN} render={() => <Login />} />
             <Route exact path={routes.REGISTER} render={() => <Register />} />
+            <Route exact path={routes.SEARCH} render={() => <Search />} />
           </Switch>
         </BrowserRouter>
       </div>
