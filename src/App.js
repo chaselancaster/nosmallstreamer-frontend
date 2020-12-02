@@ -6,6 +6,7 @@ import NavBar from './Component/NavBar/NavBar';
 import Landing from './Component/Landing/Landing';
 import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
+import Search from './Component/Search/Search';
 
 import * as routes from "./constants/routes";
 
