@@ -30,7 +30,7 @@ class Login extends Component {
                         <input type="password" name="password" value={password} onChange={this.changeHandler} />
                         <button type="submit" className="login-button">Submit</button>
                         <h3>Not yet registered?</h3>
-                        <p>Register Here!</p>
+                        <a href="/register"><p>Register Here!</p></a>
                     </form>
                 </div>
             </div>
