@@ -6,8 +6,8 @@ import './Register.css';
 class Register extends Component {
     state = {
         username: "",
-        password: "",
         email: "",
+        password: "",
         logged: false
     }
 
@@ -18,6 +18,7 @@ class Register extends Component {
     };
 
     render() {
+        const { username, email, password } = this.state;
         return (
             <div className="register-parent-container">
                 <h1>Register:</h1>
