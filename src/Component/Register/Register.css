@@ -1,3 +1,32 @@
-h1 {
+.register-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+  border: 2px solid red;
+}
+
+.register-parent-container h1 {
   color: white;
+}
+
+.register-form-container {
+  background-color: gray;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+}
+
+.register-button {
+  background-color: rgb(161, 118, 247);
+  font-size: 22px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
 }

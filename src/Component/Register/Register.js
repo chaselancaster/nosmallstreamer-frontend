@@ -30,7 +30,7 @@ class Register extends Component {
                         <input type="text" name="email" value={email} onChange={this.changeHander} />
                         <h2>Password:</h2>
                         <input type="password" name="password" value={password} onChange={this.changeHandler} />
-                        <button type="submit" className="login-button">Submit</button>
+                        <button type="submit" className="register-button">Submit</button>
                         <h3>Already registered?</h3>
                         <p>Signin Here!</p>
                     </form>
