@@ -7,8 +7,8 @@ class Register extends Component {
     state = {
         username: "",
         password: "",
-        logged: false,
-        message: ""
+        email: "",
+        logged: false
     }
 
     changeHander = e => {
