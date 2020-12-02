@@ -17,6 +17,11 @@ class Register extends Component {
         });
     };
 
+    onSubmit = e => {
+        e.preventDefault()
+        console.log('button clicked')
+    };
+
     render() {
         const { username, email, password } = this.state;
         return (
@@ -30,7 +35,7 @@ class Register extends Component {
                         <input type="text" name="email" value={email} onChange={this.changeHandler} />
                         <h2>Password:</h2>
                         <input type="password" name="password" value={password} onChange={this.changeHandler} />
-                        <button type="submit" className="register-button">Submit</button>
+                        <button onClick={this.onSubmit} type="submit" className="register-button">Submit</button>
                         <h3>Already registered?</h3>
                         <p>Signin Here!</p>
                     </form>
