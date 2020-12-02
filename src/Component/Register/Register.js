@@ -11,6 +11,12 @@ class Register extends Component {
         message: ""
     }
 
+    changeHander = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+
     render() {
         return (
             <h1>Register Component</h1>
