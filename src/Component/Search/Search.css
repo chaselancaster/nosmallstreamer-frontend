@@ -14,14 +14,14 @@
   margin-top: 60px;
 }
 
+.search-info p {
+  color: white;
+  width: 250px;
+}
+
 .search-title {
   color: white;
   border-bottom: 2px solid white;
-}
-
-p {
-  color: white;
-  width: 250px;
 }
 
 .form-container {
