@@ -37,7 +37,7 @@ class Register extends Component {
                         <input type="password" name="password" value={password} onChange={this.changeHandler} />
                         <button onClick={this.onSubmit} type="submit" className="register-button">Submit</button>
                         <h3>Already registered?</h3>
-                        <p>Signin Here!</p>
+                        <a href="/login"><p>Signin Here!</p></a>
                     </form>
                 </div>
             </div>
