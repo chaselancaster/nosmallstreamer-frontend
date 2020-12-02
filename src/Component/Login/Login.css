@@ -1,8 +1,19 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+  border: 2px solid red;
+}
+
 h1 {
   color: white;
 }
 
-form {
+.form-container {
+  display: flex;
+  flex-direction: column;
   background-color: gray;
 }
 

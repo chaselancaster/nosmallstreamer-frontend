@@ -14,7 +14,7 @@
   margin-top: 60px;
 }
 
-h1 {
+.search-title {
   color: white;
   border-bottom: 2px solid white;
 }
@@ -31,7 +31,7 @@ p {
   /* border: 2px solid red; */
 }
 
-form {
+.search-form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
