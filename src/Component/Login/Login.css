@@ -1,4 +1,4 @@
-.login-container {
+.login-parent-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -11,10 +11,16 @@ h1 {
   color: white;
 }
 
-.form-container {
+.login-form-container {
+  background-color: gray;
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
 }
 
 .login-button {

@@ -24,11 +24,11 @@
   border-bottom: 2px solid white;
 }
 
-.form-container {
+.search-form-container {
   display: flex;
   flex-direction: column;
   background-color: gray;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 .search-form {

@@ -20,10 +20,10 @@ class Login extends Component {
     render() {
         const { username, password } = this.state;
         return (
-            <div className="login-container">
+            <div className="login-parent-container">
                 <h1>Login:</h1>
-                <div className="form-container">
-                    <form>
+                <div className="login-form-container">
+                    <form className="login-form">
                         <h2>Username:</h2>
                         <input type="text" name="username" value={username} onChange={this.changeHandler}/>
                         <h2>Password:</h2>

@@ -10,7 +10,7 @@ class Search extends Component {
                     <h1 className="search-title">Search for streams!</h1>
                     <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
                 </div>
-                <div className="form-container">
+                <div className="search-form-container">
                     <form className="search-form">
                         <h3>Game:</h3>
                         <input type="text" placeholder="Game" />
