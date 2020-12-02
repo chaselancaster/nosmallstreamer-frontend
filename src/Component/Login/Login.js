@@ -4,6 +4,20 @@ import { Redirect } from 'react-router-dom';
 import './Login.css';
 
 class Login extends Component {
+    state = {
+        username: "",
+        password: "",
+        logged: false,
+        message: ""
+    }
+
+    changeHandler = e => {
+        console.log(e);
+        // this.setState({
+        //     [e.target.name]: e.target.value
+        // })
+    }
+
     render() {
         return (
             <h1>Login Component</h1>

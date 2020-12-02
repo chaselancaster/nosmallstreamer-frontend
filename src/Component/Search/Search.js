@@ -5,7 +5,7 @@ import './Search.css';
 class Search extends Component {
     render() {
         return (
-            <div>
+            <div className="search-parent-container">
                 <div className="search-info">
                     <h1>Search for streams!</h1>
                     <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
