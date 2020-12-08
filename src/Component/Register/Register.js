@@ -57,8 +57,6 @@ class Register extends Component {
                     <h1>Register:</h1>
                     <div className="register-form-container">
                         <form className="register-form" onSubmit={e => this.handleRegister(e)}>
-                            <h2>Username:</h2>
-                            <input type="text" name="username" value={username} onChange={this.changeHandler}/>
                             <h2>Email:</h2>
                             <input type="text" name="email" value={email} onChange={this.changeHandler} />
                             <h2>Password:</h2>
