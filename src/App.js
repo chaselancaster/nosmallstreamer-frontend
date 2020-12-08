@@ -11,6 +11,19 @@ import Search from './Component/Search/Search';
 import * as routes from "./constants/routes";
 
 class App extends Component {
+
+  state = {
+    currentUser: null,
+    games: []
+  };
+
+  doSetCurrentUser = user => {
+    this.setState({
+      currentUser: user,
+      games: user.games
+    })
+  }
+
   render () {
     return (
       <div className="App">
