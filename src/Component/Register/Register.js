@@ -17,16 +17,21 @@ class Register extends Component {
         });
     };
 
-    onSubmit = e => {
-        e.preventDefault()
-        const registerResponse = await fetch('/users/register', {
-            method: 'POST',
-            credentials: 'include',
-            body: JSON.stringify(this.state),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
+    onSubmit = async e => {
+        try {
+            e.preventDefault()
+            const registerResponse = await fetch('/users/register', {
+                method: 'POST',
+                credentials: 'include',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+        } catch (err) {
+            console.log(err, '<- err in register fetch call')
+        }
+        
     };
 
     render() {
