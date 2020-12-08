@@ -32,7 +32,7 @@ class App extends Component {
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing />} />
             <Route exact path={routes.LOGIN} render={() => <Login />} />
-            <Route exact path={routes.REGISTER} render={() => <Register />} />
+            <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser}/>} />
             <Route exact path={routes.SEARCH} render={() => <Search />} />
           </Switch>
         </BrowserRouter>
