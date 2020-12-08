@@ -28,14 +28,14 @@ class Register extends Component {
             <div className="register-parent-container">
                 <h1>Register:</h1>
                 <div className="register-form-container">
-                    <form className="register-form">
+                    <form className="register-form" onSubmit={this.onSubmit}>
                         <h2>Username:</h2>
                         <input type="text" name="username" value={username} onChange={this.changeHandler}/>
                         <h2>Email:</h2>
                         <input type="text" name="email" value={email} onChange={this.changeHandler} />
                         <h2>Password:</h2>
                         <input type="password" name="password" value={password} onChange={this.changeHandler} />
-                        <button onClick={this.onSubmit} type="submit" className="register-button">Submit</button>
+                        <button type="submit" className="register-button">Submit</button>
                         <h3>Already registered?</h3>
                         <a href="/login"><p>Log in here!</p></a>
                     </form>
