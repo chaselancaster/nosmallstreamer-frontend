@@ -18,16 +18,18 @@ class Register extends Component {
     };
 
     handleRegister = async e => {
+        console.log('handleRegister hit')
         try {
             e.preventDefault()
             const registerCall = await fetch('http://localhost:3001/users/register', {
                 method: 'POST',
-                credentials: 'include',
                 body: JSON.stringify(this.state),
                 headers: {
                     'Content-type': 'application/json'
                 }
             })
+            const response = await registerCall.json()
+            console.log(response, '<- response from registerCall')
         } catch (err) {
             console.log(err, '<- err in register fetch call')
         }
