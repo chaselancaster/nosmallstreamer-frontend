@@ -8,7 +8,8 @@ class Register extends Component {
         username: "",
         email: "",
         password: "",
-        logged: false
+        logged: false,
+        message: ""
     }
 
     changeHandler = e => {
@@ -30,7 +31,11 @@ class Register extends Component {
             })
             const response = await registerCall.json()
             console.log(response, '<- response from registerCall')
-            if (response.user) {
+            if (response.message) {
+                this.setState({
+                    message: response.message
+                })
+            } else if (response.user) {
                 localStorage.setItem('current', JSON.stringify(response.user))
                 this.props.doSetCurrentUser(response.user)
                 this.setState({
@@ -65,8 +70,7 @@ class Register extends Component {
                     </div>
                 </div>
                 )}
-            </div>
-            
+            </div> 
         )
     }
 }
