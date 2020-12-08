@@ -30,6 +30,12 @@ class Register extends Component {
             })
             const response = await registerCall.json()
             console.log(response, '<- response from registerCall')
+            if (response.user) {
+                localStorage.setItem('current', JSON.stringify(response.user))
+                this.setState({
+                    logged: true
+                })
+            }
         } catch (err) {
             console.log(err, '<- err in register fetch call')
         }
