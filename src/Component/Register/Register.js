@@ -17,10 +17,10 @@ class Register extends Component {
         });
     };
 
-    onSubmit = async e => {
+    handleRegister = async e => {
         try {
             e.preventDefault()
-            const registerResponse = await fetch('/users/register', {
+            const registerCall = await fetch('http://localhost:3001/users/register', {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(this.state),
@@ -40,7 +40,7 @@ class Register extends Component {
             <div className="register-parent-container">
                 <h1>Register:</h1>
                 <div className="register-form-container">
-                    <form className="register-form" onSubmit={this.onSubmit}>
+                    <form className="register-form" onSubmit={e => this.handleRegister(e)}>
                         <h2>Username:</h2>
                         <input type="text" name="username" value={username} onChange={this.changeHandler}/>
                         <h2>Email:</h2>
