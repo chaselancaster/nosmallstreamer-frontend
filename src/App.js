@@ -8,6 +8,7 @@ import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
 import Search from './Component/Search/Search';
 import Profile from './Component/Profile/Profile';
+import EditUser from './Component/EditUser/EditUser';
 
 import * as routes from "./constants/routes";
 
@@ -44,6 +45,7 @@ class App extends Component {
             <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser}/>} />
             <Route exact path={routes.SEARCH} render={() => <Search />} />
             <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
+            <Route exact path={routes.EDITUSER} render={() => <EditUser />} />
           </Switch>
         </BrowserRouter>
       </div>
