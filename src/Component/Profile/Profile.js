@@ -7,7 +7,17 @@ class Profile extends Component {
         const { currentUser } = this.props;
         return (
             <div>
-                
+                {!currentUser ? ( 
+                    <div>
+                        <h1>Please sign in or register to view profile!</h1>
+                        <p>Signin</p>
+                        <p>Register</p>
+                    </div>
+                ) : (
+                    <div>
+                        <h1>Hello</h1>
+                    </div>
+                )}
             </div>
         )
     }
