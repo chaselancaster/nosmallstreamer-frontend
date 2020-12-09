@@ -1,3 +1,16 @@
+.profile-loggedout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid red;
+  margin-top: 80px;
+}
+
+.profile-loggedout h1 {
+  color: white;
+  text-align: center;
+}
+
 .profile-header {
   display: flex;
   flex-direction: column;

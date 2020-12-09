@@ -11,7 +11,7 @@ class Profile extends Component {
         return (
             <div>
                 {!currentUser ? ( 
-                    <div>
+                    <div className="profile-loggedout">
                         <h1>Please sign in or register to view profile!</h1>
                         <p>Signin</p>
                         <p>Register</p>
