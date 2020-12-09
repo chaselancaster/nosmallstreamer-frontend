@@ -9,6 +9,12 @@ class EditUser extends Component {
         message: ''
     }
 
+    changeHandler = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+
     render() {
         return (
             <div>
@@ -18,9 +24,9 @@ class EditUser extends Component {
                 <div className="edit-user-container">
                     <form className="edit-form">
                         <h3>Email:</h3>
-                        <input type="text" name="email"/>
+                        <input type="text" name="email" onChange={this.changeHandler}/>
                         <h3>Password:</h3>
-                        <input type="password" name="password"/>
+                        <input type="password" name="password" onChange={this.changeHandler}/>
                         <button type="submit" className="edit-button">Update Account</button>
                         <p></p>
                     </form>
