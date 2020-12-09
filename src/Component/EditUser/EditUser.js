@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
+import './EditUser.css';
+
 class EditUser extends Component {
     render() {
         return (
-            <div>
-                <h1>Edit User</h1>
+            <div className="edit-user-parent">
+                <h1>Edit Your Email Or Passowrd</h1>
             </div>
         )
     }
