@@ -15,6 +15,22 @@ class EditUser extends Component {
         });
     };
 
+    updateUser = async e => {
+        try {
+            e.preventDefault()
+            const userCall = await fetch(`http://localhost:3001/ users/update/${this.props.currentUser._id}`, {
+                method: 'PUT',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            console.log(userCall, '<- userCall in updateUser func')
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     render() {
         return (
             <div>
@@ -22,7 +38,7 @@ class EditUser extends Component {
                     <h1>Edit Your Email or Passowrd</h1>
                 </div>
                 <div className="edit-user-container">
-                    <form className="edit-form">
+                    <form className="edit-form" onSubmit={this.updateUser}>
                         <h3>Email:</h3>
                         <input type="text" name="email" onChange={this.changeHandler}/>
                         <h3>Password:</h3>
