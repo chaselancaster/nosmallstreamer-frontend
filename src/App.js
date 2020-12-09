@@ -24,6 +24,14 @@ class App extends Component {
     })
   }
 
+  doLogout = () => {
+    this.setState({
+      currentUser: null
+    })
+    localStorage.clear()
+    this.props.history.push(routes.LOGIN)
+  }
+
   render () {
     return (
       <div className="App">
