@@ -27,7 +27,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar currentUser={this.state.currentUser}/>
         <BrowserRouter>
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing />} />
