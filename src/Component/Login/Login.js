@@ -17,13 +17,30 @@ class Login extends Component {
         })
     }
 
+    handleLogin = async e => {
+        try {
+            e.preventDefault()
+            const loginCall = await fetch('http://localhost:3001/users/login', {
+                method: 'POST',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            const response = await loginCall.json()
+            console.log(response, '<- response in handleLogin')
+        } catch (err) {
+            console.log(err, '<- err in handleLogin')
+        }
+    }
+
     render() {
         const { email, password } = this.state;
         return (
             <div className="login-parent-container">
                 <h1>Login:</h1>
                 <div className="login-form-container">
-                    <form className="login-form">
+                    <form className="login-form" onSubmit={this.handleLogin}>
                         <h2>Email:</h2>
                         <input type="text" name="email" value={email} onChange={this.changeHandler}/>
                         <h2>Password:</h2>

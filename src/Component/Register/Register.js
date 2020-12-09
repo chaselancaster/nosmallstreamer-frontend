@@ -49,7 +49,7 @@ class Register extends Component {
     };
 
     render() {
-        const { username, email, password } = this.state;
+        const { email, password } = this.state;
         return (
             <div>
                 {this.state.logged ? ( <Redirect to={"/"} /> ) : (
