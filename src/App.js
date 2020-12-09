@@ -35,7 +35,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <NavBar currentUser={this.state.currentUser}/>
+        <NavBar currentUser={this.state.currentUser} doLogout={this.doLogout}/>
         <BrowserRouter>
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing />} />
