@@ -4,7 +4,7 @@ import { slide as Menu } from 'react-burger-menu'
 
 import './NavBar.css';
 
-const NavBar = ({ currentUser }) => {
+const NavBar = ({ currentUser, doLogout }) => {
     return (
         <div>
             {currentUser ? (
