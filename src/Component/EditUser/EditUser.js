@@ -18,7 +18,7 @@ class EditUser extends Component {
     updateUser = async e => {
         try {
             e.preventDefault()
-            const userCall = await fetch(`http://localhost:3001/ users/update/${this.props.currentUser._id}`, {
+            const userCall = await fetch(`http://localhost:3001/users/update/${this.props.currentUser._id}`, {
                 method: 'PUT',
                 body: JSON.stringify(this.state),
                 headers: {
@@ -26,6 +26,8 @@ class EditUser extends Component {
                 }
             })
             console.log(userCall, '<- userCall in updateUser func')
+            const response = await userCall.json()
+            console.log(response, '<- response in updateUser func')
         } catch (err) {
             console.log(err)
         }
