@@ -5,7 +5,7 @@ import './Register.css';
 
 class Register extends Component {
     state = {
-        username: "",
+        name: "",
         email: "",
         password: "",
         logged: false,
@@ -49,7 +49,7 @@ class Register extends Component {
     };
 
     render() {
-        const { email, password } = this.state;
+        const { name, email, password } = this.state;
         return (
             <div>
                 {this.state.logged ? ( <Redirect to={"/"} /> ) : (
@@ -57,6 +57,8 @@ class Register extends Component {
                     <h1>Register:</h1>
                     <div className="register-form-container">
                         <form className="register-form" onSubmit={e => this.handleRegister(e)}>
+                            <h2>Name:</h2>
+                            <input type="text" name="name" value={name} onChange={this.changeHandler} />
                             <h2>Email:</h2>
                             <input type="text" name="email" value={email} onChange={this.changeHandler} />
                             <h2>Password:</h2>
