@@ -1,0 +1,33 @@
+.edit-user-header {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid red;
+}
+
+.edit-user-header h1 {
+  color: white;
+}
+
+.edit-user-container {
+  background-color: #cacfd6;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+}
+
+.edit-button {
+  background-color: rgb(161, 118, 247);
+  font-size: 22px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+}
