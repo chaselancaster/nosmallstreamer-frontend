@@ -43,7 +43,7 @@ class App extends Component {
             <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser}/>} />
             <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser}/>} />
             <Route exact path={routes.SEARCH} render={() => <Search />} />
-            <Route exact path={routes.PROFILE} render={() => <Profile />} />
+            <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
           </Switch>
         </BrowserRouter>
       </div>
