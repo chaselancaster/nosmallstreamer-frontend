@@ -4,15 +4,27 @@ import { slide as Menu } from 'react-burger-menu'
 
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({ currentUser }) => {
     return (
-        <Menu right>
-            <a id="home" className="menu-item" href="/">Home</a>
-            <a id="search" className="menu-item" href="/search">Search</a>
-            <a id="profile" className="menu-item" href="/profile">Profile</a>
-            <a id="login" className="menu-item" href="/login">Login</a>
-            <a id="register" className="menu-item" href="/register">Signin</a>
-        </Menu>
+        <div>
+            {currentUser ? (
+            <Menu right>
+                <a id="home" className="menu-item" href="/">Home</a>
+                <a id="search" className="menu-item" href="/search">Search</a>
+                <a id="profile" className="menu-item" href="/profile">Profile</a>
+                <a id="signout" className="menu-item" href="">Sign out</a>
+            </Menu>
+            ) : (
+            <Menu right>
+                <a id="home" className="menu-item" href="/">Home</a>
+                <a id="search" className="menu-item" href="/search">Search</a>
+                <a id="profile" className="menu-item" href="/profile">Profile</a>
+                <a id="login" className="menu-item" href="/login">Login</a>
+                <a id="register" className="menu-item" href="/register">Register</a>
+            </Menu>
+            )}
+        </div>
+        
         // <div className="nav-container">
         //     <div className="title">
         //         NoSmallStreamer
