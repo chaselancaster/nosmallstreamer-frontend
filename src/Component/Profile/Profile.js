@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { BrowserRouter, NavLink, Link } from 'react-router-dom'
 
 import './Profile.css'
+
+import * as routes from "../../constants/routes";
 
 class Profile extends Component {
     render() {
@@ -20,7 +23,7 @@ class Profile extends Component {
                             <p>Ready to get started?</p>
                         </div>
                         <div className='edit-account'>
-                            <p>Edit email or password.</p>
+                            <Link to='/'>Edit email or password.</Link>
                         </div>
                     </div> 
                 )}
