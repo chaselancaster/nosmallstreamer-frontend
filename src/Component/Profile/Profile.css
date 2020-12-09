@@ -10,3 +10,8 @@
 p {
   color: white;
 }
+
+.edit-account {
+  background-color: #cacfd6;
+  height: 10vh;
+}

@@ -20,7 +20,7 @@ class Profile extends Component {
                             <p>Ready to get started?</p>
                         </div>
                         <div className='edit-account'>
-
+                            <p>Edit email or password.</p>
                         </div>
                     </div> 
                 )}
