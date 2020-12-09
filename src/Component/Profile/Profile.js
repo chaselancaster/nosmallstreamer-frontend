@@ -13,8 +13,8 @@ class Profile extends Component {
                 {!currentUser ? ( 
                     <div className="profile-loggedout">
                         <h1>Please sign in or register to view profile!</h1>
-                        <p>Signin</p>
-                        <p>Register</p>
+                        <Link to='login' className="profile-link">Login</Link>
+                        <Link to='register' className="profile-link">Register</Link>
                     </div>
                 ) : (
                     <div>

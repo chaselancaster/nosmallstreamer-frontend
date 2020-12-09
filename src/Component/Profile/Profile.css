@@ -4,11 +4,16 @@
   align-items: center;
   border: 2px solid red;
   margin-top: 80px;
+  padding-bottom: 10px;
 }
 
 .profile-loggedout h1 {
   color: white;
   text-align: center;
+}
+
+.profile-link {
+  margin-top: 25px;
 }
 
 .profile-header {
@@ -17,6 +22,7 @@
   align-items: center;
   border: 2px solid red;
   margin-top: 80px;
+  padding-bottom: 10px;
 }
 
 .profile-header h1,
