@@ -12,7 +12,7 @@ const NavBar = ({ currentUser, doLogout }) => {
                 <a id="home" className="menu-item" href="/">Home</a>
                 <a id="search" className="menu-item" href="/search">Search</a>
                 <a id="profile" className="menu-item" href="/profile">Profile</a>
-                <a id="signout" className="menu-item" href="">Sign out</a>
+                <a id="signout" className="menu-item" href="" onClick={doLogout}>Sign out</a>
             </Menu>
             ) : (
             <Menu right>

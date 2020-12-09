@@ -24,7 +24,7 @@ class App extends Component {
     })
   }
 
-  doSignout = () => {
+  doLogout = () => {
     this.setState({
       currentUser: null
     })
@@ -35,7 +35,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <NavBar currentUser={this.state.currentUser} doSignout={this.doSignout}/>
+        <NavBar currentUser={this.state.currentUser} doLogout={this.doLogout}/>
         <BrowserRouter>
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing />} />
