@@ -14,8 +14,9 @@ class Profile extends Component {
                         <p>Register</p>
                     </div>
                 ) : (
-                    <div>
-                        <h1>Hello</h1>
+                    <div className="profile-parent">
+                        <h1>Hello, {currentUser.name}</h1>
+                        <p>Ready to get started?</p>
                     </div>
                 )}
             </div>

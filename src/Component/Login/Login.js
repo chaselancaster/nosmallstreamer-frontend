@@ -49,7 +49,7 @@ class Login extends Component {
         const { email, password } = this.state;
         return (
             <div>
-                {this.state.logged ? ( <Redirect to={"/"} /> ) : (
+                {this.state.logged ? ( <Redirect to={"/profile"} /> ) : (
                     <div className="login-parent-container">
                     <h1>Login:</h1>
                     <div className="login-form-container">
