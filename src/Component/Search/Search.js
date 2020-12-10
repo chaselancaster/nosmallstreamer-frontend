@@ -16,7 +16,7 @@ class Search extends Component {
                         <input type="text" placeholder="Game" />
                         <h3>Number of Viewers:</h3>
                         <input type="number" placeholder="Viewers" />
-                        <button type="submit">Search</button>
+                        <button type="submit" className="button">Search</button>
                     </form>
                 </div>
             </div>

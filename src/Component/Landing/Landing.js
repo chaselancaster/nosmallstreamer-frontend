@@ -34,7 +34,7 @@ const Landing = () => {
         {/* Get Started Section */}
         <div className="get-started-parent">
             <p>Ready to get started?</p>
-            <a href="/register"><button className="landing-button">Register Now!</button></a>
+            <a href="/register"><button className="button">Register Now!</button></a>
         </div>
     </div>
       

@@ -58,7 +58,7 @@ class Login extends Component {
                             <input type="text" name="email" value={email} onChange={this.changeHandler}/>
                             <h2>Password:</h2>
                             <input type="password" name="password" value={password} onChange={this.changeHandler} />
-                            <button type="submit" className="login-button">Submit</button>
+                            <button type="submit" className="button">Submit</button>
                             <h3>Not yet registered?</h3>
                             <a href="/register"><p>Register Here!</p></a>
                         </form>
