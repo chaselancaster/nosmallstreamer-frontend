@@ -9,7 +9,13 @@ class Search extends Component {
         viewers: '',
         message: ''
     }
-    
+
+    changeHandler = e => {
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
     render() {
         return (
             <div className="search-parent-container">
