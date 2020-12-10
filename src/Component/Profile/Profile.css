@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
+  border-bottom: 2px solid white;
   margin-top: 80px;
   padding-bottom: 10px;
 }
@@ -30,11 +30,50 @@ p {
   color: white;
 }
 
+.profile-search-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25vh;
+}
+
+.profile-search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile-search-p {
+  width: 200px;
+  text-align: center;
+}
+
+.profile-search-img {
+  width: 65px;
+  height: 65px;
+  /* margin-left: 20px; */
+  /* margin-top: 15px; */
+}
+
+.button-parent {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-search-button {
+  background-color: rgb(161, 118, 247);
+  font-size: 22px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+}
+
 .edit-account {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #dcd6f7;
+  background-color: #cacfd6;
   height: 10vh;
 }
