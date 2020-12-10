@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, NavLink, Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
 
 import './NavBar.css';
@@ -7,7 +7,15 @@ import './NavBar.css';
 const NavBar = ({ currentUser, doLogout }) => {
     return (
         <div>
-            {currentUser ? (
+          
+
+
+
+
+
+
+
+            {/* {currentUser ? (
             <Menu right>
                 <a id="home" className="menu-item" href="/">Home</a>
                 <a id="search" className="menu-item" href="/search">Search</a>
@@ -22,7 +30,7 @@ const NavBar = ({ currentUser, doLogout }) => {
                 <a id="login" className="menu-item" href="/login">Login</a>
                 <a id="register" className="menu-item" href="/register">Register</a>
             </Menu>
-            )}
+            )} */}
         </div>
         
         // <div className="nav-container">
