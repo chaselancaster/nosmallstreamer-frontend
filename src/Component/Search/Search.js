@@ -26,9 +26,9 @@ class Search extends Component {
                 <div className="search-form-container">
                     <form className="search-form">
                         <h3>Game:</h3>
-                        <input type="text" placeholder="Game" />
+                        <input type="text" name="game" placeholder="Game" onChange={this.changeHandler}/>
                         <h3>Number of Viewers:</h3>
-                        <input type="number" placeholder="Viewers" />
+                        <input type="number" name="viewers" placeholder="Viewers" onChange={this.changeHandler}/>
                         <button type="submit" className="button">Search</button>
                     </form>
                 </div>
