@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 import './Search.css';
 
 class Search extends Component {
+    state = {
+        streams: [],
+        game: '',
+        viewers: '',
+        message: ''
+    }
+    
     render() {
         return (
             <div className="search-parent-container">
