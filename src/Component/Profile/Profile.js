@@ -34,7 +34,7 @@ class Profile extends Component {
                                 </div>
                             </div>
                             <div className="button-parent">
-                                <button className="profile-search-button">Take me to search!</button>
+                            <Link to='/search'><button className="profile-search-button">Take me to search!</button></Link>
                             </div>
                         </div>
                         <div className='edit-account'>
