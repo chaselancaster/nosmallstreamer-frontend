@@ -32,7 +32,7 @@ const NavBar = ({ currentUser, doLogout }) => {
                     <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
                   </li>
                   <li className="option" onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.PROFILE}>HOME</NavLink>
+                    <NavLink exact to={routes.PROFILE}>PROFILE</NavLink>
                   </li>
                   <li className="option mobile-option" onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LANDING} onClick={doLogout}>LOGOUT</NavLink>
