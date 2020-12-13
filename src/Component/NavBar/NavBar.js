@@ -13,87 +13,96 @@ const NavBar = ({ currentUser, doLogout }) => {
     const closeMobileMenu = () => setClick(false)
 
     return (
+      <div>
+      { currentUser ? (
         <div className="header">
-      <div className="logo-nav">
-        <div className="logo-container">
-          <a href="#">
-            <Logo className="logo" />
-          </a>
-        </div>
-
-        <ul className={click ? "nav-options active" : "nav-options"}>
-          <li className="option" onClick={closeMobileMenu}>
-            <a href="#">ABOUT</a>
-          </li>
-          <li className="option" onClick={closeMobileMenu}>
-            <a href="#">CONTACT</a>
-          </li>
-          <li className="option" onClick={closeMobileMenu}>
-            <a href="#">BLOG</a>
-          </li>
-          <li className="option mobile-option" onClick={closeMobileMenu}>
-            <a href="#">SIGN-IN</a>
-          </li>
-          <li className=" option mobile-option" onClick={closeMobileMenu}>
-            <a href="" className="sign-up">
-              SIGN-UP
-            </a>
-          </li>
-        </ul>
-      </div>
-      <ul className="signin-up">
-        <li className="sign-in" onClick={closeMobileMenu}>
-          <a href="#">SIGN-IN</a>
-        </li>
-        <li onClick={closeMobileMenu}>
-          <a href="" className="signup-btn">
-            SIGN-UP
-          </a>
-        </li>
-      </ul>
-      <div className="mobile-menu" onClick={handleClick}>
-        {click ? (
-          <CloseMenu className="menu-icon" />
-        ) : (
-          <MenuIcon className="menu-icon" />
-        )}
-      </div>
-   
-
-
-
-
-
-
-
-            {/* {currentUser ? (
-            <Menu right>
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="search" className="menu-item" href="/search">Search</a>
-                <a id="profile" className="menu-item" href="/profile">Profile</a>
-                <a id="signout" className="menu-item" href="" onClick={doLogout}>Sign out</a>
-            </Menu>
+          <div className="logo-nav">
+            <div className="logo-container">
+              <a href="#">
+                <Logo className="logo" />
+              </a>
+            </div>
+            <ul className={click ? "nav-options active" : "nav-options"}>
+              <BrowserRouter>
+              <li className="option" onClick={closeMobileMenu}>
+                <NavLink to='/'>HOME</NavLink>
+              </li>
+              <li className="option" onClick={closeMobileMenu}>
+                <a href="#">SEARCH</a>
+              </li>
+              <li className="option" onClick={closeMobileMenu}>
+                <a href="#">PROFILE</a>
+              </li>
+              <li className="option mobile-option" onClick={closeMobileMenu}>
+                <a href="#">SIGNOUT</a>
+              </li>
+              </BrowserRouter>
+            </ul>
+          </div>
+          <ul className="signin-up">
+            <li className="sign-in" onClick={closeMobileMenu}>
+              <a href="#">SIGNOUT</a>
+            </li>
+          </ul>
+          <div className="mobile-menu" onClick={handleClick}>
+            {click ? (
+              <CloseMenu className="menu-icon" />
             ) : (
-            <Menu right>
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="search" className="menu-item" href="/search">Search</a>
-                <a id="profile" className="menu-item" href="/profile">Profile</a>
-                <a id="login" className="menu-item" href="/login">Login</a>
-                <a id="register" className="menu-item" href="/register">Register</a>
-            </Menu>
-            )} */}
-        </div>
+              <MenuIcon className="menu-icon" />
+            )}
+          </div>
+      </div>
+      ) : (
+        <div className="header">
+          <div className="logo-nav">
+            <div className="logo-container">
+              <a href="#">
+                <Logo className="logo" />
+              </a>
+            </div>
+            <ul className={click ? "nav-options active" : "nav-options"}>
+              <li className="option" onClick={closeMobileMenu}>
+                <a href="#">HOME</a>
+              </li>
+              <li className="option" onClick={closeMobileMenu}>
+                <a href="#">SEARCH</a>
+              </li>
+              <li className="option" onClick={closeMobileMenu}>
+                <a href="#">PROFILE</a>
+              </li>
+              <li className="option mobile-option" onClick={closeMobileMenu}>
+                <a href="#">SIGN-IN</a>
+              </li>
+              <li className=" option mobile-option" onClick={closeMobileMenu}>
+                <a href="" className="sign-up">
+                  REGISTER
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul className="signin-up">
+            <li className="sign-in" onClick={closeMobileMenu}>
+              <a href="#">SIGN-IN</a>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <a href="" className="signup-btn">
+                REGISTER
+              </a>
+            </li>
+          </ul>
+          <div className="mobile-menu" onClick={handleClick}>
+            {click ? (
+              <CloseMenu className="menu-icon" />
+            ) : (
+              <MenuIcon className="menu-icon" />
+            )}
+          </div>
+      </div>
+      )}
         
-        // <div className="nav-container">
-        //     <div className="title">
-        //         NoSmallStreamer
-        //     </div>
-        //     <ul>
-        //         <li>Search</li>
-        //         <li>Profile</li>
-        //         <li>Signin</li>
-        //     </ul>
-        // </div>
+   </div>
+        
+ 
     )
 }
 
