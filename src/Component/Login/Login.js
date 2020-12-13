@@ -51,7 +51,7 @@ class Login extends Component {
             <div>
                 {this.state.logged ? ( <Redirect to={"/profile"} /> ) : (
                     <div className="login-parent-container">
-                    <h1>Login:</h1>
+                    <h1>Log-In:</h1>
                     <div className="login-form-container">
                         <form className="login-form" onSubmit={this.handleLogin}>
                             <h2>Email:</h2>
