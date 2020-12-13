@@ -31,7 +31,7 @@ class App extends Component {
       currentUser: null
     })
     localStorage.clear()
-    this.props.history.push(routes.LOGIN)
+    // this.props.history.push(routes.LOGIN)
   }
 
   render () {
