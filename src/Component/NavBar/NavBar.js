@@ -5,6 +5,8 @@ import { ReactComponent as Logo } from "./assets/logo.svg";
 import { BrowserRouter, NavLink, Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
 
+import * as routes from "../../constants/routes";
+
 import './NavBar.css';
 
 const NavBar = ({ currentUser, doLogout }) => {
@@ -23,9 +25,9 @@ const NavBar = ({ currentUser, doLogout }) => {
               </a>
             </div>
             <ul className={click ? "nav-options active" : "nav-options"}>
-              <BrowserRouter>
+              {/* <BrowserRouter> */}
               <li className="option" onClick={closeMobileMenu}>
-                <NavLink to='/'>HOME</NavLink>
+                <NavLink to={routes.}>HOME</NavLink>
               </li>
               <li className="option" onClick={closeMobileMenu}>
                 <a href="#">SEARCH</a>
@@ -36,7 +38,7 @@ const NavBar = ({ currentUser, doLogout }) => {
               <li className="option mobile-option" onClick={closeMobileMenu}>
                 <a href="#">SIGNOUT</a>
               </li>
-              </BrowserRouter>
+              {/* </BrowserRouter> */}
             </ul>
           </div>
           <ul className="signin-up">
@@ -71,7 +73,7 @@ const NavBar = ({ currentUser, doLogout }) => {
                 <a href="#">PROFILE</a>
               </li>
               <li className="option mobile-option" onClick={closeMobileMenu}>
-                <a href="#">SIGN-IN</a>
+                <a href="#">LOG-IN</a>
               </li>
               <li className=" option mobile-option" onClick={closeMobileMenu}>
                 <a href="" className="sign-up">
