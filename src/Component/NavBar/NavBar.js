@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ReactComponent as CloseMenu } from "./assets/x.svg";
 import { ReactComponent as MenuIcon } from "./assets/menu.svg";
 import { ReactComponent as Logo } from "./assets/logo.svg";
-import { BrowserRouter, NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
 
 import * as routes from "../../constants/routes";
@@ -43,18 +43,18 @@ const NavBar = ({ currentUser, doLogout }) => {
           </div>
           { currentUser ? (
             <ul className="signin-up">
-            <li className="sign-in" onClick={closeMobileMenu}>
-              SIGNOUT
-            </li>
-          </ul>
+              <li className="sign-in" onClick={closeMobileMenu}>
+                SIGNOUT
+              </li>
+            </ul>
           ) : (
             <ul className="signin-up">
-            <li className="sign-in" onClick={closeMobileMenu}>
-              <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
-            </li>
-            <li onClick={closeMobileMenu}>
-              <NavLink exact to={routes.REGISTER}>REGISTER</NavLink>
-            </li>
+              <li className="sign-in" onClick={closeMobileMenu}>
+                <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
+              </li>
+              <li onClick={closeMobileMenu}>
+                <NavLink exact to={routes.REGISTER}>REGISTER</NavLink>
+              </li>
           </ul>
           )}
           <div className="mobile-menu" onClick={handleClick}>
@@ -64,10 +64,8 @@ const NavBar = ({ currentUser, doLogout }) => {
               <MenuIcon className="menu-icon" />
             )}
           </div>
-      </div> 
-   </div>
-        
- 
+        </div> 
+      </div>
     )
 }
 
