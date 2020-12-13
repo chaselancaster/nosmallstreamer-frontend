@@ -7,20 +7,24 @@
   padding: 0px 40px;
   height: 80px;
 }
+
 .logo-nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .logo {
   width: 45px;
   height: 45px;
 }
+
 .nav-options {
   padding-left: 25px;
   display: grid;
@@ -28,6 +32,7 @@
   grid-gap: 50px;
   list-style-type: none;
 }
+
 .mobile-option {
   display: none;
 }
@@ -35,18 +40,22 @@
 .option :hover {
   color: white;
 }
+
 .signin-up {
   display: flex;
   padding: 0px 5px;
   list-style-type: none;
 }
+
 .sign-in {
   padding-right: 50px;
   align-self: center;
 }
+
 .sign-in :hover {
   color: white;
 }
+
 .signup-btn {
   padding: 10px 10px;
   height: 2.4rem;
@@ -56,18 +65,22 @@
   cursor: pointer;
   align-items: center;
 }
+
 .mobile-menu {
   display: none;
 }
+
 @media (max-width: 648px) {
   /*Mobile View */
   .header {
     padding: 0px 10px;
   }
+
   .logo {
     width: 45px;
     height: 45px;
   }
+
   .nav-options {
     display: flex;
     width: 100%;
@@ -81,6 +94,7 @@
     list-style-type: none;
     grid-gap: 0px;
   }
+
   .nav-options.active {
     background: #9899d1;
     left: 0;
@@ -95,6 +109,7 @@
     width: 45px;
     height: 45px;
   }
+
   .option {
     display: flex;
     align-items: center;
@@ -102,6 +117,7 @@
     height: 10vw;
     padding: 30px 0px;
   }
+
   .sign-up {
     border-radius: 3px;
     color: white;
@@ -116,6 +132,7 @@
     display: none;
   }
 }
+
 .mobile-menu {
   display: block;
 }
