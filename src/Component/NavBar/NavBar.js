@@ -16,45 +16,6 @@ const NavBar = ({ currentUser, doLogout }) => {
 
     return (
       <div>
-      { currentUser ? (
-        <div className="header">
-          <div className="logo-nav">
-            <div className="logo-container">
-              <a href="#">
-                <Logo className="logo" />
-              </a>
-            </div>
-            <ul className={click ? "nav-options active" : "nav-options"}>
-              {/* <BrowserRouter> */}
-              <li className="option" onClick={closeMobileMenu}>
-                <NavLink to={routes.}>HOME</NavLink>
-              </li>
-              <li className="option" onClick={closeMobileMenu}>
-                <a href="#">SEARCH</a>
-              </li>
-              <li className="option" onClick={closeMobileMenu}>
-                <a href="#">PROFILE</a>
-              </li>
-              <li className="option mobile-option" onClick={closeMobileMenu}>
-                <a href="#">SIGNOUT</a>
-              </li>
-              {/* </BrowserRouter> */}
-            </ul>
-          </div>
-          <ul className="signin-up">
-            <li className="sign-in" onClick={closeMobileMenu}>
-              <a href="#">SIGNOUT</a>
-            </li>
-          </ul>
-          <div className="mobile-menu" onClick={handleClick}>
-            {click ? (
-              <CloseMenu className="menu-icon" />
-            ) : (
-              <MenuIcon className="menu-icon" />
-            )}
-          </div>
-      </div>
-      ) : (
         <div className="header">
           <div className="logo-nav">
             <div className="logo-container">
@@ -64,7 +25,7 @@ const NavBar = ({ currentUser, doLogout }) => {
             </div>
             <ul className={click ? "nav-options active" : "nav-options"}>
               <li className="option" onClick={closeMobileMenu}>
-                <a href="#">HOME</a>
+                <NavLink exact to={routes.LANDING}>HOME</NavLink>
               </li>
               <li className="option" onClick={closeMobileMenu}>
                 <a href="#">SEARCH</a>
@@ -82,7 +43,14 @@ const NavBar = ({ currentUser, doLogout }) => {
               </li>
             </ul>
           </div>
-          <ul className="signin-up">
+          { currentUser ? (
+            <ul className="signin-up">
+            <li className="sign-in" onClick={closeMobileMenu}>
+              <a href="#">SIGNOUT</a>
+            </li>
+          </ul>
+          ) : (
+            <ul className="signin-up">
             <li className="sign-in" onClick={closeMobileMenu}>
               <a href="#">SIGN-IN</a>
             </li>
@@ -92,6 +60,7 @@ const NavBar = ({ currentUser, doLogout }) => {
               </a>
             </li>
           </ul>
+          )}
           <div className="mobile-menu" onClick={handleClick}>
             {click ? (
               <CloseMenu className="menu-icon" />
@@ -99,9 +68,7 @@ const NavBar = ({ currentUser, doLogout }) => {
               <MenuIcon className="menu-icon" />
             )}
           </div>
-      </div>
-      )}
-        
+      </div> 
    </div>
         
  
