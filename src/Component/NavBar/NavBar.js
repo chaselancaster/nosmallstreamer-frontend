@@ -28,36 +28,32 @@ const NavBar = ({ currentUser, doLogout }) => {
                 <NavLink exact to={routes.LANDING}>HOME</NavLink>
               </li>
               <li className="option" onClick={closeMobileMenu}>
-                <a href="#">SEARCH</a>
+                <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
               </li>
               <li className="option" onClick={closeMobileMenu}>
-                <a href="#">PROFILE</a>
+                <NavLink exact to={routes.PROFILE}>HOME</NavLink>
               </li>
               <li className="option mobile-option" onClick={closeMobileMenu}>
-                <a href="#">LOG-IN</a>
+                <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
               </li>
               <li className=" option mobile-option" onClick={closeMobileMenu}>
-                <a href="" className="sign-up">
-                  REGISTER
-                </a>
+                <NavLink exact to={routes.LANDING}>REGISTER</NavLink>
               </li>
             </ul>
           </div>
           { currentUser ? (
             <ul className="signin-up">
             <li className="sign-in" onClick={closeMobileMenu}>
-              <a href="#">SIGNOUT</a>
+              SIGNOUT
             </li>
           </ul>
           ) : (
             <ul className="signin-up">
             <li className="sign-in" onClick={closeMobileMenu}>
-              <a href="#">SIGN-IN</a>
+              <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
             </li>
             <li onClick={closeMobileMenu}>
-              <a href="" className="signup-btn">
-                REGISTER
-              </a>
+              <NavLink exact to={routes.REGISTER}>REGISTER</NavLink>
             </li>
           </ul>
           )}
