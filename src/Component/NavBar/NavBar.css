@@ -11,7 +11,9 @@
 .logo-nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  border: 2px solid red;
+  width: 100%;
 }
 
 .logo-container {
@@ -27,14 +29,20 @@
 
 .nav-options {
   padding-left: 25px;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  /* grid-template-columns: repeat(3, auto); */
+  /* grid-gap: 50px; */
   list-style-type: none;
+  border: 2px solid red;
 }
 
-.mobile-option {
-  display: none;
+ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .option :hover {
@@ -45,25 +53,6 @@
   display: flex;
   padding: 0px 5px;
   list-style-type: none;
-}
-
-.sign-in {
-  padding-right: 50px;
-  align-self: center;
-}
-
-.sign-in :hover {
-  color: white;
-}
-
-.signup-btn {
-  padding: 10px 10px;
-  height: 2.4rem;
-  border-radius: 3px;
-  background: rgb(222, 9, 241);
-  color: white;
-  cursor: pointer;
-  align-items: center;
 }
 
 .mobile-menu {
@@ -117,31 +106,11 @@
     height: 10vw;
     padding: 30px 0px;
   }
-
-  .sign-up {
-    border-radius: 3px;
-    color: white;
-    padding: 20px 0px;
-    width: 80%;
-    align-self: center;
-    text-align: center;
-    border-radius: 3px;
-  }
-
-  .signin-up {
-    display: none;
-  }
 }
 
 .mobile-menu {
   display: block;
 }
-
-/* .nav-holder {
-  display: flex;
-  justify-content: flex-end;
-  border: 2px solid red;
-} */
 
 .nav-container {
   display: flex;
@@ -155,12 +124,4 @@
 .title {
   display: flex;
   align-items: center;
-}
-
-ul {
-  width: 50%;
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  flex-direction: row;
 }

@@ -55,23 +55,22 @@ const NavBar = ({ currentUser, doLogout }) => {
                   <Logo className="logo" />
                 </a>
               </div>
-            
                 <ul className={click ? "nav-options active" : "nav-options"}>
-                <li className="option" onClick={closeMobileMenu}>
-                  <NavLink exact to={routes.LANDING}>HOME</NavLink>
-                </li>
-                <li className="option" onClick={closeMobileMenu}>
-                  <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
-                </li>
-                <li className="option" onClick={closeMobileMenu}>
-                  <NavLink exact to={routes.PROFILE}>HOME</NavLink>
-                </li>
-                <li className="option mobile-option" onClick={closeMobileMenu}>
-                  <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
-                </li>
-                <li className=" option mobile-option" onClick={closeMobileMenu}>
-                  <NavLink exact to={routes.LANDING}>REGISTER</NavLink>
-                </li>
+                  <li className="option" onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.LANDING}>HOME</NavLink>
+                  </li>
+                  <li className="option" onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
+                  </li>
+                  <li className="option" onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.PROFILE}>HOME</NavLink>
+                  </li>
+                  <li className="option mobile-option" onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
+                  </li>
+                  <li className=" option mobile-option" onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.LANDING}>REGISTER</NavLink>
+                  </li>
               </ul>
             </div>
             <div className="mobile-menu" onClick={handleClick}>
