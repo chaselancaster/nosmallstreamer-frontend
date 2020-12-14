@@ -31,9 +31,8 @@
   padding-left: 25px;
   display: flex;
   justify-content: space-evenly;
-  /* grid-template-columns: repeat(3, auto); */
-  /* grid-gap: 50px; */
   list-style-type: none;
+  text-decoration: none;
   border: 2px solid red;
 }
 
