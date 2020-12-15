@@ -85,3 +85,112 @@ span {
   font-size: 28px;
   margin-top: 25px;
 }
+
+/* iPad screen size */
+@media (min-width: 768px) {
+  /* Hero Section */
+  .hero-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+  }
+
+  .welcome {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  span {
+    color: rgb(161, 118, 247);
+  }
+
+  .hero-p {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    /* border: 2px solid red; */
+    width: 400px;
+  }
+
+  .hero-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero-img {
+    width: 20%;
+    height: 20%;
+    margin-bottom: 10px;
+  }
+
+  /* Info Section */
+  .info-parent {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    /* border: 2px solid red; */
+  }
+
+  .info-img-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+
+  .info-img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 15px;
+    /* border: 2px solid red; */
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 50%;
+    /* border: 2px solid red; */
+  }
+
+  .info p {
+    color: white;
+    font-size: 25px;
+  }
+}
+
+/* Screen w/ 1280 width */
+@media (min-width: 1208px) {
+  /* Hero Section */
+  .hero-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+  }
+
+  .hero-p {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    /* border: 2px solid red; */
+    width: 800px;
+  }
+
+  .hero-img {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 10px;
+  }
+}
