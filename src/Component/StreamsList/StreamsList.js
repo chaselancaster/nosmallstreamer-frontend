@@ -21,7 +21,7 @@ class StreamsList extends Component {
             <div className='streams-container'>
                 {streams.map(stream => {
                     return (
-                        <li className='stream'>
+                        <li key={stream.id} className='stream'>
                             <img src={this.imageHandler(stream.thumbnail_url)} />
                             <div className='stream-info'>
                                 <p><span>Streamer: </span>{stream.user_name}</p>
