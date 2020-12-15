@@ -56,7 +56,7 @@ class Search extends Component {
                     </div>
                 </div>
                 <div>
-                    <StreamsList />
+                    <StreamsList streams={this.state.streams} />
                 </div>
             </div>
         )
