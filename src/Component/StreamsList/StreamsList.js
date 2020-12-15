@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import './StreamsList.css';
 class StreamsList extends Component {
     state = {
         width: '200x',
@@ -14,10 +16,10 @@ class StreamsList extends Component {
       };
 
     render() {
-        const { width, height } = this.state
+        const { streams } = this.props
         return (
             <div className='streams-container'>
-                {this.props.streams.map(stream => {
+                {streams.map(stream => {
                     return (
                         <li className='stream'>
                             <img src={this.imageHandler(stream.thumbnail_url)} />
