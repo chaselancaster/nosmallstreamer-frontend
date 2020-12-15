@@ -93,47 +93,6 @@ span {
 
 /* iPad screen size */
 @media (min-width: 768px) {
-  /* Hero Section */
-  .hero-parent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid white;
-    padding-bottom: 15px;
-  }
-
-  .welcome {
-    color: white;
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  span {
-    color: rgb(161, 118, 247);
-  }
-
-  .hero-p {
-    color: white;
-    text-align: center;
-    font-size: 2em;
-    /* border: 2px solid red; */
-    width: 400px;
-  }
-
-  .hero-logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .hero-img {
-    width: 20%;
-    height: 20%;
-    margin-bottom: 10px;
-  }
-
   /* Info Section */
   .info-parent {
     display: flex;
@@ -197,5 +156,106 @@ span {
     width: 30%;
     height: 30%;
     margin-bottom: 10px;
+  }
+}
+
+/* Screen size of 2560px */
+@media (min-width: 2560px) {
+  /* Hero Section */
+  .hero-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+    /* border: 2px solid red; */
+  }
+
+  .welcome {
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero-p {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    /* border: 2px solid red; */
+    width: 1200px;
+  }
+
+  .hero-img {
+    width: 40%;
+    height: 40%;
+    margin-bottom: 10px;
+  }
+
+  /* Info Section */
+  .info-parent {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    /* border: 2px solid red; */
+  }
+
+  .info-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 20%;
+  }
+
+  .info-img {
+    width: 150px;
+    height: 150px;
+    /* border: 2px solid red; */
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 30%;
+    /* border: 2px solid red; */
+  }
+
+  .info p {
+    color: white;
+    font-size: 40px;
+  }
+
+  /* Get Started Section */
+  .get-started-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    /* border: 2px solid red; */
+  }
+
+  .get-started-parent p {
+    color: white;
+    font-size: 50px;
+    margin-top: 25px;
+  }
+
+  .already-registered {
+    margin-top: 10px;
+    color: white;
+    font-size: 25px;
+  }
+
+  .register-now-landing {
+    font-size: 45px;
+    width: 400px;
   }
 }

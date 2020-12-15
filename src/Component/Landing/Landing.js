@@ -37,7 +37,7 @@ const Landing = () => {
         {/* Get Started Section */}
         <div className="get-started-parent">
             <p>Ready to get started?</p>
-            <Link exact to={routes.REGISTER}><button className="button">Register Now!</button></Link>
+            <Link exact to={routes.REGISTER}><button className="button register-now-landing">Register Now!</button></Link>
             <Link exact to={routes.LOGIN} className='already-registered'>Already registered? Log-in here!</Link>
         </div>
     </div>
