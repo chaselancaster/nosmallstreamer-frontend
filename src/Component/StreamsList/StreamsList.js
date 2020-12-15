@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 class StreamsList extends Component {
     state = {
-        width: '250x',
-        height: '100.jpg'
+        width: '200x',
+        height: '125.jpg'
     }
 
     imageHandler = string => {
@@ -16,8 +16,18 @@ class StreamsList extends Component {
     render() {
         const { width, height } = this.state
         return (
-            <div>
-                Streams List component
+            <div className='streams-container'>
+                {this.props.streams.map(stream => {
+                    return (
+                        <li className='stream'>
+                            <img src={this.imageHandler(stream.thumbnail_url)} />
+                            <p>Streamer: {stream.user_name}</p>
+                            <p>Title: {stream.title}</p>
+                            <p>Viewers: {stream.viewer_count}</p>
+                            <a href={`https://www.twitch.tv/${stream.user_name}`} target='_blank'><button>View on Twitch!</button></a>
+                        </li>
+                    )
+                })}
             </div>
         )
     }
