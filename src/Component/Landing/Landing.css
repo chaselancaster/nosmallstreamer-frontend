@@ -86,6 +86,11 @@ span {
   margin-top: 25px;
 }
 
+.already-registered {
+  margin-top: 10px;
+  color: white;
+}
+
 /* iPad screen size */
 @media (min-width: 768px) {
   /* Hero Section */

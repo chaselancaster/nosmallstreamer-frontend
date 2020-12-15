@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import streamerImg from './assets/streamer.png';
 import handshakeImg from './assets/hand-shake.png';
 import magnifyingImg from './assets/magnifying.png';
 import twitchImg from './assets/twitch.png';
+
+import * as routes from "../../constants/routes";
 
 import './Landing.css';
 
@@ -34,7 +37,8 @@ const Landing = () => {
         {/* Get Started Section */}
         <div className="get-started-parent">
             <p>Ready to get started?</p>
-            <a href="/register"><button className="button">Register Now!</button></a>
+            <Link exact to={routes.REGISTER}><button className="button">Register Now!</button></Link>
+            <Link exact to={routes.LOGIN} className='already-registered'>Already registered? Log-in here!</Link>
         </div>
     </div>
       
