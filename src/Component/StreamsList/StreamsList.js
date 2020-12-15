@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-
 class StreamsList extends Component {
+    state = {
+        width: '450x',
+        height: '250.jpg'
+    }
+
     render() {
         return (
             <div>
