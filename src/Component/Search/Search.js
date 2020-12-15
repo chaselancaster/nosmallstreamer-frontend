@@ -16,6 +16,18 @@ class Search extends Component {
         })
     }
 
+    getStreams = async e => {
+        e.preventDefault()
+        const streams = await fetch(`http://localhost:3001/api/${this.state.game}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const parsedStreams = await streams.json()
+        console.log(parsedStreams, '<- parsedStreams')
+    }
+
     render() {
         return (
             <div className="search-parent-container">
@@ -24,7 +36,7 @@ class Search extends Component {
                     <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
                 </div>
                 <div className="search-form-container">
-                    <form className="search-form">
+                    <form className="search-form" onSubmit={this.getStreams}>
                         <h3>Game:</h3>
                         <input type="text" name="game" placeholder="Game" onChange={this.changeHandler}/>
                         <h3>Number of Viewers:</h3>
