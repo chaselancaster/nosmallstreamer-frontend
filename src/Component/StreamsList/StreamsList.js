@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import './StreamsList.css';
 class StreamsList extends Component {
     state = {
-        width: '200x',
-        height: '125.jpg'
+        width: '325x',
+        height: '225.jpg'
     }
 
     imageHandler = string => {
@@ -23,10 +23,12 @@ class StreamsList extends Component {
                     return (
                         <li className='stream'>
                             <img src={this.imageHandler(stream.thumbnail_url)} />
-                            <p>Streamer: {stream.user_name}</p>
-                            <p>Title: {stream.title}</p>
-                            <p>Viewers: {stream.viewer_count}</p>
-                            <a href={`https://www.twitch.tv/${stream.user_name}`} target='_blank'><button>View on Twitch!</button></a>
+                            <div className='stream-info'>
+                                <p><span>Streamer: </span>{stream.user_name}</p>
+                                <p>{stream.title}</p>
+                                <p><span>Viewers: </span>{stream.viewer_count}</p>
+                                <a href={`https://www.twitch.tv/${stream.user_name}`} target='_blank'><button className='view-button'>View on Twitch!</button></a>
+                            </div>
                         </li>
                     )
                 })}

@@ -15,7 +15,7 @@ const Landing = () => {
     <div>
         {/* Hero Section */}
         <div className="hero-parent">
-            <p className="welcome">Welcome to <span>NoSmallStreamer.</span></p>
+            <p className="welcome">Welcome to <span className='nss'>NoSmallStreamer.</span></p>
             <div className="hero-logo">
               <img className="hero-img" src={streamerImg} alt="streamer"/>
             </div>
