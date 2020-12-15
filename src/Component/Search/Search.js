@@ -17,8 +17,9 @@ class Search extends Component {
     }
 
     getStreams = async e => {
+        try {
         e.preventDefault()
-        const streams = await fetch(`http://localhost:3001/api/${this.state.game}`, {
+        const streams = await fetch(`http://localhost:3001/api/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,6 +27,12 @@ class Search extends Component {
         })
         const parsedStreams = await streams.json()
         console.log(parsedStreams, '<- parsedStreams')
+        this.setState({
+            streams: parsedStreams.streams
+        })
+        } catch (err) {
+            console.log(err, '<-- err in getStreams function')
+        }
     }
 
     render() {
