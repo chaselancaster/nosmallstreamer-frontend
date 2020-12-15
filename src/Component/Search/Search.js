@@ -39,8 +39,8 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
-                <div className="search-parent-container">
+            <div className='search-parent'>
+                <div className="search-container">
                     <div className="search-info">
                         <h1 className="search-title">Search for streams!</h1>
                         <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
