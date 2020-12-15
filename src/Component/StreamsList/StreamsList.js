@@ -4,7 +4,7 @@ class StreamsList extends Component {
     render() {
         return (
             <div>
-                
+                Streams List component
             </div>
         )
     }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import StreamsList from '../StreamsList/StreamsList';
+
 import './Search.css';
 
 class Search extends Component {
@@ -37,19 +39,24 @@ class Search extends Component {
 
     render() {
         return (
-            <div className="search-parent-container">
-                <div className="search-info">
-                    <h1 className="search-title">Search for streams!</h1>
-                    <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
+            <div>
+                <div className="search-parent-container">
+                    <div className="search-info">
+                        <h1 className="search-title">Search for streams!</h1>
+                        <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
+                    </div>
+                    <div className="search-form-container">
+                        <form className="search-form" onSubmit={this.getStreams}>
+                            <h3>Game:</h3>
+                            <input type="text" name="game" placeholder="Game" onChange={this.changeHandler}/>
+                            <h3>Number of Viewers:</h3>
+                            <input type="number" name="viewers" placeholder="Viewers" onChange={this.changeHandler}/>
+                            <button type="submit" className="button">Search</button>
+                        </form>
+                    </div>
                 </div>
-                <div className="search-form-container">
-                    <form className="search-form" onSubmit={this.getStreams}>
-                        <h3>Game:</h3>
-                        <input type="text" name="game" placeholder="Game" onChange={this.changeHandler}/>
-                        <h3>Number of Viewers:</h3>
-                        <input type="number" name="viewers" placeholder="Viewers" onChange={this.changeHandler}/>
-                        <button type="submit" className="button">Search</button>
-                    </form>
+                <div>
+                    <StreamsList />
                 </div>
             </div>
         )
