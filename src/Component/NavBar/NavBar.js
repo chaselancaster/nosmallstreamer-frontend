@@ -17,67 +17,67 @@ const NavBar = ({ currentUser, doLogout }) => {
     return (
       <div>
         { currentUser ? (
-          <div className="header">
-            <div className="logo-nav">
-              <div className="logo-container">
+          <div className='header'>
+            <div className='logo-nav'>
+              <div className='logo-container'>
                 <a href="#">
-                  <Logo className="logo" />
+                  <Logo className='logo' />
                 </a>
               </div>
-                <ul className={click ? "nav-options active" : "nav-options"}>
-                  <li className="option" onClick={closeMobileMenu}>
+                <ul className={click ? 'nav-options active' : 'nav-options'}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LANDING}>HOME</NavLink>
                   </li>
-                  <li className="option" onClick={closeMobileMenu}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
                   </li>
-                  <li className="option" onClick={closeMobileMenu}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.PROFILE}>PROFILE</NavLink>
                   </li>
-                  <li className="option mobile-option" onClick={closeMobileMenu}>
+                  <li className='option mobile-option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LANDING} onClick={doLogout}>LOGOUT</NavLink>
                   </li>
                 </ul>
             </div>
-            <div className="mobile-menu" onClick={handleClick}>
+            <div className='mobile-menu' onClick={handleClick}>
               {click ? (
-                <CloseMenu className="menu-icon" />
+                <CloseMenu className='menu-icon' />
               ) : (
-                <MenuIcon className="menu-icon" />
+                <MenuIcon className='menu-icon' />
               )}
             </div>
           </div> 
         ) : (
-          <div className="header">
-            <div className="logo-nav">
-              <div className="logo-container">
-                <a href="#">
-                  <Logo className="logo" />
+          <div className='header'>
+            <div className='logo-nav'>
+              <div className='logo-container'>
+                <a href='#'>
+                  <Logo className='logo' />
                 </a>
               </div>
-                <ul className={click ? "nav-options active" : "nav-options"}>
-                  <li className="option" onClick={closeMobileMenu}>
+                <ul className={click ? 'nav-options active' : 'nav-options'}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LANDING}>HOME</NavLink>
                   </li>
-                  <li className="option" onClick={closeMobileMenu}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
                   </li>
-                  <li className="option" onClick={closeMobileMenu}>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.PROFILE}>HOME</NavLink>
                   </li>
-                  <li className="option mobile-option" onClick={closeMobileMenu}>
+                  <li className='option mobile-option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
                   </li>
-                  <li className=" option mobile-option" onClick={closeMobileMenu}>
+                  <li className='option mobile-option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.LANDING}>REGISTER</NavLink>
                   </li>
               </ul>
             </div>
-            <div className="mobile-menu" onClick={handleClick}>
+            <div className='mobile-menu' onClick={handleClick}>
               {click ? (
-                <CloseMenu className="menu-icon" />
+                <CloseMenu className='menu-icon' />
               ) : (
-                <MenuIcon className="menu-icon" />
+                <MenuIcon className='menu-icon' />
               )}
             </div>
           </div> 

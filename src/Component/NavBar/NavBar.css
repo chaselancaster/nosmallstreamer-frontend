@@ -47,6 +47,10 @@ li {
   margin-left: 50px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .option :hover {
   color: white;
 }
@@ -105,5 +109,9 @@ li {
     justify-content: center;
     height: 10vw;
     padding: 30px 0px;
+  }
+
+  li {
+    margin-left: 0px;
   }
 }
