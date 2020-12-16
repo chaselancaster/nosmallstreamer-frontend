@@ -1,11 +1,11 @@
 .edit-user-header {
-  margin-top: 80px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .edit-user-header h1 {
@@ -13,7 +13,8 @@
 }
 
 .edit-user-container {
-  background-color: #cacfd6;
+  color: white;
+  /* background-color: #cacfd6; */
 }
 
 .edit-form {

@@ -43,9 +43,9 @@ class EditUser extends Component {
                 <div className="edit-user-container">
                     <form className="edit-form" onSubmit={this.updateUser}>
                         <h3>Email:</h3>
-                        <input type="text" name="email" onChange={this.changeHandler}/>
+                        <input type="text" name="email" className="input" onChange={this.changeHandler}/>
                         <h3>Password:</h3>
-                        <input type="password" name="password" onChange={this.changeHandler}/>
+                        <input type="password" name="password" className="input" onChange={this.changeHandler}/>
                         <button type="submit" className="button">Update Account</button>
                         <p></p>
                     </form>
