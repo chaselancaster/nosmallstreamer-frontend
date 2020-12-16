@@ -51,13 +51,13 @@ class Login extends Component {
             <div>
                 {this.state.logged ? ( <Redirect to={"/profile"} /> ) : (
                     <div className="login-parent-container">
-                    <h1>Log-In:</h1>
+                    <h1>Log-in to get started:</h1>
                     <div className="login-form-container">
                         <form className="login-form" onSubmit={this.handleLogin}>
                             <h2>Email:</h2>
-                            <input type="text" name="email" value={email} onChange={this.changeHandler}/>
+                            <input type="text" name="email" value={email} placeholder="Email" onChange={this.changeHandler} className='input'/>
                             <h2>Password:</h2>
-                            <input type="password" name="password" value={password} onChange={this.changeHandler} />
+                            <input type="password" name="password" value={password} placeholder="Password"onChange={this.changeHandler} className='input'/>
                             <button type="submit" className="button">Submit</button>
                             <h3>Not yet registered?</h3>
                             <a href="/register"><p>Register Here!</p></a>

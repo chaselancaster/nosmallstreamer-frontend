@@ -12,7 +12,7 @@
 }
 
 .login-form-container {
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .login-form {
@@ -21,4 +21,18 @@
   justify-content: space-evenly;
   align-items: center;
   height: 500px;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  position: relative;
+  display: block;
+  outline: none;
+  width: 300px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
 }
