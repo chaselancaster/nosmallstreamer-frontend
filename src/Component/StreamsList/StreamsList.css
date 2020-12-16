@@ -40,3 +40,22 @@
   cursor: pointer;
   color: #dcd6f7;
 }
+
+@media (min-width: 1280px) {
+  .streams-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .stream {
+    display: flex;
+    align-items: center;
+    width: 325px;
+    height: 450px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+}

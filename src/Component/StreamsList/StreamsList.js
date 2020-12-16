@@ -15,6 +15,20 @@ class StreamsList extends Component {
         return src;
       };
 
+    updateDimensions = () => {
+        console.log('updateDimenions func')
+        console.log(window.innerWidth)
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount')
+        window.addEventListener('resize', this.updateDimensions);
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount')
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
     render() {
         const { streams } = this.props
         return (
