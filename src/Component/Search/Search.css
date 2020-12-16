@@ -48,3 +48,21 @@
 .search-form button {
   margin-top: 20px;
 }
+
+/* 1280x950 screen size */
+@media (min-width: 1280px) {
+  .search-info h1 {
+    font-size: 50px;
+  }
+
+  .search-info p {
+    color: white;
+    width: 500px;
+    font-size: 25px;
+  }
+
+  .search-form-container {
+    width: 50vw;
+    padding-bottom: 20px;
+  }
+}
