@@ -60,11 +60,11 @@ class Register extends Component {
                     <div className="register-form-container">
                         <form className="register-form" onSubmit={e => this.handleRegister(e)}>
                             <h2>Name:</h2>
-                            <input type="text" name="name" value={name} onChange={this.changeHandler} />
+                            <input type="text" name="name" value={name} className="input" onChange={this.changeHandler} />
                             <h2>Email:</h2>
-                            <input type="text" name="email" value={email} onChange={this.changeHandler} />
+                            <input type="text" name="email" value={email} className="input" onChange={this.changeHandler} />
                             <h2>Password:</h2>
-                            <input type="password" name="password" value={password} onChange={this.changeHandler} />
+                            <input type="password" name="password" value={password} className="input" onChange={this.changeHandler} />
                             <button type="submit" className="button">Submit</button>
                             <h3>Already registered?</h3>
                             <Link to={routes.LOGIN}><p>Log in here!</p></Link>

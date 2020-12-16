@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 60px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .login-parent-container h1 {
@@ -21,6 +21,15 @@
   justify-content: space-evenly;
   align-items: center;
   height: 500px;
+  color: white;
+}
+
+.login-form button {
+  margin-top: 10px;
+}
+
+.login-form p {
+  margin: 0;
 }
 
 .input {

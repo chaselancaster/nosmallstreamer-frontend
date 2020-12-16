@@ -52,7 +52,7 @@ class Login extends Component {
         return (
             <div>
                 {this.state.logged ? ( <Redirect to={"/profile"} /> ) : (
-                    <div className="login-parent-container">
+                <div className="login-parent-container">
                     <h1>Log-in to get started:</h1>
                     <div className="login-form-container">
                         <form className="login-form" onSubmit={this.handleLogin}>
