@@ -130,3 +130,45 @@
     height: 50px;
   }
 }
+
+@media (min-width: 3072px) {
+  .search-info h1 {
+    font-size: 90px;
+  }
+
+  .search-info p {
+    width: 800px;
+    font-size: 40px;
+  }
+
+  .search-form-container {
+    width: 30vw;
+    padding-bottom: 50px;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .search-form h3 {
+    font-size: 50px;
+  }
+
+  .search-form button {
+    margin-top: 40px;
+  }
+
+  .search-input {
+    width: 650px;
+    height: 50px;
+  }
+
+  .search-button {
+    font-size: 35px;
+    width: 350px;
+    height: 55px;
+  }
+}
