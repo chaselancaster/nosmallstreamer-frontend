@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 60px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .register-parent-container h1 {
@@ -12,7 +12,7 @@
 }
 
 .register-form-container {
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .register-form {
@@ -21,4 +21,9 @@
   justify-content: space-evenly;
   align-items: center;
   height: 500px;
+  color: white;
+}
+
+.register-form button {
+  margin-top: 20px;
 }
