@@ -51,10 +51,10 @@ class Search extends Component {
                     <div className="search-form-container">
                         <form className="search-form" onSubmit={this.getStreams}>
                             <h3>Game:</h3>
-                            <input type="text" name="game" placeholder="Game" className="input" value={game} onChange={this.changeHandler}/>
+                            <input type="text" name="game" placeholder="Game" className="search-input" value={game} onChange={this.changeHandler}/>
                             <h3>Number of Viewers:</h3>
-                            <input type="number" name="viewers" placeholder="Viewers" className="input" value={viewers} onChange={this.changeHandler}/>
-                            <button type="submit" className="button">Search</button>
+                            <input type="number" name="viewers" placeholder="Viewers" className="search-input" value={viewers} onChange={this.changeHandler}/>
+                            <button type="submit" className="search-button">Search</button>
                         </form>
                     </div>
                 </div>
