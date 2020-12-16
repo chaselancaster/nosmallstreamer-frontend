@@ -10,7 +10,7 @@ import * as routes from "../../constants/routes";
 
 import './Landing.css';
 
-const Landing = () => {
+const Landing = ({ currentUser }) => {
     return (
     <div>
         {/* Hero Section */}
@@ -35,11 +35,19 @@ const Landing = () => {
             </div>
         </div>
         {/* Get Started Section */}
+        { currentUser ? (
+        <div className="get-started-parent">
+            <p>Ready to get started?</p>
+            <Link exact to={routes.SEARCH}><button className="button register-now-landing">Find streamers!</button></Link>
+        </div>
+        ) : (
         <div className="get-started-parent">
             <p>Ready to get started?</p>
             <Link exact to={routes.REGISTER}><button className="button register-now-landing">Register Now!</button></Link>
             <Link exact to={routes.LOGIN} className='already-registered'>Already registered? Log-in here!</Link>
         </div>
+        )}
+        
     </div>
       
     )
