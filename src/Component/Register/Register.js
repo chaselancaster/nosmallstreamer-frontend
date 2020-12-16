@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 import './Register.css';
+
+import * as routes from '../../constants/routes';
 
 class Register extends Component {
     state = {
@@ -65,7 +67,7 @@ class Register extends Component {
                             <input type="password" name="password" value={password} onChange={this.changeHandler} />
                             <button type="submit" className="button">Submit</button>
                             <h3>Already registered?</h3>
-                            <a href="/login"><p>Log in here!</p></a>
+                            <Link to={routes.LOGIN}><p>Log in here!</p></Link>
                         </form>
                     </div>
                 </div>
