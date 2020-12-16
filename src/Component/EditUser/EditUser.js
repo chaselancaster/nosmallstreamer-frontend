@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import * as routes from '../../constants/routes';
 
 import './EditUser.css';
 
@@ -6,7 +9,8 @@ class EditUser extends Component {
     state = {
         email: '',
         password: '',
-        message: ''
+        message: 'Update successful! Click here to return to Profile.',
+        success: false
     }
 
     changeHandler = e => {
@@ -47,7 +51,7 @@ class EditUser extends Component {
                         <h3>Password:</h3>
                         <input type="password" name="password" className="input" onChange={this.changeHandler}/>
                         <button type="submit" className="button">Update Account</button>
-                        <p></p>
+                        <Link to={routes.PROFILE}><p className="update-message">{this.state.message}</p></Link>
                     </form>
                 </div>
             </div>
