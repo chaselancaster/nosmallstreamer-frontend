@@ -44,6 +44,7 @@ class EditUser extends Component {
     }
 
     render() {
+        const { success, message } = this.state;
         return (
             <div>
                 <div className="edit-user-header">
@@ -56,7 +57,7 @@ class EditUser extends Component {
                         <h3>Password:</h3>
                         <input type="password" name="password" className="input" onChange={this.changeHandler}/>
                         <button type="submit" className="button">Update Account</button>
-                        <Link to={routes.PROFILE}><p className="update-message">{this.state.message}</p></Link>
+                        <Link to={routes.PROFILE}><p className={ success ? "" : "update-message"}>{message}</p></Link>
                     </form>
                 </div>
             </div>
