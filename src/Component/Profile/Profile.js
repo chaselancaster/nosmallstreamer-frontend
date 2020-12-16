@@ -38,7 +38,7 @@ class Profile extends Component {
                             </div>
                         </div>
                         <div className='edit-account'>
-                            <Link to='/edituser'>Edit email or password.</Link>
+                            <Link to='/edituser'><p>Edit email or password.</p></Link>
                         </div>
                     </div> 
                 )}
