@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
+
+import * as routes from '../../constants/routes';
 
 import './Login.css';
 
@@ -60,7 +62,7 @@ class Login extends Component {
                             <input type="password" name="password" value={password} placeholder="Password"onChange={this.changeHandler} className='input'/>
                             <button type="submit" className="button">Submit</button>
                             <h3>Not yet registered?</h3>
-                            <a href="/register"><p>Register Here!</p></a>
+                            <Link to={routes.REGISTER}><p>Register Here!</p></Link>
                         </form>
                     </div>
                 </div>
