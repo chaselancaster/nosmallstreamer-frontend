@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { ReactComponent as CloseMenu } from "./assets/x.svg";
 import { ReactComponent as MenuIcon } from "./assets/menu.svg";
 import { ReactComponent as Logo } from "./assets/logo.svg";
-import { NavLink } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu'
+import { NavLink, Link } from 'react-router-dom';
 
 import * as routes from "../../constants/routes";
 
@@ -20,9 +19,9 @@ const NavBar = ({ currentUser, doLogout }) => {
           <div className='header'>
             <div className='logo-nav'>
               <div className='logo-container'>
-                <a href="#">
+                <Link to={routes.LANDING}>
                   <Logo className='logo' />
-                </a>
+                </Link>
               </div>
                 <ul className={click ? 'nav-options active' : 'nav-options'}>
                   <li className='option' onClick={closeMobileMenu}>
