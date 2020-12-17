@@ -51,6 +51,7 @@
   border-radius: 20px;
   cursor: pointer;
   color: #dcd6f7;
+  font-family: "Oswald";
 }
 
 @media (min-width: 1280px) {

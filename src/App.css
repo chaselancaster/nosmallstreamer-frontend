@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 body {
   background-color: #333333;
   margin: 0;
   padding: 0;
+  font-family: "Oswald";
 }
 
 .App {
@@ -12,11 +15,13 @@ body {
 .button {
   background-color: #7d5ba6;
   font-size: 22px;
+  padding: 2px;
   width: 200px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   color: #dcd6f7;
+  font-family: "Oswald";
 }
 
 .button:hover {

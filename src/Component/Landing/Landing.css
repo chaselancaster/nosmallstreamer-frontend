@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 /* Hero Section */
 .hero-parent {
   display: flex;
@@ -6,6 +8,7 @@
   align-items: center;
   border-bottom: 2px solid white;
   padding-bottom: 15px;
+  font-family: "Oswald";
 }
 
 .welcome {

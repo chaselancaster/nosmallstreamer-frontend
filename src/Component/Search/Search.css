@@ -66,6 +66,7 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  font-family: "Oswald";
 }
 
 .search-form button {
