@@ -9,7 +9,9 @@ class Search extends Component {
         streams: [],
         game: '',
         viewers: '',
-        message: ''
+        message: '',
+        gamdId: '',
+        cursor: '' 
     }
 
     changeHandler = e => {
@@ -30,9 +32,9 @@ class Search extends Component {
         const parsedStreams = await streams.json()
         console.log(parsedStreams, '<- parsedStreams')
         this.setState({
-            streams: parsedStreams.streams,
-            game: '',
-            viewers: ''
+            streams: parsedStreams.streams
+            // game: '',
+            // viewers: ''
         })
         } catch (err) {
             console.log(err, '<-- err in getStreams function')
