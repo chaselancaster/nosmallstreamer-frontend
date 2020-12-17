@@ -4,10 +4,10 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div>
+        <footer className='footer-parent'>
             <p>Coded by Chase Lancaster</p>
             <p>Powered by Twitch</p>
-        </div>
+        </footer>
     )
 }
 
