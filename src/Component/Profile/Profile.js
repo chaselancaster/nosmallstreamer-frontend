@@ -13,10 +13,10 @@ class Profile extends Component {
         return (
             <div>
                 {!currentUser ? ( 
-                    <div className="profile-loggedout">
+                    <div className='profile-loggedout'>
                         <h1>Please sign in or register to view profile!</h1>
-                        <Link to='login' className="profile-link">Login</Link>
-                        <Link to='register' className="profile-link">Register</Link>
+                        <Link to='login' className="profile-link"><button className='button'>Login</button></Link>
+                        <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
                     </div>
                 ) : (
                     <div>
