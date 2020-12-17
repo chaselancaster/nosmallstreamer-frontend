@@ -75,9 +75,11 @@
 .get-started-parent {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 30px;
+  height: 50vw;
 }
 
 .get-started-parent p {
