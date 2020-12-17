@@ -132,6 +132,10 @@
     color: white;
     font-size: 25px;
   }
+
+  .get-started-parent {
+    height: 30vw;
+  }
 }
 
 /* Screen w/ 1280 width */
@@ -158,6 +162,10 @@
     width: 30%;
     height: 30%;
     margin-bottom: 10px;
+  }
+
+  .get-started-parent {
+    height: 20vw;
   }
 }
 
@@ -240,7 +248,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 20vh;
+    height: 30vh;
     /* border: 2px solid red; */
   }
 
@@ -259,5 +267,11 @@
   .register-now-landing {
     font-size: 45px;
     width: 400px;
+  }
+}
+
+@media (min-width: 3072) {
+  .get-started-parent {
+    height: 20vw;
   }
 }
