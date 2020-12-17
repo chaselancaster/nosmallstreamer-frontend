@@ -9,6 +9,7 @@ import Register from './Component/Register/Register';
 import Search from './Component/Search/Search';
 import Profile from './Component/Profile/Profile';
 import EditUser from './Component/EditUser/EditUser';
+import Footer from './Component/Footer/Footer';
 
 import * as routes from "./constants/routes";
 
@@ -48,6 +49,7 @@ class App extends Component {
             <Route exact path={routes.EDITUSER} render={() => <EditUser currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>}/>
           </Switch>
         </BrowserRouter>
+        <Footer />
       </div>
     );
   }
