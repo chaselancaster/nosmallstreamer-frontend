@@ -72,6 +72,13 @@
   margin-top: 20px;
 }
 
+@media (min-width: 648px) {
+  .search-form-container {
+    width: 50vw;
+    padding-bottom: 20px;
+  }
+}
+
 /* 1280x950 screen size */
 @media (min-width: 1280px) {
   .search-info h1 {
@@ -84,7 +91,7 @@
   }
 
   .search-form-container {
-    width: 50vw;
+    width: 40vw;
     padding-bottom: 20px;
   }
 }
