@@ -3,27 +3,37 @@ import React, { Component } from 'react'
 import './StreamsList.css';
 class StreamsList extends Component {
     state = {
+        // 500 x 300
         width: '325x',
-        height: '225.jpg'
+        height: '225.jpg',
+        windowWidth: 0
     }
 
     imageHandler = string => {
         let array = string.split("{");
-        array[1] = this.state.width;
-        array[2] = this.state.height;
+        if (this.state.windowWidth >= 2560) {
+            array[1] = '500x'
+            array[2] = '300.jpg'
+        } else {
+            array[1] = this.state.width;
+            array[2] = this.state.height;
+        }
         let src = array.join("");
         return src;
       };
 
     updateDimensions = () => {
         console.log('updateDimenions func')
-        console.log(window.innerWidth)
+        this.setState({
+            windowWidth: window.innerWidth
+        })
     }
 
     componentDidMount() {
         console.log('componentDidMount')
         window.addEventListener('resize', this.updateDimensions);
     }
+    
     componentWillUnmount() {
         console.log('componentWillUnmount')
         window.removeEventListener('resize', this.updateDimensions);
