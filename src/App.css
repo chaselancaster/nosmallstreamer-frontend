@@ -5,10 +5,16 @@ body {
 }
 
 .button {
-  background-color: rgb(161, 118, 247);
+  background-color: #7d5ba6;
   font-size: 22px;
   width: 200px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  color: #dcd6f7;
+}
+
+.button:hover {
+  background-color: #dcd6f7;
+  color: #7d5ba6;
 }
