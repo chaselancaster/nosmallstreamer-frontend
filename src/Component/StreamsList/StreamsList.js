@@ -11,13 +11,8 @@ class StreamsList extends Component {
 
     imageHandler = string => {
         let array = string.split("{");
-        if (this.state.windowWidth >= 2560) {
-            array[1] = '500x'
-            array[2] = '300.jpg'
-        } else {
-            array[1] = this.state.width;
-            array[2] = this.state.height;
-        }
+        array[1] = this.state.width;
+        array[2] = this.state.height;
         let src = array.join("");
         return src;
       };
