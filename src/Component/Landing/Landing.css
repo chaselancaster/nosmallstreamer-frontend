@@ -270,7 +270,7 @@
   }
 }
 
-@media (min-width: 3072) {
+@media (min-width: 3072px) {
   .get-started-parent {
     height: 20vw;
   }
