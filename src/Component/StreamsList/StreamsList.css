@@ -36,6 +36,11 @@
   color: black;
 }
 
+.stream-title {
+  width: 323px;
+  /* border: 2px solid red; */
+}
+
 .stream-info {
   display: flex;
   flex-direction: column;

@@ -44,7 +44,7 @@ class StreamsList extends Component {
                             <img src={this.imageHandler(stream.thumbnail_url)} />
                             <div className='stream-info'>
                                 <p><span>Streamer: </span>{stream.user_name}</p>
-                                <p>{stream.title}</p>
+                                <p className='stream-title'>{stream.title}</p>
                                 <p><span>Viewers: </span>{stream.viewer_count}</p>
                                 <a href={`https://www.twitch.tv/${stream.user_name}`} target='_blank'><button className='view-button'>View on Twitch!</button></a>
                             </div>
