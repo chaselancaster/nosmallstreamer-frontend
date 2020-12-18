@@ -66,6 +66,16 @@ class Search extends Component {
         }
     }
 
+    handleScroll = () => {
+        let lastLi = document.querySelector('.streams-container > li:last-child')
+        let lastLiOffset = lastLi.offsetTop + lastLi.clientHeight;
+        let pageOffset = window.pageYOffset + window.innerHeight;
+
+        if (pageOffset > lastLiOffset) {
+            this.loadMoreStreams()
+        }
+    }
+
     render() {
         const { game , viewers } = this.state;
         return (
