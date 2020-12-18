@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import StreamsList from '../StreamsList/StreamsList';
 
@@ -69,7 +70,15 @@ class Search extends Component {
     render() {
         const { game , viewers } = this.state;
         return (
-            <div className='search-parent'>
+            <div>
+            { !this.props.currentUser ? (
+                <div className='profile-loggedout'>
+                        <h1>Please sign in or register to access the search feature!</h1>
+                        <Link to='login' className="profile-link"><button className='button'>Login</button></Link>
+                        <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
+                    </div>
+            ) : (
+                <div className='search-parent'>
                 <div className="search-container">
                     <div className="search-info">
                         <h1 className="search-title">Search for streams!</h1>
@@ -88,6 +97,8 @@ class Search extends Component {
                 <div>
                     <StreamsList streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
                 </div>
+            </div>
+            )}
             </div>
         )
     }
