@@ -39,7 +39,8 @@
 }
 
 .stream-title {
-  width: 323px;
+  width: 300px;
+  overflow: hidden;
   /* border: 2px solid red; */
 }
 
@@ -48,6 +49,8 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  /* border: 2px solid red; */
+  height: 300px;
 }
 
 .view-button {
@@ -75,7 +78,7 @@
     display: flex;
     align-items: center;
     width: 325px;
-    height: 450px;
+    height: 480px;
     margin-top: 20px;
     padding-bottom: 10px;
   }
