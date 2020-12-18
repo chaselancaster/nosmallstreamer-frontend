@@ -8,6 +8,7 @@ class Search extends Component {
     state = {
         streams: [],
         game: '',
+        gamdId: '',
         viewers: '',
         message: '',
         cursor: '' 
@@ -32,7 +33,8 @@ class Search extends Component {
         console.log(parsedStreams, '<- parsedStreams')
         this.setState({
             streams: parsedStreams.streams,
-            cursor: parsedStreams.cursor
+            cursor: parsedStreams.cursor,
+            gameId: parsedStreams.gameId
             // game: '',
             // viewers: ''
         })
@@ -42,11 +44,12 @@ class Search extends Component {
     }
 
     loadMoreStreams = async e => {
+        const { gameId, views, cursor } = this.state
         e.preventDefault();
         console.log('loadMoreStreams hit')
         try {
             console.log('in try block')
-            const streams = await fetch(`http://localhost:3001/api/more/${this.state.cursor}`, {
+            const streams = await fetch(`http://localhost:3001/api/more/${gameId}/${cursor}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
