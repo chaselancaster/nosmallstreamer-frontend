@@ -22,18 +22,20 @@ const Landing = ({ currentUser }) => {
             <p className="hero-p">A place to discover hard working, growing streamers.</p>
         </div>
         {/* Info Section */}
-        <div className="info-parent">
-            <div className="info-img-container">
-                <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
-                <img className="info-img" src={handshakeImg} alt="handshake"/>
-                <img className="info-img" src={twitchImg} alt="twitch logo"/>
+            <div className='info-container-2'>
+                <div className='info2'>
+                    <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
+                    <p>Find streamers hidden in popular categories!</p>
+                </div>
+                <div className='info2'>
+                    <img className="info-img" src={handshakeImg} alt="handshake"/>
+                    <p>Help new streamers grow!</p>
+                </div>
+                <div className='info2'>
+                    <img className="info-img" src={twitchImg} alt="twitch logo"/>
+                    <p>Direct links to a user's channel!</p>
+                </div>
             </div>
-            <div className="info">
-                <p>Find streamers hidden in popular categories!</p>
-                <p>Help new streamers grow!</p>
-                <p>Direct links to a user's channel!</p>
-            </div>
-        </div>
         {/* Get Started Section */}
         { currentUser ? (
         <div className="get-started-parent">
