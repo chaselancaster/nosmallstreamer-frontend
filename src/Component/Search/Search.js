@@ -45,7 +45,7 @@ class Search extends Component {
 
     loadMoreStreams = async e => {
         const { gameId, views, cursor } = this.state
-        e.preventDefault();
+        // e.preventDefault();
         console.log('loadMoreStreams hit')
         try {
             console.log('in try block')
@@ -65,7 +65,7 @@ class Search extends Component {
             console.log(err, '<- err in loadMoreStreams')
         }
     }
-    
+
     render() {
         const { game , viewers } = this.state;
         return (
@@ -86,8 +86,7 @@ class Search extends Component {
                     </div>
                 </div>
                 <div>
-                    <button onClick={this.loadMoreStreams}>Load More</button>
-                    <StreamsList streams={this.state.streams} handleScroll={this.handleScroll}/>
+                    <StreamsList streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
                 </div>
             </div>
         )

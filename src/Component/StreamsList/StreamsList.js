@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import './StreamsList.css';
 class StreamsList extends Component {
@@ -24,12 +25,6 @@ class StreamsList extends Component {
         })
     }
 
-    componentWillMount() {
-        this.scrollListener = window.addEventListener('scroll', e => {
-            this.props.handleScroll(e)
-        })
-    }
-
     componentDidMount() {
         console.log('componentDidMount')
         window.addEventListener('resize', this.updateDimensions);
@@ -44,6 +39,12 @@ class StreamsList extends Component {
         const { streams } = this.props
         return (
             <div className='streams-container'>
+            <InfiniteScroll
+            className='streams-container'
+            dataLength={this.props.streams.length}
+            next={this.props.loadMoreStreams}
+            hasMore={true}
+            >
                 {streams.map(stream => {
                     return (
                         <li key={stream.id} className='stream'>
@@ -57,6 +58,7 @@ class StreamsList extends Component {
                         </li>
                     )
                 })}
+            </InfiniteScroll>
             </div>
         )
     }
