@@ -22,7 +22,7 @@ class Search extends Component {
     getStreams = async e => {
         try {
         e.preventDefault()
-        const streams = await fetch(`http://localhost:3001/api/${this.state.game}/${this.state.viewers}`, {
+        const streams = await fetch(`http://localhost:3001/api/stream/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,6 +54,10 @@ class Search extends Component {
         })
             const parsedLoadMoreStreams = await streams.json()
             console.log(parsedLoadMoreStreams, '<- parsedLoadMoreStreams')
+            this.setState({
+                streams: [...this.state.streams, ...parsedLoadMoreStreams.moreStreams],
+                cursor: parsedLoadMoreStreams.cursor
+            })
         } catch (err) {
             console.log(err, '<- err in loadMoreStreams')
         }
@@ -79,7 +83,7 @@ class Search extends Component {
                     </div>
                 </div>
                 <div>
-                    {/* <button onClick={this.loadMoreStreams}>Load More</button> */}
+                    <button onClick={this.loadMoreStreams}>Load More</button>
                     <StreamsList streams={this.state.streams} />
                 </div>
             </div>
