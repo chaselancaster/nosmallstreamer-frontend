@@ -1,9 +1,11 @@
 .streams-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 20px;
   margin-top: 30px;
+  border: 2px solid red;
 }
 
 .stream {
@@ -59,7 +61,7 @@
   font-family: "Oswald";
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 820px) {
   .streams-container {
     display: flex;
     flex-direction: row;

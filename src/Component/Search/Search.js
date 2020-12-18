@@ -45,6 +45,7 @@ class Search extends Component {
         e.preventDefault();
         console.log('loadMoreStreams hit')
         try {
+            console.log('in try block')
             const streams = await fetch(`http://localhost:3001/api/more/${this.state.cursor}`, {
             method: 'GET',
             headers: {
@@ -78,7 +79,7 @@ class Search extends Component {
                     </div>
                 </div>
                 <div>
-                    <button type='button' onClick={this.loadMoreStreams}>Load More</button>
+                    {/* <button onClick={this.loadMoreStreams}>Load More</button> */}
                     <StreamsList streams={this.state.streams} />
                 </div>
             </div>
