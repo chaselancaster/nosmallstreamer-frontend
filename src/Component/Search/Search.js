@@ -65,17 +65,7 @@ class Search extends Component {
             console.log(err, '<- err in loadMoreStreams')
         }
     }
-
-    handleScroll = () => {
-        let lastLi = document.querySelector('.streams-container > li:last-child')
-        let lastLiOffset = lastLi.offsetTop + lastLi.clientHeight;
-        let pageOffset = window.pageYOffset + window.innerHeight;
-
-        if (pageOffset > lastLiOffset) {
-            this.loadMoreStreams()
-        }
-    }
-
+    
     render() {
         const { game , viewers } = this.state;
         return (
@@ -97,7 +87,7 @@ class Search extends Component {
                 </div>
                 <div>
                     <button onClick={this.loadMoreStreams}>Load More</button>
-                    <StreamsList streams={this.state.streams} />
+                    <StreamsList streams={this.state.streams} handleScroll={this.handleScroll}/>
                 </div>
             </div>
         )

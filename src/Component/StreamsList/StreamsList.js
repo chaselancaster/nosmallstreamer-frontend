@@ -24,6 +24,12 @@ class StreamsList extends Component {
         })
     }
 
+    componentWillMount() {
+        this.scrollListener = window.addEventListener('scroll', e => {
+            this.props.handleScroll(e)
+        })
+    }
+
     componentDidMount() {
         console.log('componentDidMount')
         window.addEventListener('resize', this.updateDimensions);
