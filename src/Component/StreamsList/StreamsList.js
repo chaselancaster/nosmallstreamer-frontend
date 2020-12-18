@@ -38,7 +38,6 @@ class StreamsList extends Component {
     render() {
         const { streams } = this.props
         return (
-            <div className='streams-container'>
             <InfiniteScroll
             className='streams-container'
             dataLength={this.props.streams.length}
@@ -59,7 +58,6 @@ class StreamsList extends Component {
                     )
                 })}
             </InfiniteScroll>
-            </div>
         )
     }
 }
