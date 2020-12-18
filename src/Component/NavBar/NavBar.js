@@ -68,7 +68,7 @@ const NavBar = ({ currentUser, doLogout }) => {
                     <NavLink exact to={routes.LOGIN}><p>LOG-IN</p></NavLink>
                   </li>
                   <li className='option mobile-option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LANDING}><p>REGISTER</p></NavLink>
+                    <NavLink exact to={routes.REGISTER}><p>REGISTER</p></NavLink>
                   </li>
               </ul>
             </div>
