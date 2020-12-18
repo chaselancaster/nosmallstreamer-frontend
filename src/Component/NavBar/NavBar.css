@@ -51,8 +51,12 @@ a {
   text-decoration: none;
 }
 
-.option :hover {
+.option p {
   color: white;
+}
+
+.option :hover {
+  filter: brightness(0.7);
 }
 
 .mobile-menu {

@@ -25,16 +25,16 @@ const NavBar = ({ currentUser, doLogout }) => {
               </div>
                 <ul className={click ? 'nav-options active' : 'nav-options'}>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LANDING}>HOME</NavLink>
+                    <NavLink exact to={routes.LANDING}><p>HOME</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
+                    <NavLink exact to={routes.SEARCH}><p>SEARCH</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.PROFILE}>PROFILE</NavLink>
+                    <NavLink exact to={routes.PROFILE}><p>PROFILE</p></NavLink>
                   </li>
                   <li className='option mobile-option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LANDING} onClick={doLogout}>LOGOUT</NavLink>
+                    <NavLink exact to={routes.LANDING} onClick={doLogout}><p>LOGOUT</p></NavLink>
                   </li>
                 </ul>
             </div>
@@ -56,19 +56,19 @@ const NavBar = ({ currentUser, doLogout }) => {
               </div>
                 <ul className={click ? 'nav-options active' : 'nav-options'}>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LANDING}>HOME</NavLink>
+                    <NavLink exact to={routes.LANDING}><p>HOME</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.SEARCH}>SEARCH</NavLink>
+                    <NavLink exact to={routes.SEARCH}><p>SEARCH</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.PROFILE}>PROFILE</NavLink>
+                    <NavLink exact to={routes.PROFILE}><p>PROFILE</p></NavLink>
                   </li>
                   <li className='option mobile-option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LOGIN}>LOG-IN</NavLink>
+                    <NavLink exact to={routes.LOGIN}><p>LOG-IN</p></NavLink>
                   </li>
                   <li className='option mobile-option' onClick={closeMobileMenu}>
-                    <NavLink exact to={routes.LANDING}>REGISTER</NavLink>
+                    <NavLink exact to={routes.LANDING}><p>REGISTER</p></NavLink>
                   </li>
               </ul>
             </div>
