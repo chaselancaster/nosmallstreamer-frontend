@@ -43,12 +43,16 @@ ul {
   flex-direction: row;
 }
 
-li {
+/* li {
   margin-left: 50px;
-}
+} */
 
 a {
   text-decoration: none;
+}
+
+.option {
+  margin-left: 50px;
 }
 
 .option p {
