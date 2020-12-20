@@ -22,7 +22,7 @@ class Login extends Component {
     handleLogin = async e => {
         try {
             e.preventDefault()
-            const loginCall = await fetch('http://localhost:3001/users/login', {
+            const loginCall = await fetch('https://nosmallstreamer.herokuapp.com/users/login', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
