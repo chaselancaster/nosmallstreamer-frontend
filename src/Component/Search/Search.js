@@ -50,7 +50,7 @@ class Search extends Component {
         console.log('loadMoreStreams hit')
         try {
             console.log('in try block')
-            const streams = await fetch(`https://nosmallstreamer.herokuapp.com/api/more/${gameId}/${cursor}`, {
+            const streams = await fetch(`https://pacific-forest-27041.herokuapp.com/api/more/${gameId}/${cursor}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

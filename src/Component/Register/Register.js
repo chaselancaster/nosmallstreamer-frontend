@@ -24,7 +24,7 @@ class Register extends Component {
         console.log('handleRegister hit')
         try {
             e.preventDefault()
-            const registerCall = await fetch('https://nosmallstreamer.herokuapp.com/users/register', {
+            const registerCall = await fetch('https://pacific-forest-27041.herokuapp.com/users/register', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
