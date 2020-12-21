@@ -86,24 +86,24 @@ class Search extends Component {
                         <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
                     </div>
             ) : (
-                <div className='search-parent'>
-                <div className="search-container">
-                    <div className="search-info">
-                        <h1 className="search-title">Search for streams!</h1>
-                        <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
+            <div className='search-parent'>
+                    <div className="search-container">
+                        <div className="search-info">
+                            <h1 className="search-title">Search for streams!</h1>
+                            <p>Simply type in a game you want to see and the number of viewers you want to interact with!</p>
+                        </div>
+                        <div className="search-form-container">
+                            <form className="search-form" onSubmit={this.getStreams}>
+                                <h3>Game</h3>
+                                <input type="text" name="game" placeholder="Game" className="search-input" value={game} onChange={this.changeHandler}/>
+                                <h3>Number of Viewers</h3>
+                                <input type="number" name="viewers" placeholder="Viewers" className="search-input" value={viewers} onChange={this.changeHandler}/>
+                                <button type="submit" className="search-button">Search</button>
+                            </form>
+                        </div>
+                        <p>{this.state.message}</p>
                     </div>
-                    <div className="search-form-container">
-                        <form className="search-form" onSubmit={this.getStreams}>
-                            <h3>Game</h3>
-                            <input type="text" name="game" placeholder="Game" className="search-input" value={game} onChange={this.changeHandler}/>
-                            <h3>Number of Viewers</h3>
-                            <input type="number" name="viewers" placeholder="Viewers" className="search-input" value={viewers} onChange={this.changeHandler}/>
-                            <button type="submit" className="search-button">Search</button>
-                        </form>
-                    </div>
-                    <p>{this.state.message}</p>
-                </div>
-                <div>
+                <div className='streams-list-parent'>
                     <StreamsList streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
                 </div>
             </div>

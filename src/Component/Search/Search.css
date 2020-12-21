@@ -1,3 +1,6 @@
+.search-parent {
+}
+
 .search-container {
   display: flex;
   flex-direction: column;
