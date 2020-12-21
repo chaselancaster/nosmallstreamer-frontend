@@ -12,7 +12,7 @@ class Search extends Component {
         gamdId: '',
         viewers: '',
         message: '',
-        cursor: '' 
+        cursor: ''
     }
 
     changeHandler = e => {
@@ -24,6 +24,9 @@ class Search extends Component {
     getStreams = async e => {
         try {
         e.preventDefault()
+        this.setState({
+            message: ''
+        })
         const streams = await fetch(`https://pacific-forest-27041.herokuapp.com/api/stream/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
             headers: {
@@ -39,6 +42,11 @@ class Search extends Component {
             // game: '',
             // viewers: ''
         })
+        if (parsedStreams.streams.length === 0) {
+            this.setState({
+                message: 'Viewer number is too low. Try a higher one!'
+            })
+        }
         } catch (err) {
             console.log(err, '<-- err in getStreams function')
         }
@@ -93,6 +101,7 @@ class Search extends Component {
                             <button type="submit" className="search-button">Search</button>
                         </form>
                     </div>
+                    <p>{this.state.message}</p>
                 </div>
                 <div>
                     <StreamsList streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
