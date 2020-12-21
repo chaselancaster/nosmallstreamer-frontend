@@ -24,7 +24,7 @@ class Search extends Component {
     getStreams = async e => {
         try {
         e.preventDefault()
-        const streams = await fetch(`http://localhost:3001/api/stream/${this.state.game}/${this.state.viewers}`, {
+        const streams = await fetch(`https://pacific-forest-27041.herokuapp.com/api/stream/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
