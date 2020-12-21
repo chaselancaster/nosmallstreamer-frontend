@@ -1,3 +1,7 @@
+.profile-container {
+  height: 85vh;
+}
+
 .profile-loggedout {
   display: flex;
   flex-direction: column;
@@ -40,7 +44,7 @@ p {
 
 .profile-search {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
@@ -53,13 +57,35 @@ p {
 .profile-search-img {
   width: 65px;
   height: 65px;
-  /* margin-left: 20px; */
-  /* margin-top: 15px; */
+}
+
+.profile-search-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
 }
 
 .button-parent {
   display: flex;
   justify-content: center;
+}
+
+.profile-button {
+  background-color: #7d5ba6;
+  font-size: 22px;
+  padding: 2px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #dcd6f7;
+  font-family: "Oswald";
+}
+
+.profile-button:hover {
+  background-color: #dcd6f7;
+  color: #7d5ba6;
 }
 
 .edit-account {
@@ -69,4 +95,120 @@ p {
   align-items: center;
   height: 10vh;
   color: white;
+  padding-top: 50px;
+}
+
+.edit-account p {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@media (min-width: 1280px) {
+  .profile-header h1 {
+    font-size: 50px;
+  }
+
+  .profile-header p {
+    font-size: 20px;
+  }
+
+  .profile-search-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-search-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+  }
+
+  .profile-search-p {
+    width: 300px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .profile-header h1 {
+    font-size: 70px;
+  }
+
+  .profile-header p {
+    font-size: 30px;
+  }
+
+  .profile-search-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-search-content {
+    width: 1000px;
+  }
+
+  .profile-search-p {
+    width: 500px;
+    font-size: 30px;
+  }
+
+  .profile-button {
+    font-size: 30px;
+    padding: 2px;
+    width: 300px;
+  }
+
+  .edit-account h2 {
+    font-size: 40px;
+  }
+
+  .edit-account p {
+    border: 2px solid white;
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 3072px) {
+  .profile-header h1 {
+    font-size: 90px;
+  }
+
+  .profile-header p {
+    font-size: 40px;
+  }
+
+  .profile-search-img {
+    width: 180px;
+    height: 180px;
+    /* margin-left: 20px; */
+    /* margin-top: 15px; */
+  }
+
+  .profile-search-content {
+    border: 2px solid red;
+    width: 1000px;
+  }
+
+  .profile-search-p {
+    width: 600px;
+    font-size: 40px;
+  }
+
+  .profile-button {
+    font-size: 40px;
+    padding: 2px;
+    width: 300px;
+  }
+
+  .edit-account h2 {
+    font-size: 50px;
+  }
+
+  .edit-account p {
+    border: 2px solid white;
+    padding: 5px;
+    font-size: 30px;
+  }
 }

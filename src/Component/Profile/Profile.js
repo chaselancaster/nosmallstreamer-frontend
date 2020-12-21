@@ -11,7 +11,7 @@ class Profile extends Component {
     render() {
         const { currentUser } = this.props;
         return (
-            <div>
+            <div className='profile-container'>
                 {!currentUser ? ( 
                     <div className='profile-loggedout'>
                         <h1>Please sign in or register to view profile!</h1>
@@ -26,19 +26,18 @@ class Profile extends Component {
                         </div>
                         <div className="profile-search-parent">
                             <div className="profile-search">
-                                <div>
-                                   <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/>
-                                </div>
-                                <div className="profile-search-p">
-                                    <p>Find streamers using the button below!</p>
+                                <div className='profile-search-content'>
+                                    <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/>
+                                    <p className='profile-search-p'>Find streamers using the button below!</p>
                                 </div>
                             </div>
                             <div className="button-parent">
-                            <Link to='/search'><button className="button">Take me to search!</button></Link>
+                            <Link to='/search'><button className="profile-button">Take me to search!</button></Link>
                             </div>
                         </div>
                         <div className='edit-account'>
-                            <Link to='/edituser'><p>Edit email or password.</p></Link>
+                            <h2>Change account information!</h2>
+                            <Link to='/edituser'><p>Edit email or password</p></Link>
                         </div>
                     </div> 
                 )}
