@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner';
 
 import * as routes from '../../constants/routes';
 
@@ -10,7 +12,8 @@ class Login extends Component {
         email: "",
         password: "",
         logged: false,
-        message: ""
+        message: "",
+        loading: false
     }
 
     changeHandler = e => {
@@ -22,6 +25,9 @@ class Login extends Component {
     handleLogin = async e => {
         try {
             e.preventDefault()
+            this.setState({
+                loading: true
+            })
             const loginCall = await fetch('https://pacific-forest-27041.herokuapp.com/users/login', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
@@ -48,10 +54,10 @@ class Login extends Component {
     }
 
     render() {
-        const { email, password } = this.state;
+        const { email, password, logged, loading } = this.state;
         return (
             <div>
-                {this.state.logged ? ( <Redirect to={"/profile"} /> ) : (
+                {logged ? ( <Redirect to={"/profile"} /> ) : (
                 <div className="login-parent-container">
                     <h1>Log-in to get started:</h1>
                     <div className="login-form-container">
@@ -63,6 +69,16 @@ class Login extends Component {
                             <button type="submit" className="button">Submit</button>
                             <h3>Not yet registered?</h3>
                             <Link to={routes.REGISTER}><p>Register Here!</p></Link>
+                            {loading ? (
+                                <Loader
+                                type="TailSpin"
+                                color="white"
+                                height={100}
+                                width={100}
+                            />
+                            ) : (
+                                <div></div>
+                            )}
                         </form>
                     </div>
                 </div>
