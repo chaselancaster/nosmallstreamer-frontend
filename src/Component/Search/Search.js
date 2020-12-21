@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner';
 
 import StreamsList from '../StreamsList/StreamsList';
 
@@ -12,7 +14,8 @@ class Search extends Component {
         gamdId: '',
         viewers: '',
         message: '',
-        cursor: ''
+        cursor: '',
+        loading: false
     }
 
     changeHandler = e => {
@@ -25,7 +28,8 @@ class Search extends Component {
         try {
         e.preventDefault()
         this.setState({
-            message: ''
+            message: '',
+            loading: true
         })
         const streams = await fetch(`https://pacific-forest-27041.herokuapp.com/api/stream/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
@@ -38,7 +42,8 @@ class Search extends Component {
         this.setState({
             streams: parsedStreams.streams,
             cursor: parsedStreams.cursor,
-            gameId: parsedStreams.gameId
+            gameId: parsedStreams.gameId,
+            loading: false
             // game: '',
             // viewers: ''
         })
@@ -76,7 +81,7 @@ class Search extends Component {
     }
 
     render() {
-        const { game , viewers } = this.state;
+        const { game , viewers, loading } = this.state;
         return (
             <div>
             { !this.props.currentUser ? (
@@ -102,6 +107,16 @@ class Search extends Component {
                             </form>
                         </div>
                         <p>{this.state.message}</p>
+                        {loading ? (
+                            <Loader
+                                type="TailSpin"
+                                color="white"
+                                height={100}
+                                width={100}
+                            />
+                            ) : (
+                                <div></div>
+                        )}
                     </div>
                 <div className='streams-list-parent'>
                     <StreamsList streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
