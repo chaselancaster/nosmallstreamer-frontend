@@ -46,6 +46,7 @@ class Register extends Component {
             } else if (response.user) {
                 localStorage.setItem('current', JSON.stringify(response.user))
                 this.props.doSetCurrentUser(response.user)
+                this.props.doSetUserToken(response.accessToken)
                 this.setState({
                     logged: true
                 })
