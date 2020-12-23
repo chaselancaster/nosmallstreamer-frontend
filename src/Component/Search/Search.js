@@ -56,6 +56,7 @@ class Search extends Component {
         const streams = await fetch(`https://pacific-forest-27041.herokuapp.com/api/stream/${this.state.game}/${this.state.viewers}`, {
             method: 'GET',
             headers: {
+                'Authorization': `Bearer ${this.props.userToken}`,
                 'Content-Type': 'application/json'
             }
         })
