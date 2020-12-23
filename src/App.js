@@ -17,13 +17,20 @@ class App extends Component {
 
   state = {
     currentUser: null,
-    games: []
+    games: [],
+    userToken: ''
   };
 
   doSetCurrentUser = user => {
     this.setState({
       currentUser: user,
       games: user.games
+    })
+  }
+
+  doSetUserToken = token => {
+    this.setState({
+      userToken: token
     })
   }
 
