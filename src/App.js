@@ -49,7 +49,7 @@ class App extends Component {
         <NavBar currentUser={this.state.currentUser} doLogout={this.doLogout}/>        
           <Switch>
             <Route exact path={routes.LANDING} render={() => <Landing currentUser={this.state.currentUser}/>} />
-            <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser}/>} />
+            <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
             <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser}/>} />
             <Route exact path={routes.SEARCH} render={() => <Search currentUser={this.state.currentUser}/>} />
             <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
