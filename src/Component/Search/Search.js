@@ -25,6 +25,19 @@ class Search extends Component {
     }
 
     getStreams = async e => {
+        if (this.state.game == '') {
+            this.setState({
+                message: 'Game can not be blank!'
+            })
+        } else if (this.state.viewers == '') {
+            this.setState({
+                message: 'Viewers can not be blank!'
+            })
+        } else if (this.state.game == '' && this.state.viewers == '') {
+            this.setState({
+                message: 'Both fields must be filled out!!'
+            })
+        }
         try {
         e.preventDefault()
         this.setState({
@@ -43,15 +56,16 @@ class Search extends Component {
             streams: parsedStreams.streams,
             cursor: parsedStreams.cursor,
             gameId: parsedStreams.gameId,
-            loading: false
+            loading: false,
+            message: parsedStreams.message
             // game: '',
             // viewers: ''
         })
-        if (parsedStreams.streams.length === 0) {
-            this.setState({
-                message: 'Viewer number is too low. Try a higher one!'
-            })
-        }
+        // if (parsedStreams.streams.length === 0) {
+        //     this.setState({
+        //         message: 'Viewer number is too low. Try a higher one!'
+        //     })
+        // }
         } catch (err) {
             console.log(err, '<-- err in getStreams function')
         }
