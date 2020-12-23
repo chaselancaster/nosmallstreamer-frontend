@@ -25,21 +25,30 @@ class Search extends Component {
     }
 
     getStreams = async e => {
-        if (this.state.game == '') {
+        e.preventDefault()
+        if (this.state.game === '' && this.state.viewers === '') {
+            this.setState({
+                message: 'Please fill out both fields!'
+            })
+            return
+        }
+        if (this.state.game === '') {
             this.setState({
                 message: 'Game can not be blank!'
             })
-        } else if (this.state.viewers == '') {
+            return
+        } else if (this.state.viewers === '') {
             this.setState({
                 message: 'Viewers can not be blank!'
             })
-        } else if (this.state.game == '' && this.state.viewers == '') {
+            return
+        } else if (this.state.game === '' && this.state.viewers === '') {
             this.setState({
                 message: 'Both fields must be filled out!!'
             })
+            return
         }
         try {
-        e.preventDefault()
         this.setState({
             message: '',
             loading: true
