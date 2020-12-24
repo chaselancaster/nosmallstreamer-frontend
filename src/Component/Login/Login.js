@@ -26,7 +26,8 @@ class Login extends Component {
         try {
             e.preventDefault()
             this.setState({
-                loading: true
+                loading: true,
+                message: ''
             })
             const loginCall = await fetch('http://localhost:3001/users/login', {
                 method: 'POST',
@@ -46,7 +47,8 @@ class Login extends Component {
                 })
             } else {
                 this.setState({
-                    message: response.message
+                    message: response.message,
+                    loading: false
                 })
             }
         } catch (err) {
@@ -55,7 +57,7 @@ class Login extends Component {
     }
 
     render() {
-        const { email, password, logged, loading } = this.state;
+        const { email, password, logged, loading, message } = this.state;
         return (
             <div>
                 {logged ? ( <Redirect to={"/profile"} /> ) : (
@@ -68,6 +70,11 @@ class Login extends Component {
                             <h2>Password:</h2>
                             <input type="password" name="password" value={password} placeholder="Password"onChange={this.changeHandler} className='input'/>
                             <button type="submit" className="button">Submit</button>
+                            { message ? (
+                                <p>{message}</p>
+                            ) : (
+                                <div></div>
+                            ) }
                             <h3>Not yet registered?</h3>
                             <Link to={routes.REGISTER}><p>Register Here!</p></Link>
                             {loading ? (
