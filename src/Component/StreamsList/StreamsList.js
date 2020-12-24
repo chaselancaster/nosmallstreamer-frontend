@@ -50,8 +50,7 @@ class StreamsList extends Component {
             <li key={stream.id} className="stream">
               <img src={this.imageHandler(stream.thumbnail_url)} />
               <div className="stream-info">
-                <p>
-                  <span>Streamer: </span>
+                <p className="stream-user-name">
                   {stream.user_name}
                 </p>
                 <p className="stream-title">{stream.title}</p>
