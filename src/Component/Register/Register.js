@@ -28,9 +28,10 @@ class Register extends Component {
         try {
             e.preventDefault()
             this.setState({
-                loading: true
+                loading: true,
+                message: ''
             })
-            const registerCall = await fetch('https://pacific-forest-27041.herokuapp.com/users/register', {
+            const registerCall = await fetch('http://localhost:3001/users/register', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
@@ -41,14 +42,16 @@ class Register extends Component {
             console.log(response, '<- response from registerCall')
             if (response.message) {
                 this.setState({
-                    message: response.message
+                    message: response.message,
+                    loading: false
                 })
             } else if (response.user) {
                 localStorage.setItem('current', JSON.stringify(response.user))
                 this.props.doSetCurrentUser(response.user)
                 this.props.doSetUserToken(response.accessToken)
                 this.setState({
-                    logged: true
+                    logged: true,
+                    loading: false
                 })
             }
         } catch (err) {
@@ -58,7 +61,7 @@ class Register extends Component {
     };
 
     render() {
-        const { name, email, password, logged, loading } = this.state;
+        const { name, email, password, logged, loading, message } = this.state;
         return (
             <div>
                 {logged ? ( <Redirect to={"/"} /> ) : (
@@ -73,6 +76,11 @@ class Register extends Component {
                             <h2>Password:</h2>
                             <input type="password" name="password" value={password} placeholder="Password" className="input" onChange={this.changeHandler} />
                             <button type="submit" className="button">Submit</button>
+                            { message ? (
+                                <p>{message}</p>
+                            ) : (
+                                <div></div>
+                            ) }
                             <h3>Already registered?</h3>
                             <Link to={routes.LOGIN}><p>Log in here!</p></Link>
                             {loading ? (
