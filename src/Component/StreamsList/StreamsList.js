@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { ReactComponent as ThumbsUp } from "./assets/thumbsUp.svg";
 
 import "./StreamsList.css";
 class StreamsList extends Component {
@@ -64,6 +65,9 @@ class StreamsList extends Component {
                 >
                   <button className="view-button">View on Twitch!</button>
                 </a>
+                <div>
+                  <ThumbsUp  className="thumbs-up"/>
+                </div>
               </div>
             </li>
           );
