@@ -12,6 +12,9 @@ class StreamsList extends Component {
     windowWidth: 0,
   };
 
+  upvote = 'upvote'
+  downvote = 'downvote'
+
   imageHandler = (string) => {
     let array = string.split("{");
     array[1] = this.state.width;
@@ -20,8 +23,11 @@ class StreamsList extends Component {
     return src;
   };
 
-  rateStreamer = (name) => {
-    console.log(name)
+  rateStreamer = (name, vote) => {
+    // console.log(name)
+    if (vote === this.upvote) {
+      console.log(name)
+    }
   }
 
   updateDimensions = () => {
@@ -52,7 +58,6 @@ class StreamsList extends Component {
         hasMore={true}
       >
         {streams.map((stream, index) => {
-          {console.log(index)}
           return (
             <li key={stream.id} className="stream">
               <img src={this.imageHandler(stream.thumbnail_url)} />
@@ -72,7 +77,7 @@ class StreamsList extends Component {
                   <button className="view-button">View on Twitch!</button>
                 </a>
                 <div className="thumbs">
-                  <button onClick={this.rateStreamer(stream.user_name)}><ThumbsUp streamName={stream.user_namee} className="thumbs-up"/></button>
+                  <ThumbsUp onClick={() => this.rateStreamer(stream.user_name, this.upvote)} streamName={stream.user_namee} className="thumbs-up"/>
                   <ThumbsDown streamName={stream.user_namee} className="thumbs-down"/>
                 </div>
               </div>
