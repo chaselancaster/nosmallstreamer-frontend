@@ -27,6 +27,8 @@ class StreamsList extends Component {
     // console.log(name)
     if (vote === this.upvote) {
       console.log(name)
+    } else if (vote === this.downvote) {
+      console.log('downvote')
     }
   }
 
@@ -78,7 +80,7 @@ class StreamsList extends Component {
                 </a>
                 <div className="thumbs">
                   <ThumbsUp onClick={() => this.rateStreamer(stream.user_name, this.upvote)} streamName={stream.user_namee} className="thumbs-up"/>
-                  <ThumbsDown streamName={stream.user_namee} className="thumbs-down"/>
+                  <ThumbsDown onClick={() => this.rateStreamer(stream.user_name, this.downvote)} streamName={stream.user_namee} className="thumbs-down"/>
                 </div>
               </div>
             </li>
