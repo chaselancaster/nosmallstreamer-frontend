@@ -20,6 +20,10 @@ class StreamsList extends Component {
     return src;
   };
 
+  rateStreamer = (name) => {
+    console.log(name)
+  }
+
   updateDimensions = () => {
     console.log("updateDimenions func");
     this.setState({
@@ -47,7 +51,8 @@ class StreamsList extends Component {
         next={this.props.loadMoreStreams}
         hasMore={true}
       >
-        {streams.map((stream) => {
+        {streams.map((stream, index) => {
+          {console.log(index)}
           return (
             <li key={stream.id} className="stream">
               <img src={this.imageHandler(stream.thumbnail_url)} />
@@ -67,8 +72,8 @@ class StreamsList extends Component {
                   <button className="view-button">View on Twitch!</button>
                 </a>
                 <div className="thumbs">
-                  <ThumbsUp  className="thumbs-up"/>
-                  <ThumbsDown  className="thumbs-down"/>
+                  <button onClick={this.rateStreamer(stream.user_name)}><ThumbsUp streamName={stream.user_namee} className="thumbs-up"/></button>
+                  <ThumbsDown streamName={stream.user_namee} className="thumbs-down"/>
                 </div>
               </div>
             </li>
