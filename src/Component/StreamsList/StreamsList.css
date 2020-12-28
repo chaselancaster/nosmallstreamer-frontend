@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   width: 325px;
-  height: 450px;
+  height: 500px;
   background-color: white;
   margin-top: 20px;
   padding-bottom: 10px;
@@ -63,9 +63,9 @@
 }
 
 .thumbs {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100px;
   justify-content: space-between;
 }
@@ -73,11 +73,21 @@
 .thumbs-up {
   height: 25px;
   width: 25px;
+  color: rgba(0, 200, 0, 1);
+}
+
+.thumbs-up:hover {
+  color: rgba(0, 200, 0, 0.5);
 }
 
 .thumbs-down {
   height: 25px;
   width: 25px;
+  color: rgba(255, 0, 0, 1);
+}
+
+.thumbs-down:hover {
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .view-button {
