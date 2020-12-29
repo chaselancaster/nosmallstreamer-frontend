@@ -26,6 +26,9 @@ class Search extends Component {
 
     getStreams = async e => {
         e.preventDefault()
+        this.setState({
+            message: ''
+        })
         if (this.state.game === '' && this.state.viewers === '') {
             this.setState({
                 message: 'Please fill out both fields!'
