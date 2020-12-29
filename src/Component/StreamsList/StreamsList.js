@@ -10,6 +10,7 @@ class StreamsList extends Component {
     width: "325x",
     height: "225.jpg",
     windowWidth: 0,
+    message: ''
   };
 
   upvote = 'upvote'
@@ -23,13 +24,26 @@ class StreamsList extends Component {
     return src;
   };
 
-  rateStreamer = (name, vote) => {
-    // console.log(name)
-    if (vote === this.upvote) {
-      console.log(name)
-    } else if (vote === this.downvote) {
-      console.log('downvote')
-    }
+  rateStreamer = async (name, vote) => {
+    try {
+      this.setState({
+        message: ''
+      })
+      const sendVote = await fetch(`http://localhost:3001/leaderboard/submit/${name}/${vote}`, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      }
+      })
+      const parsedSendVote = await sendVote.json()
+      if (parsedSendVote) {
+        this.setState({
+          message: parsedSendVote.message
+        })
+      }
+  } catch (err) {
+      console.log(err, '<- err in rateStreamer')
+  }
   }
 
   updateDimensions = () => {
@@ -82,6 +96,7 @@ class StreamsList extends Component {
                   <ThumbsUp onClick={() => this.rateStreamer(stream.user_name, this.upvote)} streamName={stream.user_namee} className="thumbs-up"/>
                   <ThumbsDown onClick={() => this.rateStreamer(stream.user_name, this.downvote)} streamName={stream.user_namee} className="thumbs-down"/>
                 </div>
+                <p className="state-message">{this.state.message}</p>
               </div>
             </li>
           );
