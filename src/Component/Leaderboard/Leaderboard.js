@@ -13,6 +13,13 @@ class Leaderboard extends Component {
                 'Content-Type': 'application/json'
             }
             })
+            const parsedStreamers = await streamers.json()
+            console.log(parsedStreamers, '<- parsedStreamers')
+            if (parsedStreamers) {
+                this.setState({
+                    streamers: parsedStreamers
+                })
+            }
         } catch (err) {
             console.log(err, '<- err in getStreamers in Leaderboard')
         }
