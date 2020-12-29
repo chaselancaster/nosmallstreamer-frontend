@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './Leaderboard.css';
+
 class Leaderboard extends Component {
     state = {
         streamers: []
@@ -35,14 +37,14 @@ class Leaderboard extends Component {
         const { streamers } = this.state;
         return (
             <div className="leaderboard-container">
-                <div>
+                <div className="leaderboard-header">
                     <h1>Community Leaderboard</h1>
                     <p>These are community voted streamers to check out!</p>
                 </div>
-                <div>
+                <div className="streamers">
                     {streamers.map((streamer) => {
                         return (
-                            <li>
+                            <li className="streamer">
                                 <p>{streamer.name}</p>
                                 <p>{streamer.score}</p>
                             </li>
