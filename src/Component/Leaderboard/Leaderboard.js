@@ -17,7 +17,7 @@ class Leaderboard extends Component {
             console.log(parsedStreamers, '<- parsedStreamers')
             if (parsedStreamers) {
                 this.setState({
-                    streamers: parsedStreamers
+                    streamers: parsedStreamers.streamers
                 })
             }
         } catch (err) {
