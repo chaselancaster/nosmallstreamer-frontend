@@ -10,6 +10,7 @@ import Search from './Component/Search/Search';
 import Profile from './Component/Profile/Profile';
 import EditUser from './Component/EditUser/EditUser';
 import Footer from './Component/Footer/Footer';
+import Leaderboard from './Component/Leaderboard/Leaderboard';
 
 import * as routes from "./constants/routes";
 
