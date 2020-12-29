@@ -39,7 +39,6 @@ class Leaderboard extends Component {
             <div className="leaderboard-container">
                 <div className="leaderboard-header">
                     <h1>Community Leaderboard</h1>
-                    <p>These are community voted streamers to check out!</p>
                 </div>
                 <div className="streamers">
                     {streamers.map((streamer) => {

@@ -1,0 +1,48 @@
+/* Leaderboard Container and Header */
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.leaderboard-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #7d5ba6;
+  width: 90%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 20px;
+}
+
+.leaderboard-header h1 {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* Streamers */
+.streamers {
+  background-color: white;
+  /* border: 2px solid red; */
+  width: 90%;
+  margin-bottom: 60px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.streamer {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid black;
+}
+
+.streamer p {
+  color: black;
+  /* border: 2px solid red; */
+  width: 140px;
+  text-align: center;
+}
