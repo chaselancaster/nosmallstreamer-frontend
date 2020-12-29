@@ -31,6 +31,9 @@ const NavBar = ({ currentUser, doLogout }) => {
                     <NavLink exact to={routes.SEARCH}><p>SEARCH</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.LEADERBOARD}><p>LEADERBOARD</p></NavLink>
+                  </li>
+                  <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.PROFILE}><p>PROFILE</p></NavLink>
                   </li>
                   <li className='option mobile-option' onClick={closeMobileMenu}>
@@ -60,6 +63,9 @@ const NavBar = ({ currentUser, doLogout }) => {
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.SEARCH}><p>SEARCH</p></NavLink>
+                  </li>
+                  <li className='option' onClick={closeMobileMenu}>
+                    <NavLink exact to={routes.LEADERBOARD}><p>LEADERBOARD</p></NavLink>
                   </li>
                   <li className='option' onClick={closeMobileMenu}>
                     <NavLink exact to={routes.PROFILE}><p>PROFILE</p></NavLink>
