@@ -7,13 +7,13 @@ class Leaderboard extends Component {
 
     getStreamers = async () => {
         try {
-            const streamers = await fetch('http://localhost:3001/leaderboard/get', {
+            const leaderboard = await fetch('http://localhost:3001/leaderboard/get', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
             })
-            const parsedStreamers = await streamers.json()
+            const parsedStreamers = await leaderboard.json()
             console.log(parsedStreamers, '<- parsedStreamers')
             if (parsedStreamers) {
                 this.setState({
@@ -26,15 +26,29 @@ class Leaderboard extends Component {
     }
 
     componentDidMount() {
+        console.log('componentDidMount')
         this.getStreamers()
+        console.log(this.state.streamers, '<- this.state.streamers')
     }
 
     render() {
-        
-        
+        const { streamers } = this.state;
         return (
-            <div>
-                <h1>Leaderboard component</h1>
+            <div className="leaderboard-container">
+                <div>
+                    <h1>Community Leaderboard</h1>
+                    <p>These are community voted streamers to check out!</p>
+                </div>
+                <div>
+                    {streamers.map((streamer) => {
+                        return (
+                            <li>
+                                <p>{streamer.name}</p>
+                                <p>{streamer.score}</p>
+                            </li>
+                        )
+                     })}
+                </div>
             </div>
         )
     }
