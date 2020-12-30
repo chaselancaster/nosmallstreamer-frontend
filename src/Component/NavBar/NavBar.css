@@ -97,7 +97,6 @@ a {
     flex-direction: column;
     list-style-type: none;
     grid-gap: 0px;
-    border: 2px solid red;
   }
 
   .nav-options.active {

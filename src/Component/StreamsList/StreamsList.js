@@ -3,6 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { ReactComponent as ThumbsUp } from "./assets/thumbsUp.svg";
 import { ReactComponent as ThumbsDown } from "./assets/thumbsDown.svg";
 import { ReactComponent as PlusCircle } from './assets/plusCircle.svg';
+import StreamCard from '../StreamCard/StreamCard';
 
 import "./StreamsList.css";
 class StreamsList extends Component {
@@ -45,6 +46,14 @@ class StreamsList extends Component {
   } catch (err) {
       console.log(err, '<- err in rateStreamer')
   }
+  }
+
+  addToWatchLater = async (name) => {
+    // try {
+
+    // } catch (err) {
+    //   console.log(err, '<- err')
+    // }
   }
 
   updateDimensions = () => {
