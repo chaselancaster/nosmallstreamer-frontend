@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ReactComponent as ThumbsUp } from "./assets/thumbsUp.svg";
 import { ReactComponent as ThumbsDown } from "./assets/thumbsDown.svg";
+import { ReactComponent as PlusCircle } from './assets/plusCircle.svg';
 
 import "./StreamsList.css";
 class StreamsList extends Component {
