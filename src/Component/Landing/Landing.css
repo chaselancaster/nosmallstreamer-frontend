@@ -53,6 +53,10 @@
   /* border: 2px solid red; */
 }
 
+.info-container-2 p {
+  color: white;
+}
+
 .info2 {
   display: flex;
   justify-content: space-evenly;
