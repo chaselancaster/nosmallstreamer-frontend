@@ -121,6 +121,7 @@ a {
     justify-content: center;
     height: 10vw;
     padding: 30px 0px;
+    margin-left: 0px;
   }
 
   li {
