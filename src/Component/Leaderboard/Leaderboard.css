@@ -46,3 +46,36 @@
   width: 140px;
   text-align: center;
 }
+
+.streamer-name:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 2560px) {
+  .leaderboard-header {
+    width: 70%;
+    font-size: 32px;
+  }
+
+  .streamers {
+    width: 70%;
+    font-size: 25px;
+  }
+
+  .streamer p {
+    color: black;
+    /* border: 2px solid red; */
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 3072px) {
+  .leaderboard-header {
+    width: 50%;
+  }
+
+  .streamers {
+    width: 50%;
+  }
+}

@@ -44,7 +44,7 @@ class Leaderboard extends Component {
                     {streamers.map((streamer) => {
                         return (
                             <li className="streamer">
-                                <p>{streamer.name}</p>
+                                <a href={`http://twitch.tv/${streamer.name}`} target="_blank"><p className="streamer-name">{streamer.name}</p></a>
                                 <p>{streamer.score}</p>
                             </li>
                         )
