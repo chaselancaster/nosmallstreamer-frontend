@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   width: 325px;
-  height: 520px;
+  height: 550px;
   background-color: white;
   margin-top: 20px;
   padding-bottom: 10px;
@@ -45,6 +45,7 @@
   word-wrap: none;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /* border: 2px solid red; */
 }
 
 .stream-info {
@@ -53,7 +54,7 @@
   text-align: center;
   align-items: center;
   /* border: 2px solid red; */
-  height: 300px;
+  height: 380px;
 }
 
 .stream-user-name {
@@ -74,8 +75,9 @@
   margin-top: 15px;
 }
 
-.thumbs {
+.stream-card-buttons {
   margin-top: 20px;
+  /* margin-bottom: 20px; */
   display: flex;
   /* border: 2px solid red; */
   width: 100px;
