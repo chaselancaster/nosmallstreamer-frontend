@@ -18,15 +18,16 @@ class Leaderboard extends Component {
             const parsedStreamers = await leaderboard.json()
             console.log(parsedStreamers, '<- parsedStreamers')
             if (parsedStreamers) {
+                let streamers = parsedStreamers.streamers.sort((a, b) => a.score - b.score).reverse()
                 this.setState({
-                    streamers: parsedStreamers.streamers
+                    streamers: streamers
                 })
             }
         } catch (err) {
             console.log(err, '<- err in getStreamers in Leaderboard')
         }
     }
-
+    
     componentDidMount() {
         console.log('componentDidMount')
         this.getStreamers()
