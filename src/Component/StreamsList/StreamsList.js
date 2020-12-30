@@ -95,6 +95,7 @@ class StreamsList extends Component {
                 </a>
                 <div className="thumbs">
                   <ThumbsUp onClick={() => this.rateStreamer(stream.user_name, this.upvote)} streamName={stream.user_namee} className="thumbs-up"/>
+                  <PlusCircle className="plus-circle"/>
                   <ThumbsDown onClick={() => this.rateStreamer(stream.user_name, this.downvote)} streamName={stream.user_namee} className="thumbs-down"/>
                 </div>
                 <p className="state-message">{this.state.message}</p>

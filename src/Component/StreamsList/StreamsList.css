@@ -62,6 +62,18 @@
   border-bottom: 2px solid black;
 }
 
+.view-button {
+  background-color: #7d5ba6;
+  font-size: 22px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #dcd6f7;
+  font-family: "Oswald";
+  margin-top: 15px;
+}
+
 .thumbs {
   margin-top: 20px;
   display: flex;
@@ -90,15 +102,14 @@
   color: rgba(255, 0, 0, 0.5);
 }
 
-.view-button {
-  background-color: #7d5ba6;
-  font-size: 22px;
-  width: 200px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  color: #dcd6f7;
-  font-family: "Oswald";
+.plus-circle {
+  height: 25px;
+  width: 25px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.plus-circle:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 820px) {
