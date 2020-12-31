@@ -51,8 +51,7 @@ class StreamCard extends Component {
 
     addToWatchLater = async (name) => {
         try {
-            console.log(name, '<- name in addToWatchLater')
-            const watchLaterCall = await fetch(`http://localhost:3001/users/watchlater/add/${this.props.currentUser._id}`, {
+            const watchLaterCall = await fetch(`http://localhost:3001/users/watchlater/add/${this.props.currentUser._id}/${name}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
