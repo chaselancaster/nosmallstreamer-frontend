@@ -20,7 +20,7 @@ class StreamsList extends Component {
       >
         {streams.map((stream, index) => {
           return (
-            <StreamCard streamer={stream} />
+            <StreamCard currentUser={this.props.currentUser} streamer={stream} />
           );
         })}
       </InfiniteScroll>
