@@ -37,8 +37,12 @@ class StreamCard extends Component {
         const parsedSendVote = await sendVote.json()
         if (parsedSendVote) {
             this.setState({
-            message: parsedSendVote.message
-            })
+                message: parsedSendVote.message
+                })
+            setTimeout(
+                () => this.setState({ message: '' }), 
+                5000
+              );
         }
     } catch (err) {
         console.log(err, '<- err in rateStreamer')
