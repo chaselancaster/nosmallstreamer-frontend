@@ -50,11 +50,17 @@ class StreamCard extends Component {
     }
 
     addToWatchLater = async (name) => {
-        // try {
-
-        // } catch (err) {
-        //   console.log(err, '<- err')
-        // }
+        try {
+            console.log(name, '<- name in addToWatchLater')
+            const watchLaterCall = await fetch('http://localhost:3001/users/watchlater/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        } catch (err) {
+          console.log(err, '<- err')
+        }
     }
 
     render() {
@@ -80,7 +86,7 @@ class StreamCard extends Component {
                         </a>
                         <div className="stream-card-buttons">
                         <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote)} streamName={streamer.user_namee} className="thumbs-up"/>
-                        <PlusCircle className="plus-circle"/>
+                        <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name)} className="plus-circle"/>
                         <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote)} streamName={streamer.user_namee} className="thumbs-down"/>
                         </div>
                         <p className="state-message">{this.state.message}</p>
