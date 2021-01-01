@@ -51,6 +51,25 @@
   text-decoration: underline;
 }
 
+.name-link {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.external-link {
+  height: 15px;
+  width: 15px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.external-link:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 2560px) {
   .leaderboard-header {
     width: 70%;

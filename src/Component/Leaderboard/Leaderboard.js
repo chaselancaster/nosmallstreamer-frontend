@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { ReactComponent as ExternalLink } from "./assets/externalLink.svg";
 
 import './Leaderboard.css';
 
@@ -45,7 +46,11 @@ class Leaderboard extends Component {
                     {streamers.map((streamer) => {
                         return (
                             <li className="streamer">
-                                <a href={`http://twitch.tv/${streamer.name}`} target="_blank"><p className="streamer-name">{streamer.name}</p></a>
+                                <div className="name-link">
+                                    <p className="streamer-name">{streamer.name}</p>
+                                    <a href={`http://twitch.tv/${streamer.name}`} target="_blank"><ExternalLink className="external-link"/></a>
+                                </div>
+                                
                                 <p>{streamer.score}</p>
                             </li>
                         )

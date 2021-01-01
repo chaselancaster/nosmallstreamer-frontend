@@ -57,6 +57,17 @@ class StreamCard extends Component {
                     'Content-Type': 'application/json'
                 }
             })
+            const parsedWatchLaterCall = await watchLaterCall.json()
+            console.log(parsedWatchLaterCall, '<- parsedWatchLaterCall')
+            if (parsedWatchLaterCall) {
+                this.setState({
+                    message: parsedWatchLaterCall.message
+                })
+                setTimeout(
+                    () => this.setState({ message: '' }), 
+                    5000
+                );
+            }
         } catch (err) {
           console.log(err, '<- err')
         }
