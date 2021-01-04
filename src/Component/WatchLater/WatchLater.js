@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './WatchLater.css';
+
 class WatchLater extends Component {
     render() {
         return (
