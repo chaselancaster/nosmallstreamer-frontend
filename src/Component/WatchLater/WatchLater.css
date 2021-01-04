@@ -69,6 +69,43 @@
   transform: scale(1.1);
 }
 
+.trash-wl {
+  height: 15px;
+  width: 15px;
+  text-decoration: none;
+  color: red;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.trash-wl:hover {
+  transform: scale(1.1);
+}
+
+.buttons-wl {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100px;
+  /* border: 2px solid red; */
+}
+
+@media (min-width: 1280px) {
+  .streamer-name-wl {
+    font-size: 30px;
+  }
+
+  .external-link-wl {
+    height: 25px;
+    width: 25px;
+  }
+
+  .trash-wl {
+    height: 25px;
+    width: 25px;
+  }
+}
+
 @media (min-width: 2560px) {
   .watchlater-header {
     width: 70%;
@@ -80,7 +117,7 @@
     font-size: 25px;
   }
 
-  .streamer p {
+  .streamer-wl p {
     color: black;
     /* border: 2px solid red; */
     width: 200px;

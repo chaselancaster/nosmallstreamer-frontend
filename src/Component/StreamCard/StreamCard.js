@@ -68,6 +68,7 @@ class StreamCard extends Component {
                     () => this.setState({ message: '' }), 
                     5000
                 );
+                this.props.doSetCurrentUser(parsedWatchLaterCall.user)
             }
         } catch (err) {
           console.log(err, '<- err')
@@ -79,29 +80,29 @@ class StreamCard extends Component {
         return (
             <div>
                     <li key={streamer.id} className="stream">
-                    <img src={this.imageHandler(streamer.thumbnail_url)} />
-                    <div className="stream-info">
-                        <p className="stream-user-name">
-                        {streamer.user_name}
-                        </p>
-                        <p className="stream-title">{streamer.title}</p>
-                        <p>
-                        <span>Viewers: </span>
-                        {streamer.viewer_count}
-                        </p>
-                        <a
-                        href={`https://www.twitch.tv/${streamer.user_name}`}
-                        target="_blank"
-                        >
-                        <button className="view-button">View on Twitch!</button>
-                        </a>
-                        <div className="stream-card-buttons">
-                        <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote)} streamName={streamer.user_namee} className="thumbs-up"/>
-                        <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name)} className="plus-circle"/>
-                        <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote)} streamName={streamer.user_namee} className="thumbs-down"/>
+                        <img src={this.imageHandler(streamer.thumbnail_url)} />
+                        <div className="stream-info">
+                            <p className="stream-user-name">
+                            {streamer.user_name}
+                            </p>
+                            <p className="stream-title">{streamer.title}</p>
+                            <p>
+                            <span>Viewers: </span>
+                            {streamer.viewer_count}
+                            </p>
+                            <a
+                            href={`https://www.twitch.tv/${streamer.user_name}`}
+                            target="_blank"
+                            >
+                            <button className="view-button">View on Twitch!</button>
+                            </a>
+                            <div className="stream-card-buttons">
+                            <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote)} streamName={streamer.user_namee} className="thumbs-up"/>
+                            <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name)} className="plus-circle"/>
+                            <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote)} streamName={streamer.user_namee} className="thumbs-down"/>
+                            </div>
+                            <p className="state-message">{this.state.message}</p>
                         </div>
-                        <p className="state-message">{this.state.message}</p>
-                    </div>
                     </li>
             </div>
         )
