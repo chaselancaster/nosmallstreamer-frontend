@@ -11,6 +11,7 @@ import Profile from './Component/Profile/Profile';
 import EditUser from './Component/EditUser/EditUser';
 import Footer from './Component/Footer/Footer';
 import Leaderboard from './Component/Leaderboard/Leaderboard';
+import WatchLater from './Component/WatchLater/WatchLater';
 
 import * as routes from "./constants/routes";
 
@@ -56,6 +57,7 @@ class App extends Component {
             <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
             <Route exact path={routes.EDITUSER} render={() => <EditUser currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>}/>
             <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
+            <Route exact path={routes.WATCHLATER} render={() => <WatchLater/>} />
           </Switch>
         </BrowserRouter>
         <Footer />
