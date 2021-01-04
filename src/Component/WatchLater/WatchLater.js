@@ -15,6 +15,11 @@ class WatchLater extends Component {
                     'Content-Type': 'application/json'
                 }
             })
+            const parsedCall = await deleteStreamerCall.json()
+            console.log(parsedCall, '<- parsedCall')
+            if (parsedCall) {
+                this.props.doSetCurrentUser(parsedCall.user)
+            }
         } catch (err) {
             console.log(err, '<- err in deleteStreamer func')
         }
