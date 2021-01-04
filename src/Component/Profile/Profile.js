@@ -39,6 +39,10 @@ class Profile extends Component {
                             <h2>Change account information!</h2>
                             <Link to='/edituser'><p>Edit email or password</p></Link>
                         </div>
+                        <div className='watch-later'>
+                            <h2>Watch Later</h2>
+                            <Link to='/watchlater'><p>Go to Watch Later!</p></Link>
+                        </div>
                     </div> 
                 )}
             </div>
