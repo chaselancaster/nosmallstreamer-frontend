@@ -37,7 +37,7 @@ class Login extends Component {
                 }
             })
             const response = await loginCall.json()
-            console.log(response, '<- response in handleLogin')
+            // console.log(response, '<- response in handleLogin')
             if (response.user) {
                 localStorage.setItem('user', response.user)
                 this.props.doSetCurrentUser(response.user)
@@ -52,7 +52,7 @@ class Login extends Component {
                 })
             }
         } catch (err) {
-            console.log(err, '<- err in handleLogin')
+            // console.log(err, '<- err in handleLogin')
         }
     }
 

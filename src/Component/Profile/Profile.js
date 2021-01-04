@@ -25,23 +25,21 @@ class Profile extends Component {
                         </div>
                         <div className="profile-sections">
                             <div className="profile-search-parent section">
-                                <div className="profile-search">
-                                    <div className='profile-search-content'>
+                                {/* <div className="profile-search"> */}
+                                    {/* <div className='profile-search-content'> */}
                                         {/* <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/> */}
-                                        <h2 className='profile-search-h2'>Find Streamers!</h2>
-                                    </div>
-                                </div>
-                                <div className="button-parent">
-                                <Link to='/search'><button className="profile-button">Take me to search!</button></Link>
-                                </div>
+                                        <h2>Find Streamers!</h2>
+                                        <Link to='/search'><button className="profile-button">Search</button></Link>
+                                    {/* </div> */}
+                                {/* </div> */}
                             </div>
                             <div className='edit-account section'>
                                 <h2>Change Account Information!</h2>
-                                <Link to='/edituser'><button className="profile-button">Edit email or password</button></Link>
+                                <Link to='/edituser'><button className="profile-button">Edit Account</button></Link>
                             </div>
                             <div className='watch-later section'>
                                 <h2>Watch Later!</h2>
-                                <Link to='/watchlater'><button className="profile-button">Go to Watch Later!</button></Link>
+                                <Link to='/watchlater'><button className="profile-button">Watch Later</button></Link>
                             </div>
                         </div>
                     </div> 

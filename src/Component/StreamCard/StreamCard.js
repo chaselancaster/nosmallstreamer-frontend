@@ -46,7 +46,7 @@ class StreamCard extends Component {
               );
         }
     } catch (err) {
-        console.log(err, '<- err in rateStreamer')
+        // console.log(err, '<- err in rateStreamer')
     }
     }
 
@@ -59,7 +59,7 @@ class StreamCard extends Component {
                 }
             })
             const parsedWatchLaterCall = await watchLaterCall.json()
-            console.log(parsedWatchLaterCall, '<- parsedWatchLaterCall')
+            // console.log(parsedWatchLaterCall, '<- parsedWatchLaterCall')
             if (parsedWatchLaterCall) {
                 this.setState({
                     message: parsedWatchLaterCall.message
@@ -71,7 +71,7 @@ class StreamCard extends Component {
                 this.props.doSetCurrentUser(parsedWatchLaterCall.user)
             }
         } catch (err) {
-          console.log(err, '<- err')
+        //   console.log(err, '<- err')
         }
     }
 

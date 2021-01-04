@@ -29,9 +29,9 @@ class EditUser extends Component {
                     'Content-Type': 'application/json'
                 }
             })
-            console.log(userCall, '<- userCall in updateUser func')
+            // console.log(userCall, '<- userCall in updateUser func')
             const response = await userCall.json()
-            console.log(response, '<- response in updateUser func')
+            // console.log(response, '<- response in updateUser func')
             if (response.success) {
                 this.setState({
                     success: true
@@ -39,7 +39,7 @@ class EditUser extends Component {
             }
             this.props.doSetCurrentUser(response.updatedUser)
         } catch (err) {
-            console.log(err)
+            // console.log(err)
         }
     }
 

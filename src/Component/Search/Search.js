@@ -64,7 +64,7 @@ class Search extends Component {
             }
         })
         const parsedStreams = await streams.json()
-        console.log(parsedStreams, '<- parsedStreams')
+        // console.log(parsedStreams, '<- parsedStreams')
         this.setState({
             streams: parsedStreams.streams,
             cursor: parsedStreams.cursor,
@@ -80,7 +80,7 @@ class Search extends Component {
         //     })
         // }
         } catch (err) {
-            console.log(err, '<-- err in getStreams function')
+            // console.log(err, '<-- err in getStreams function')
         }
     }
 
@@ -97,13 +97,13 @@ class Search extends Component {
             }
         })
             const parsedLoadMoreStreams = await streams.json()
-            console.log(parsedLoadMoreStreams, '<- parsedLoadMoreStreams')
+            // console.log(parsedLoadMoreStreams, '<- parsedLoadMoreStreams')
             this.setState({
                 streams: [...this.state.streams, ...parsedLoadMoreStreams.moreStreams],
                 cursor: parsedLoadMoreStreams.cursor
             })
         } catch (err) {
-            console.log(err, '<- err in loadMoreStreams')
+            // console.log(err, '<- err in loadMoreStreams')
         }
     }
 
