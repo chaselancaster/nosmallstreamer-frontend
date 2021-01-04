@@ -19,7 +19,6 @@ class App extends Component {
 
   state = {
     currentUser: null,
-    games: [],
     userToken: ''
   };
 
@@ -57,7 +56,7 @@ class App extends Component {
             <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
             <Route exact path={routes.EDITUSER} render={() => <EditUser currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>}/>
             <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
-            <Route exact path={routes.WATCHLATER} render={() => <WatchLater/>} />
+            <Route exact path={routes.WATCHLATER} render={() => <WatchLater currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>} />
           </Switch>
         </BrowserRouter>
         <Footer />
