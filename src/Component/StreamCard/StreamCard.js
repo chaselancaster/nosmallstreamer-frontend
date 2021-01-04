@@ -3,6 +3,7 @@ import { ReactComponent as ThumbsUp } from "../StreamsList/assets/thumbsUp.svg";
 import { ReactComponent as ThumbsDown } from "../StreamsList/assets/thumbsDown.svg";
 import { ReactComponent as PlusCircle } from '../StreamsList/assets/plusCircle.svg';
 
+import './StreamCard.css';
 class StreamCard extends Component {
     state = {
         // 500 x 300
