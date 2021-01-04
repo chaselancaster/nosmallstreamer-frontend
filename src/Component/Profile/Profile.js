@@ -19,29 +19,30 @@ class Profile extends Component {
                         <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
                     </div>
                 ) : (
-                    <div>
+                    <div className="sections">
                         <div className='profile-header'>
-                            <h1>Hello, {currentUser.name}</h1>
-                            <p>Ready to get started?</p>
+                            <h1>Hello, <span>{currentUser.name}</span></h1>
                         </div>
-                        <div className="profile-search-parent">
-                            <div className="profile-search">
-                                <div className='profile-search-content'>
-                                    <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/>
-                                    <p className='profile-search-p'>Find streamers using the button below!</p>
+                        <div className="profile-sections">
+                            <div className="profile-search-parent section">
+                                <div className="profile-search">
+                                    <div className='profile-search-content'>
+                                        {/* <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/> */}
+                                        <h2 className='profile-search-h2'>Find Streamers!</h2>
+                                    </div>
+                                </div>
+                                <div className="button-parent">
+                                <Link to='/search'><button className="profile-button">Take me to search!</button></Link>
                                 </div>
                             </div>
-                            <div className="button-parent">
-                            <Link to='/search'><button className="profile-button">Take me to search!</button></Link>
+                            <div className='edit-account section'>
+                                <h2>Change Account Information!</h2>
+                                <Link to='/edituser'><button className="profile-button">Edit email or password</button></Link>
                             </div>
-                        </div>
-                        <div className='edit-account'>
-                            <h2>Change account information!</h2>
-                            <Link to='/edituser'><p>Edit email or password</p></Link>
-                        </div>
-                        <div className='watch-later'>
-                            <h2>Watch Later</h2>
-                            <Link to='/watchlater'><p>Go to Watch Later!</p></Link>
+                            <div className='watch-later section'>
+                                <h2>Watch Later!</h2>
+                                <Link to='/watchlater'><button className="profile-button">Go to Watch Later!</button></Link>
+                            </div>
                         </div>
                     </div> 
                 )}

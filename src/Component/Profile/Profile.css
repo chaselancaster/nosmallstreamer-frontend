@@ -1,5 +1,6 @@
 .profile-container {
-  height: 85vh;
+  /* height: 100vh; */
+  /* border: 2px solid red; */
 }
 
 .profile-loggedout {
@@ -23,24 +24,43 @@
 .profile-header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-bottom: 2px solid white;
-  /* margin-top: 30px; */
   padding-bottom: 10px;
-  background-color: white;
+  height: 25vh;
+  /* border: 2px solid red; */
+  text-align: center;
 }
 
-.profile-header h1,
-p {
-  color: black;
+.profile-header h1 {
+  font-size: 60px;
+  color: white;
+}
+
+.profile-header span {
+  color: rgb(161, 118, 247);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  width: 90vw;
+  height: 25vh;
 }
 
 .profile-search-parent {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 25vh;
-  border-bottom: 2px solid white;
+  justify-content: center;
+  align-items: center;
+  /* height: 25vh; */
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .profile-search-content p {
@@ -54,8 +74,9 @@ p {
   margin-top: 10px;
 }
 
-.profile-search-p {
-  width: 200px;
+.profile-search-h2 {
+  color: white;
+  width: 250px;
   text-align: center;
 }
 
@@ -98,10 +119,11 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  /* height: 25vh; */
   color: white;
-  padding-top: 50px;
-  /* border: 2px solid red; */
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .edit-account h2 {
@@ -115,7 +137,30 @@ p {
   color: white;
 }
 
+.watch-later {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 25vh; */
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
 @media (min-width: 1280px) {
+  .profile-sections {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+    width: 95vw;
+  }
+
+  .section {
+    width: 25vw;
+  }
+
   .profile-header h1 {
     font-size: 50px;
   }
@@ -135,9 +180,9 @@ p {
     width: 500px;
   }
 
-  .profile-search-p {
+  .profile-search-h2 {
     width: 300px;
-    font-size: 20px;
+    /* font-size: 20px; */
   }
 }
 
@@ -159,7 +204,7 @@ p {
     width: 1000px;
   }
 
-  .profile-search-p {
+  .profile-search-h2 {
     width: 500px;
     font-size: 30px;
   }
@@ -202,7 +247,7 @@ p {
     width: 1000px;
   }
 
-  .profile-search-p {
+  .profile-search-h2 {
     width: 600px;
     font-size: 40px;
   }
