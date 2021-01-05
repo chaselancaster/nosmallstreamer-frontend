@@ -29,7 +29,7 @@ class StreamCard extends Component {
         this.setState({
             message: ''
         })
-        const sendVote = await fetch(`http://localhost:3001/leaderboard/submit/${name}/${vote}`, {
+        const sendVote = await fetch(`https://pacific-forest-27041.herokuapp.com/leaderboard/submit/${name}/${vote}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ class StreamCard extends Component {
 
     addToWatchLater = async (name) => {
         try {
-            const watchLaterCall = await fetch(`http://localhost:3001/users/watchlater/add/${this.props.currentUser._id}/${name}`, {
+            const watchLaterCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/add/${this.props.currentUser._id}/${name}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

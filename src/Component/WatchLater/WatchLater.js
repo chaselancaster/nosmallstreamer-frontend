@@ -10,7 +10,7 @@ class WatchLater extends Component {
     deleteStreamer =  async (streamer) => {
         // console.log('deleteStreamer func hit')
         try {
-            const deleteStreamerCall = await fetch(`http://localhost:3001/users/watchlater/${this.props.currentUser._id}/${streamer}`, {
+            const deleteStreamerCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/${this.props.currentUser._id}/${streamer}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

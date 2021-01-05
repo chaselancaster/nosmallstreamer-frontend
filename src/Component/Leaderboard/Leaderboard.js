@@ -10,7 +10,7 @@ class Leaderboard extends Component {
 
     getStreamers = async () => {
         try {
-            const leaderboard = await fetch('http://localhost:3001/leaderboard/get', {
+            const leaderboard = await fetch('https://pacific-forest-27041.herokuapp.com/leaderboard/get', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
