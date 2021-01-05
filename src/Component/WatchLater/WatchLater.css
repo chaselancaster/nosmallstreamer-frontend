@@ -90,10 +90,16 @@
   /* border: 2px solid red; */
 }
 
+.empty-wl {
+  text-align: center;
+  color: white;
+}
+
 .loggedout-wl {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: c;
   text-align: center;
   color: white;
   margin-top: 80px;

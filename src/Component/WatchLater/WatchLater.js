@@ -31,7 +31,9 @@ class WatchLater extends Component {
         return (
             <div>
             {currentUser ? (
-                <div className="watchlater-container">
+                <div>
+                    {currentUser.watchLater.length !== 0 ? (
+                        <div className="watchlater-container">
                     <div className="watchlater-header">
                         <h1>Watch Later</h1>
                     </div>
@@ -46,14 +48,16 @@ class WatchLater extends Component {
                                             <Trash onClick={() => this.deleteStreamer(streamer)} className="trash-wl"/>
                                         </div>
                                     </div>
-                                    {/* <div className="trash-container">
-                                        
-                                    </div> */}
                                 </li>
                             )
                         })}
                     </div>
                  </div>
+                    ) : (
+                        <h1 className="empty-wl">Your watch later list is currently empty!</h1>
+                    )}
+                </div>
+                
             ) : (
                 <div className="loggedout-wl">
                     <h1>Please sign in or register to view you watch later list!</h1>
