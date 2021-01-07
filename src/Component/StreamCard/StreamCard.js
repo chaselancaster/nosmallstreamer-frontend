@@ -24,12 +24,13 @@ class StreamCard extends Component {
         return src;
     };
 
-    rateStreamer = async (name, vote) => {
+    rateStreamer = async (name, vote, user_id) => {
         try {
         this.setState({
             message: ''
         })
-        const sendVote = await fetch(`https://pacific-forest-27041.herokuapp.com/leaderboard/submit/${name}/${vote}`, {
+        console.log(user_id, '<- user_id')
+        const sendVote = await fetch(`http://localhost:3001/leaderboard/submit/${name}/${vote}/${user_id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -50,9 +51,9 @@ class StreamCard extends Component {
     }
     }
 
-    addToWatchLater = async (name) => {
+    addToWatchLater = async (name, user_id) => {
         try {
-            const watchLaterCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/add/${this.props.currentUser._id}/${name}`, {
+            const watchLaterCall = await fetch(`http://localhost:3001/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -97,9 +98,9 @@ class StreamCard extends Component {
                             <button className="view-button">View on Twitch!</button>
                             </a>
                             <div className="stream-card-buttons">
-                            <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote)} streamName={streamer.user_namee} className="thumbs-up"/>
+                            <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote, streamer.user_id)} streamName={streamer.user_name} className="thumbs-up"/>
                             <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name)} className="plus-circle"/>
-                            <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote)} streamName={streamer.user_namee} className="thumbs-down"/>
+                            <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote, streamer.user_id)} streamName={streamer.user_name} className="thumbs-down"/>
                             </div>
                             <p className="state-message">{this.state.message}</p>
                         </div>

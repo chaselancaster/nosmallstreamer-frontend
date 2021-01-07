@@ -48,7 +48,7 @@ class Leaderboard extends Component {
                             <li className="streamer">
                                 <div className="name-link">
                                     <p className="streamer-name">{streamer.name}</p>
-                                    <a href={`http://twitch.tv/${streamer.name}`} target="_blank"><ExternalLink className="external-link"/></a>
+                                    <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link"/></a>
                                 </div>
                                 
                                 <p>{streamer.score}</p>
