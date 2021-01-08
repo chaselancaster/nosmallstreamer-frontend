@@ -99,7 +99,7 @@ class StreamCard extends Component {
                             </a>
                             <div className="stream-card-buttons">
                             <ThumbsUp onClick={() => this.rateStreamer(streamer.user_name, this.upvote, streamer.user_id)} streamName={streamer.user_name} className="thumbs-up"/>
-                            <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name)} className="plus-circle"/>
+                            <PlusCircle onClick={() => this.addToWatchLater(streamer.user_name, streamer.user_id)} className="plus-circle"/>
                             <ThumbsDown onClick={() => this.rateStreamer(streamer.user_name, this.downvote, streamer.user_id)} streamName={streamer.user_name} className="thumbs-down"/>
                             </div>
                             <p className="state-message">{this.state.message}</p>

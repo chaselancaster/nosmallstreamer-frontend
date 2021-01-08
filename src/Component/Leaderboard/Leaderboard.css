@@ -37,7 +37,9 @@
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  border-top: 2px solid black;
+  /* border-top: 2px solid black; */
+  border: 2px solid red;
+  height: 200px;
 }
 
 .streamer p {
@@ -51,11 +53,33 @@
   text-decoration: underline;
 }
 
-.name-link {
+.streamer-info {
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.streamer-info img {
+  height: 100px;
+  width: 100px;
+}
+
+.streamer-left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+
+.name-link {
+  display: flex;
+  /* flex-direction: column; */
+  border: 2px solid red;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
 }
 
 .external-link {
