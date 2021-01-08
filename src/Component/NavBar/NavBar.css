@@ -52,6 +52,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 .option {
   margin-left: 50px;
 }

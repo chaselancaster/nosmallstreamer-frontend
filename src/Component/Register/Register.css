@@ -29,3 +29,7 @@
 .register-form button {
   margin-top: 20px;
 }
+
+.register-form p {
+  color: white;
+}

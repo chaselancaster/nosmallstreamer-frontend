@@ -11,10 +11,6 @@
   color: white;
 }
 
-.login-form-container {
-  /* background-color: gray; */
-}
-
 .login-form {
   display: flex;
   flex-direction: column;
@@ -31,6 +27,7 @@
 
 .login-form p {
   margin: 0;
+  color: white;
 }
 
 .input {
