@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ReactComponent as ExternalLink } from "./assets/externalLink.svg";
+// import { ReactComponent as ExternalLink } from "./assets/externalLink.svg";
 
 import './Leaderboard.css';
 
@@ -43,20 +43,24 @@ class Leaderboard extends Component {
                     <h1>Community Leaderboard</h1>
                 </div>
                 <div className="streamers">
-                    {streamers.map((streamer) => {
+                    {streamers.map((streamer, index) => {
                         return (
                             <li className="streamer">
                                 <div className="streamer-info">
-                                    <div className="streamer-left-side">
+                                    <div className="image-name">
                                         <img src={streamer.profile_image_url} />
+                                        <p className="streamer-name">{streamer.name}</p>
+                                    </div>  
+                                    <div className="streamer-right-side">
                                         <div className="name-link">
-                                            <p className="streamer-name">{streamer.name}</p>
-                                            <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link"/></a>
+                                            <p className="streamer-rank">Rank: {index + 1}</p>
+                                            {/* <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link"/></a> */}
+                                            <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer">
+                                                <button className="view">View</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <p>{streamer.score}</p>
                             </li>
                         )
                      })}

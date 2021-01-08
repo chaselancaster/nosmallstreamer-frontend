@@ -37,9 +37,9 @@
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  /* border-top: 2px solid black; */
-  border: 2px solid red;
-  height: 200px;
+  border-top: 2px solid black;
+  /* border: 2px solid red; */
+  height: 180px;
 }
 
 .streamer p {
@@ -47,6 +47,10 @@
   /* border: 2px solid red; */
   width: 140px;
   text-align: center;
+}
+
+.streamer-name {
+  font-weight: bold;
 }
 
 .streamer-name:hover {
@@ -58,6 +62,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 320px;
 }
 
 .streamer-info img {
@@ -65,21 +70,55 @@
   width: 100px;
 }
 
-.streamer-left-side {
+.image-name {
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.image-name p {
+  font-size: 18px;
+}
+
+.streamer-right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   /* border: 2px solid red; */
   align-items: center;
 }
 
 .name-link {
   display: flex;
-  /* flex-direction: column; */
-  border: 2px solid red;
+  flex-direction: column;
+  /* border: 2px solid red; */
   align-items: center;
   justify-content: center;
   width: 100px;
+}
+
+.name-link p {
+  font-size: 20px;
+}
+
+.view {
+  background-color: #7d5ba6;
+  font-size: 15px;
+  padding: 2px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #dcd6f7;
+  font-family: "Oswald";
+}
+
+.view:hover {
+  background-color: #dcd6f7;
+  color: #7d5ba6;
 }
 
 .external-link {
