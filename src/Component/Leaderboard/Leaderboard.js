@@ -18,7 +18,6 @@ class Leaderboard extends Component {
             }
             })
             const parsedStreamers = await leaderboard.json()
-            // console.log(parsedStreamers, '<- parsedStreamers')
             if (parsedStreamers) {
                 let streamers = parsedStreamers.streamers.sort((a, b) => a.score - b.score).reverse().filter(s => s.score > 0)
                 this.setState({
@@ -32,9 +31,7 @@ class Leaderboard extends Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount')
         this.getStreamers()
-        // console.log(this.state.streamers, '<- this.state.streamers')
     }
 
     render() {
@@ -67,7 +64,6 @@ class Leaderboard extends Component {
                                     <div className="streamer-right-side">
                                         <div className="rank-link">
                                             <p className="streamer-rank">Rank: {index + 1}</p>
-                                            {/* <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link"/></a> */}
                                             <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer">
                                                 <button className="view">View</button>
                                             </a>

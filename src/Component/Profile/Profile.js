@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-import { BrowserRouter, NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './Profile.css'
-
-import * as routes from "../../constants/routes";
-
-import magnifyingImg from '../Landing/assets/magnifying.png';
-
 class Profile extends Component {
     render() {
         const { currentUser } = this.props;
@@ -25,13 +20,8 @@ class Profile extends Component {
                         </div>
                         <div className="profile-sections">
                             <div className="profile-search-parent section">
-                                {/* <div className="profile-search"> */}
-                                    {/* <div className='profile-search-content'> */}
-                                        {/* <img className="profile-search-img" src={magnifyingImg} alt="magnifying glass"/> */}
                                         <h2>Find Streamers!</h2>
                                         <Link to='/search'><button className="profile-button">Search</button></Link>
-                                    {/* </div> */}
-                                {/* </div> */}
                             </div>
                             <div className='edit-account section'>
                                 <h2>Change Account Information!</h2>

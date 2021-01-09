@@ -64,29 +64,20 @@ class Search extends Component {
             }
         })
         const parsedStreams = await streams.json()
-        // console.log(parsedStreams, '<- parsedStreams')
         this.setState({
             streams: parsedStreams.streams,
             cursor: parsedStreams.cursor,
             gameId: parsedStreams.gameId,
             loading: false,
             message: parsedStreams.message
-            // game: '',
-            // viewers: ''
         })
-        // if (parsedStreams.streams.length === 0) {
-        //     this.setState({
-        //         message: 'Viewer number is too low. Try a higher one!'
-        //     })
-        // }
         } catch (err) {
             // console.log(err, '<-- err in getStreams function')
         }
     }
 
     loadMoreStreams = async e => {
-        const { gameId, views, cursor } = this.state
-        // e.preventDefault();
+        const { gameId, cursor } = this.state
         console.log('loadMoreStreams hit')
         try {
             console.log('in try block')
@@ -97,7 +88,6 @@ class Search extends Component {
             }
         })
             const parsedLoadMoreStreams = await streams.json()
-            // console.log(parsedLoadMoreStreams, '<- parsedLoadMoreStreams')
             this.setState({
                 streams: [...this.state.streams, ...parsedLoadMoreStreams.moreStreams],
                 cursor: parsedLoadMoreStreams.cursor

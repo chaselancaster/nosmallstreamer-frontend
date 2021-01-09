@@ -24,7 +24,6 @@ class Register extends Component {
     };
 
     handleRegister = async e => {
-        // console.log('handleRegister hit')
         try {
             e.preventDefault()
             this.setState({
@@ -39,7 +38,6 @@ class Register extends Component {
                 }
             })
             const response = await registerCall.json()
-            // console.log(response, '<- response from registerCall')
             if (response.message) {
                 this.setState({
                     message: response.message,

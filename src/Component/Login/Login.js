@@ -29,7 +29,7 @@ class Login extends Component {
                 loading: true,
                 message: ''
             })
-            const loginCall = await fetch('http://localhost:3001/users/login', {
+            const loginCall = await fetch('https://pacific-forest-27041.herokuapp.com/users/login', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
@@ -37,7 +37,6 @@ class Login extends Component {
                 }
             })
             const response = await loginCall.json()
-            // console.log(response, '<- response in handleLogin')
             if (response.user) {
                 localStorage.setItem('user', response.user)
                 this.props.doSetCurrentUser(response.user)

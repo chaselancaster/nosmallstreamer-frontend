@@ -8,7 +8,6 @@ import './WatchLater.css';
 class WatchLater extends Component {
 
     deleteStreamer =  async (streamer) => {
-        // console.log('deleteStreamer func hit')
         try {
             const deleteStreamerCall = await fetch(`http://localhost:3001/users/watchlater/${this.props.currentUser._id}/${streamer.name}`, {
                 method: 'DELETE',
@@ -17,7 +16,6 @@ class WatchLater extends Component {
                 }
             })
             const parsedCall = await deleteStreamerCall.json()
-            // console.log(parsedCall, '<- parsedCall')
             if (parsedCall) {
                 this.props.doSetCurrentUser(parsedCall.user)
             }

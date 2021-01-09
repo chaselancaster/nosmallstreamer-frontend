@@ -6,7 +6,6 @@ import { ReactComponent as PlusCircle } from '../StreamsList/assets/plusCircle.s
 import './StreamCard.css';
 class StreamCard extends Component {
     state = {
-        // 500 x 300
         width: "325x",
         height: "225.jpg",
         windowWidth: 0,
@@ -30,7 +29,7 @@ class StreamCard extends Component {
             message: ''
         })
         console.log(user_id, '<- user_id')
-        const sendVote = await fetch(`http://localhost:3001/leaderboard/submit/${name}/${vote}/${user_id}`, {
+        const sendVote = await fetch(`https://pacific-forest-27041.herokuapp.com/leaderboard/submit/${name}/${vote}/${user_id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -53,14 +52,13 @@ class StreamCard extends Component {
 
     addToWatchLater = async (name, user_id) => {
         try {
-            const watchLaterCall = await fetch(`http://localhost:3001/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
+            const watchLaterCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
             const parsedWatchLaterCall = await watchLaterCall.json()
-            // console.log(parsedWatchLaterCall, '<- parsedWatchLaterCall')
             if (parsedWatchLaterCall) {
                 this.setState({
                     message: parsedWatchLaterCall.message
