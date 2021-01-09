@@ -83,7 +83,8 @@ class Login extends Component {
                                 color="white"
                                 height={100}
                                 width={100}
-                            />
+                                className="spinner"
+                                />
                             ) : (
                                 <div></div>
                             )}

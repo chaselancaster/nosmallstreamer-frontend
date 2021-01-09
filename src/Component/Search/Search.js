@@ -110,7 +110,7 @@ class Search extends Component {
     render() {
         const { game , viewers, loading } = this.state;
         return (
-            <div>
+            <div className="search-parent">
             { !this.props.currentUser ? (
                 <div className='profile-loggedout'>
                         <h1>Please sign in or register to access the search feature!</h1>
@@ -118,7 +118,7 @@ class Search extends Component {
                         <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
                     </div>
             ) : (
-            <div className='search-parent'>
+            <div>
                     <div className="search-container">
                         <div className="search-info">
                             <h1 className="search-title">Search for streams!</h1>
