@@ -47,8 +47,8 @@ class WatchLater extends Component {
                                             <p className="streamer-name-wl">{streamer.name}</p>
                                         </div>
                                         <div className="buttons-wl">
-                                            <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link-wl"/></a>
-                                            <Trash onClick={() => this.deleteStreamer(streamer)} className="trash-wl"/>
+                                            <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link-wl button-wl"/></a>
+                                            <Trash onClick={() => this.deleteStreamer(streamer)} className="trash-wl button-wl"/>
                                         </div>
                                     </div>
                                 </li>
