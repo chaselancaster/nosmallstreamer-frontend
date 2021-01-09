@@ -10,7 +10,7 @@ class WatchLater extends Component {
     deleteStreamer =  async (streamer) => {
         // console.log('deleteStreamer func hit')
         try {
-            const deleteStreamerCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/${this.props.currentUser._id}/${streamer}`, {
+            const deleteStreamerCall = await fetch(`http://localhost:3001/users/watchlater/${this.props.currentUser._id}/${streamer.name}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ class WatchLater extends Component {
     }
 
     render() {
-        const { currentUser } = this.props;
+        const { currentUser } = this.props
         return (
             <div>
             {currentUser ? (
@@ -41,10 +41,13 @@ class WatchLater extends Component {
                         {currentUser.watchLater.map((streamer) => {
                             return (
                                 <li className="streamer-wl">
-                                    <div className="name-link-wl">
-                                        <p className="streamer-name-wl">{streamer}</p>
+                                    <div className="streamer-info-wl">
+                                        <div className="streamer-image-name-wl">
+                                            <img src={streamer.profile_image_url} />
+                                            <p className="streamer-name-wl">{streamer.name}</p>
+                                        </div>
                                         <div className="buttons-wl">
-                                            <a href={`http://twitch.tv/${streamer}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link-wl"/></a>
+                                            <a href={`http://twitch.tv/${streamer.name}`} target="_blank" rel="noreferrer"><ExternalLink className="external-link-wl"/></a>
                                             <Trash onClick={() => this.deleteStreamer(streamer)} className="trash-wl"/>
                                         </div>
                                     </div>

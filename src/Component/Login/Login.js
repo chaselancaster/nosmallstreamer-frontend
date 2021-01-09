@@ -29,7 +29,7 @@ class Login extends Component {
                 loading: true,
                 message: ''
             })
-            const loginCall = await fetch('https://pacific-forest-27041.herokuapp.com/users/login', {
+            const loginCall = await fetch('http://localhost:3001/users/login', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
@@ -81,8 +81,8 @@ class Login extends Component {
                                 <Loader
                                 type="TailSpin"
                                 color="white"
-                                height={100}
-                                width={100}
+                                height={80}
+                                width={80}
                                 className="spinner"
                                 />
                             ) : (

@@ -37,6 +37,7 @@
   display: flex;
   justify-content: space-evenly;
   border-top: 2px solid black;
+  height: 150px;
 }
 
 .streamer-wl p {
@@ -50,11 +51,16 @@
   text-decoration: underline;
 }
 
-.name-link-wl {
+.streamer-info-wl {
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.streamer-image-name-wl img {
+  height: 100px;
+  width: 100px;
 }
 
 .external-link-wl {

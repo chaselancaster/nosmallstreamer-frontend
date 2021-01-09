@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-// import { ReactComponent as ExternalLink } from "./assets/externalLink.svg";
+import Loader from 'react-loader-spinner';
 
 import './Leaderboard.css';
 
 class Leaderboard extends Component {
     state = {
-        streamers: []
+        streamers: [],
+        loading: true
     }
 
     getStreamers = async () => {
@@ -21,7 +22,8 @@ class Leaderboard extends Component {
             if (parsedStreamers) {
                 let streamers = parsedStreamers.streamers.sort((a, b) => a.score - b.score).reverse().filter(s => s.score > 0)
                 this.setState({
-                    streamers: streamers
+                    streamers: streamers,
+                    loading: false
                 })
             }
         } catch (err) {
@@ -36,13 +38,24 @@ class Leaderboard extends Component {
     }
 
     render() {
-        const { streamers } = this.state;
+        const { streamers, loading } = this.state;
         return (
             <div className="leaderboard-container">
                 <div className="leaderboard-header">
                     <h1>Community Leaderboard</h1>
                 </div>
                 <div className="streamers">
+                {loading ? (
+                                <Loader
+                                type="TailSpin"
+                                color="white"
+                                height={100}
+                                width={100}
+                                className="spinner"
+                                />
+                            ) : (
+                                <div></div>
+                )}
                     {streamers.map((streamer, index) => {
                         return (
                             <li className="streamer">
