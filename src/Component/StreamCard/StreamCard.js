@@ -6,11 +6,11 @@ import { ReactComponent as PlusCircle } from '../StreamsList/assets/plusCircle.s
 import './StreamCard.css';
 
 import * as routes from '../../constants/routes';
+import * as card from '../../constants/card';
 class StreamCard extends Component {
     state = {
         width: "325x",
         height: "225.jpg",
-        windowWidth: 0,
         message: ''
       };
 
@@ -19,8 +19,8 @@ class StreamCard extends Component {
 
     imageHandler = (string) => {
         let array = string.split("{");
-        array[1] = this.state.width;
-        array[2] = this.state.height;
+        array[1] = card.WIDTH;
+        array[2] = card.HEIGHT;
         let src = array.join("");
         return src;
     };
