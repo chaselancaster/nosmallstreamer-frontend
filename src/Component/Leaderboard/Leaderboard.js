@@ -3,6 +3,8 @@ import Loader from 'react-loader-spinner';
 
 import './Leaderboard.css';
 
+import * as routes from '../../constants/routes';
+
 class Leaderboard extends Component {
     state = {
         streamers: [],
@@ -11,7 +13,7 @@ class Leaderboard extends Component {
 
     getStreamers = async () => {
         try {
-            const leaderboard = await fetch('https://pacific-forest-27041.herokuapp.com/leaderboard/get', {
+            const leaderboard = await fetch(`${routes.HEROKU}/leaderboard/get`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 
 import './WatchLater.css';
 
+import * as routes from '../../constants/routes';
+
 class WatchLater extends Component {
 
     deleteStreamer =  async (streamer) => {
         try {
-            const deleteStreamerCall = await fetch(`http://localhost:3001/users/watchlater/${this.props.currentUser._id}/${streamer.name}`, {
+            const deleteStreamerCall = await fetch(`${routes.HEROKU}/users/watchlater/${this.props.currentUser._id}/${streamer.name}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

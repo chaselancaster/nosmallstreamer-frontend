@@ -4,6 +4,8 @@ import { ReactComponent as ThumbsDown } from "../StreamsList/assets/thumbsDown.s
 import { ReactComponent as PlusCircle } from '../StreamsList/assets/plusCircle.svg';
 
 import './StreamCard.css';
+
+import * as routes from '../../constants/routes';
 class StreamCard extends Component {
     state = {
         width: "325x",
@@ -29,7 +31,7 @@ class StreamCard extends Component {
             message: ''
         })
         console.log(user_id, '<- user_id')
-        const sendVote = await fetch(`https://pacific-forest-27041.herokuapp.com/leaderboard/submit/${name}/${vote}/${user_id}`, {
+        const sendVote = await fetch(`${routes.HEROKU}/leaderboard/submit/${name}/${vote}/${user_id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -52,7 +54,7 @@ class StreamCard extends Component {
 
     addToWatchLater = async (name, user_id) => {
         try {
-            const watchLaterCall = await fetch(`https://pacific-forest-27041.herokuapp.com/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
+            const watchLaterCall = await fetch(`${routes.HEROKU}/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
