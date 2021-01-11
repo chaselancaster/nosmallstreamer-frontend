@@ -6,3 +6,4 @@ export const REGISTER = "/register";
 export const EDITUSER = "/edituser";
 export const LEADERBOARD = '/leaderboard';
 export const WATCHLATER = '/watchlater';
+export const HEROKU = 'https://pacific-forest-27041.herokuapp.com';
