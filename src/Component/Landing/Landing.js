@@ -10,6 +10,25 @@ import * as routes from "../../constants/routes";
 
 import './Landing.css';
 
+const checkCurrentUser = (user) => {
+    if (user) {
+        return (
+            <div className="get-started-parent">
+                <p>Ready to get started?</p>
+                <Link exact to={routes.SEARCH}><button className="button register-now-landing">Find streamers!</button></Link>
+            </div>
+        )
+    } else {
+        return (
+            <div className="get-started-parent">
+                <p>Ready to get started?</p>
+                <Link exact to={routes.REGISTER}><button className="button register-now-landing">Register Now!</button></Link>
+                <Link exact to={routes.LOGIN} className='already-registered'>Already registered? Log-in here!</Link>
+            </div>
+        )
+    }
+}
+
 const Landing = ({ currentUser }) => {
     return (
     <div>
@@ -37,19 +56,7 @@ const Landing = ({ currentUser }) => {
                 </div>
             </div>
         {/* Get Started Section */}
-        { currentUser ? (
-        <div className="get-started-parent">
-            <p>Ready to get started?</p>
-            <Link exact to={routes.SEARCH}><button className="button register-now-landing">Find streamers!</button></Link>
-        </div>
-        ) : (
-        <div className="get-started-parent">
-            <p>Ready to get started?</p>
-            <Link exact to={routes.REGISTER}><button className="button register-now-landing">Register Now!</button></Link>
-            <Link exact to={routes.LOGIN} className='already-registered'>Already registered? Log-in here!</Link>
-        </div>
-        )}
-        
+        {checkCurrentUser(currentUser)}
     </div>
       
     )
