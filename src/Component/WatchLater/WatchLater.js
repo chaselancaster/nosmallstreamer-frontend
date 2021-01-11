@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ReactComponent as ExternalLink } from "../Leaderboard/assets/externalLink.svg";
+import { ReactComponent as ExternalLink } from "../../assets/externalLink.svg";
 import { ReactComponent as Trash} from '../../assets/trash.svg';
 import { Link } from 'react-router-dom';
 

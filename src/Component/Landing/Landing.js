@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import streamerImg from './assets/streamer.png';
-import handshakeImg from './assets/hand-shake.png';
-import magnifyingImg from './assets/magnifying.png';
-import twitchImg from './assets/twitch.png';
+import streamerImg from '../../assets/streamer.png';
+import handshakeImg from '../../assets/hand-shake.png';
+import magnifyingImg from '../../assets/magnifying.png';
+import twitchImg from '../../assets/twitch.png';
 
 import * as routes from "../../constants/routes";
 

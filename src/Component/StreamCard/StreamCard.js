@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ReactComponent as ThumbsUp } from "../StreamsList/assets/thumbsUp.svg";
-import { ReactComponent as ThumbsDown } from "../StreamsList/assets/thumbsDown.svg";
-import { ReactComponent as PlusCircle } from '../StreamsList/assets/plusCircle.svg';
+import { ReactComponent as ThumbsUp } from "../../assets/thumbsUp.svg";
+import { ReactComponent as ThumbsDown } from "../../assets/thumbsDown.svg";
+import { ReactComponent as PlusCircle } from '../../assets/plusCircle.svg';
 
 import './StreamCard.css';
 
