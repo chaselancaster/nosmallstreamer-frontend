@@ -14,6 +14,7 @@ import Leaderboard from './Component/Leaderboard/Leaderboard';
 import WatchLater from './Component/WatchLater/WatchLater';
 
 import * as routes from "./constants/routes";
+import { UserContext } from './UserContext';
 
 class App extends Component {
 
@@ -39,7 +40,6 @@ class App extends Component {
       currentUser: null
     })
     localStorage.clear()
-    // this.props.history.push(routes.LOGIN)
   }
 
   render () {
@@ -48,14 +48,16 @@ class App extends Component {
         <BrowserRouter>
         <NavBar currentUser={this.state.currentUser} doLogout={this.doLogout}/>        
           <Switch>
-            <Route exact path={routes.LANDING} render={() => <Landing currentUser={this.state.currentUser}/>} />
-            <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
-            <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
-            <Route exact path={routes.SEARCH} render={() => <Search doSetCurrentUser={this.doSetCurrentUser} currentUser={this.state.currentUser} userToken={this.state.userToken}/>} />
-            <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
-            <Route exact path={routes.EDITUSER} render={() => <EditUser currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>}/>
-            <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
-            <Route exact path={routes.WATCHLATER} render={() => <WatchLater currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>} />
+            <UserContext.Provider value={this.state.currentUser}>
+                <Route exact path={routes.LANDING} render={() => <Landing currentUser={this.state.currentUser}/>} />
+                <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
+                <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
+                <Route exact path={routes.SEARCH} render={() => <Search doSetCurrentUser={this.doSetCurrentUser} currentUser={this.state.currentUser} userToken={this.state.userToken}/>} />
+                <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
+                <Route exact path={routes.EDITUSER} render={() => <EditUser currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>}/>
+                <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
+                <Route exact path={routes.WATCHLATER} render={() => <WatchLater currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>} />
+            </UserContext.Provider>
           </Switch>
         </BrowserRouter>
         <Footer />
@@ -64,5 +66,4 @@ class App extends Component {
   }
 }
   
-
 export default App;
