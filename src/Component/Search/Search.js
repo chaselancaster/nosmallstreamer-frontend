@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner';
+import UserContext from '../../UserContext';
 
 import StreamsList from '../StreamsList/StreamsList';
 
@@ -9,6 +10,9 @@ import './Search.css';
 
 import * as routes from '../../constants/routes';
 class Search extends Component {
+
+    static contextType = UserContext
+
     state = {
         streams: [],
         game: '',
@@ -98,18 +102,11 @@ class Search extends Component {
         }
     }
 
-    render() {
+    checkForUser = (user) => {
         const { game , viewers, loading } = this.state;
-        return (
-            <div className="search-parent">
-            { !this.props.currentUser ? (
-                <div className='profile-loggedout'>
-                        <h1>Please sign in or register to access the search feature!</h1>
-                        <Link to='login' className="profile-link"><button className='button'>Login</button></Link>
-                        <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
-                    </div>
-            ) : (
-            <div>
+        if (user) {
+            return (
+                <div>
                     <div className="search-container">
                         <div className="search-info">
                             <h1 className="search-title">Search for streams!</h1>
@@ -136,11 +133,28 @@ class Search extends Component {
                                 <div></div>
                         )}
                     </div>
-                <div className='streams-list-parent'>
-                    <StreamsList doSetCurrentUser={this.props.doSetCurrentUser} currentUser={this.props.currentUser} streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
-                </div>
+                    <div className='streams-list-parent'>
+                        <StreamsList doSetCurrentUser={this.props.doSetCurrentUser} currentUser={this.props.currentUser} streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
+                    </div>
             </div>
-            )}
+            ) 
+        } else {
+            return (
+                <div className='profile-loggedout'>
+                        <h1>Please sign in or register to access the search feature!</h1>
+                        <Link to='login' className="profile-link"><button className='button'>Login</button></Link>
+                        <Link to='register' className="profile-link"><button className='button'>Register</button></Link>
+                </div>
+            )
+        }
+    }
+
+    render() {
+        const { game , viewers, loading } = this.state;
+        const user = this.context
+        return (
+            <div className="search-parent">
+                {this.checkForUser(user)}
             </div>
         )
     }

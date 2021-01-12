@@ -55,24 +55,6 @@ class Login extends Component {
         }
     }
 
-    checkForLoading = () => {
-        if (this.state.loading) {
-            return (
-                <Loader
-                    type="TailSpin"
-                    color="white"
-                    height={100}
-                    width={100}
-                    className="spinner"
-                />
-            )
-        } else {
-            return (
-                <div></div>
-            )
-        }
-    }
-
     render() {
         const { email, password, logged, loading, message } = this.state;
         return (
