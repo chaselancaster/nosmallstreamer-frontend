@@ -14,7 +14,7 @@ import Leaderboard from './Component/Leaderboard/Leaderboard';
 import WatchLater from './Component/WatchLater/WatchLater';
 
 import * as routes from "./constants/routes";
-import { UserContext } from './UserContext';
+import UserContext from './UserContext';
 
 class App extends Component {
 

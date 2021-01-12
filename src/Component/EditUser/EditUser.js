@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UserContext from '../../UserContext';
 
 import * as routes from '../../constants/routes';
 
 import './EditUser.css';
 
 class EditUser extends Component {
+
+    static contextType = UserContext
+
     state = {
         email: '',
         password: '',
@@ -22,7 +26,8 @@ class EditUser extends Component {
     updateUser = async e => {
         try {
             e.preventDefault()
-            const userCall = await fetch(`${routes.HEROKU}/users/update/${this.props.currentUser._id}`, {
+            const user = this.context
+            const userCall = await fetch(`${routes.HEROKU}/users/update/${user._id}`, {
                 method: 'PUT',
                 body: JSON.stringify(this.state),
                 headers: {
@@ -39,6 +44,10 @@ class EditUser extends Component {
         } catch (err) {
             // console.log(err)
         }
+    }
+
+    componentDidMount() {
+        const user = this.context
     }
 
     render() {
