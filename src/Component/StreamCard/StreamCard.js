@@ -31,29 +31,31 @@ class StreamCard extends Component {
 
     rateStreamer = async (name, vote, user_id) => {
         try {
-        this.setState({
-            message: ''
-        })
-        console.log(user_id, '<- user_id')
-        const sendVote = await fetch(`${routes.HEROKU}/leaderboard/submit/${name}/${vote}/${user_id}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-        })
-        const parsedSendVote = await sendVote.json()
-        if (parsedSendVote) {
             this.setState({
-                message: parsedSendVote.message
-                })
-            setTimeout(
-                () => this.setState({ message: '' }), 
-                5000
-              );
+                message: ''
+            })
+            console.log(user_id, '<- user_id')
+            const sendVote = await fetch(`${routes.HEROKU}/leaderboard/submit/${name}/${vote}/${user_id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+            })
+            const parsedSendVote = await sendVote.json()
+            if (parsedSendVote) {
+                this.setState({
+                    message: parsedSendVote.message
+                    })
+                setTimeout(
+                    () => this.setState({ message: '' }), 
+                    5000
+                );
+            }
+        } catch (err) {
+            this.setState({
+                message: 'Unable to submit vote.'
+            })
         }
-    } catch (err) {
-        // console.log(err, '<- err in rateStreamer')
-    }
     }
 
     addToWatchLater = async (name, user_id) => {
@@ -77,7 +79,9 @@ class StreamCard extends Component {
                 this.props.doSetCurrentUser(parsedWatchLaterCall.user)
             }
         } catch (err) {
-        //   console.log(err, '<- err')
+            this.setState({
+                message: 'Error adding streamer to watch later.'
+            })
         }
     }
 

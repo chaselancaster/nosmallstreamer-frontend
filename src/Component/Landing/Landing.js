@@ -35,34 +35,33 @@ const Landing = () => {
     const user = useContext(UserContext)
 
     return (
-    <div>
-        {/* Hero Section */}
-        <div className="hero-parent">
-            <p className="welcome">Welcome to <span className='nss'>NoSmallStreamer.</span></p>
-            <div className="hero-logo">
-              <img className="hero-img" src={streamerImg} alt="streamer"/>
+        <div>
+            {/* Hero Section */}
+            <div className="hero-parent">
+                <p className="welcome">Welcome to <span className='nss'>NoSmallStreamer.</span></p>
+                <div className="hero-logo">
+                <img className="hero-img" src={streamerImg} alt="streamer"/>
+                </div>
+                <p className="hero-p">A place to discover hard working, growing streamers.</p>
             </div>
-            <p className="hero-p">A place to discover hard working, growing streamers.</p>
+            {/* Info Section */}
+                <div className='info-container-2'>
+                    <div className='info2'>
+                        <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
+                        <p>Find streamers hidden in popular categories!</p>
+                    </div>
+                    <div className='info2'>
+                        <img className="info-img" src={handshakeImg} alt="handshake"/>
+                        <p>Help new streamers grow!</p>
+                    </div>
+                    <div className='info2'>
+                        <img className="info-img" src={twitchImg} alt="twitch logo"/>
+                        <p>Direct links to a user's channel!</p>
+                    </div>
+                </div>
+            {/* Get Started Section */}
+            {checkCurrentUser(user)}
         </div>
-        {/* Info Section */}
-            <div className='info-container-2'>
-                <div className='info2'>
-                    <img className="info-img" src={magnifyingImg} alt="magnifying glass"/>
-                    <p>Find streamers hidden in popular categories!</p>
-                </div>
-                <div className='info2'>
-                    <img className="info-img" src={handshakeImg} alt="handshake"/>
-                    <p>Help new streamers grow!</p>
-                </div>
-                <div className='info2'>
-                    <img className="info-img" src={twitchImg} alt="twitch logo"/>
-                    <p>Direct links to a user's channel!</p>
-                </div>
-            </div>
-        {/* Get Started Section */}
-        {checkCurrentUser(user)}
-    </div>
-      
     )
 }
 

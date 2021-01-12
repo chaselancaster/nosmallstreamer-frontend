@@ -42,7 +42,10 @@ class EditUser extends Component {
             }
             this.props.doSetCurrentUser(response.updatedUser)
         } catch (err) {
-            // console.log(err)
+            this.setState({
+                message: 'Error updating account. Please try again.',
+                success: true
+            })
         }
     }
 

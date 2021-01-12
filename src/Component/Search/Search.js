@@ -57,35 +57,35 @@ class Search extends Component {
             return
         }
         try {
-        this.setState({
-            message: '',
-            loading: true
-        })
-        const streams = await fetch(`${routes.HEROKU}/api/stream/${this.state.game}/${this.state.viewers}`, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${this.props.userToken}`,
-                'Content-Type': 'application/json'
-            }
-        })
-        const parsedStreams = await streams.json()
-        this.setState({
-            streams: parsedStreams.streams,
-            cursor: parsedStreams.cursor,
-            gameId: parsedStreams.gameId,
-            loading: false,
-            message: parsedStreams.message
-        })
+            this.setState({
+                message: '',
+                loading: true
+            })
+            const streams = await fetch(`${routes.HEROKU}/api/stream/${this.state.game}/${this.state.viewers}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${this.props.userToken}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+            const parsedStreams = await streams.json()
+            this.setState({
+                streams: parsedStreams.streams,
+                cursor: parsedStreams.cursor,
+                gameId: parsedStreams.gameId,
+                loading: false,
+                message: parsedStreams.message
+            })
         } catch (err) {
-            // console.log(err, '<-- err in getStreams function')
+            this.setState({
+                message: 'Unable to find streams. Please try a different search.'
+            })
         }
     }
 
     loadMoreStreams = async e => {
         const { gameId, cursor } = this.state
-        console.log('loadMoreStreams hit')
         try {
-            console.log('in try block')
             const streams = await fetch(`${routes.HEROKU}/api/more/${gameId}/${cursor}`, {
             method: 'GET',
             headers: {
@@ -98,7 +98,9 @@ class Search extends Component {
                 cursor: parsedLoadMoreStreams.cursor
             })
         } catch (err) {
-            // console.log(err, '<- err in loadMoreStreams')
+            this.setState({
+                message: 'Unable to find streams. Please try a different search.'
+            })
         }
     }
 

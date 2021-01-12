@@ -12,6 +12,10 @@ class WatchLater extends Component {
 
     static contextType = UserContext
 
+    state = {
+        message: ''
+    }
+
     deleteStreamer =  async (streamer) => {
         try {
             const deleteStreamerCall = await fetch(`${routes.HEROKU}/users/watchlater/${this.props.currentUser._id}/${streamer.name}`, {
@@ -25,7 +29,9 @@ class WatchLater extends Component {
                 this.props.doSetCurrentUser(parsedCall.user)
             }
         } catch (err) {
-            // console.log(err, '<- err in deleteStreamer func')
+            this.setState({
+                message: 'Unable to delete streamer.'
+            })
         }
     }
 

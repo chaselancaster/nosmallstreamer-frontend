@@ -6,7 +6,6 @@ import Loader from 'react-loader-spinner';
 import './Register.css';
 
 import * as routes from '../../constants/routes';
-
 class Register extends Component {
     state = {
         name: "",
@@ -53,7 +52,9 @@ class Register extends Component {
                 })
             }
         } catch (err) {
-            // console.log(err, '<- err in register fetch call')
+            this.setState({
+                message: 'Error unable to register. Please try again.'
+            })
         }
         
     };
@@ -91,7 +92,6 @@ class Register extends Component {
                             ) : (
                                 <div></div>
                             )}
-                            
                         </form>
                     </div>
                 </div>

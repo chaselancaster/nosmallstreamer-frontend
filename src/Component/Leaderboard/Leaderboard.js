@@ -8,7 +8,8 @@ import * as routes from '../../constants/routes';
 class Leaderboard extends Component {
     state = {
         streamers: [],
-        loading: true
+        loading: true,
+        message: ''
     }
 
     getStreamers = async () => {
@@ -28,7 +29,9 @@ class Leaderboard extends Component {
                 })
             }
         } catch (err) {
-            // console.log(err, '<- err in getStreamers in Leaderboard')
+            this.setState({
+                message: 'Error loading leaderboard. Please refresh the page.'
+            })
         }
     }
 
@@ -55,12 +58,13 @@ class Leaderboard extends Component {
     }
 
     render() {
-        const { streamers, loading } = this.state;
+        const { streamers, loading, message } = this.state;
         return (
             <div className="leaderboard-container">
                 <div className="leaderboard-header">
                     <h1>Community Leaderboard</h1>
                 </div>
+                {message}
                 <div className="streamers">
                 {this.checkForLoading}
                     {streamers.map((streamer, index) => {
