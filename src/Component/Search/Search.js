@@ -134,7 +134,7 @@ class Search extends Component {
                         )}
                     </div>
                     <div className='streams-list-parent'>
-                        <StreamsList doSetCurrentUser={this.props.doSetCurrentUser} currentUser={this.props.currentUser} streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
+                        <StreamsList doSetCurrentUser={this.props.doSetCurrentUser} streams={this.state.streams} loadMoreStreams={this.loadMoreStreams}/>
                     </div>
             </div>
             ) 
