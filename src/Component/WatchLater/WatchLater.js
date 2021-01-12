@@ -16,9 +16,10 @@ class WatchLater extends Component {
   };
 
   deleteStreamer = async (streamer) => {
+    const user = this.context;
     try {
       const deleteStreamerCall = await fetch(
-        `${routes.HEROKU}/users/watchlater/${this.props.currentUser._id}/${streamer.name}`,
+        `${routes.HEROKU}/users/watchlater/${user._id}/${streamer.name}`,
         {
           method: "DELETE",
           headers: {
