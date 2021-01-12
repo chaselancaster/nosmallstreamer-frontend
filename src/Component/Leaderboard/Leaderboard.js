@@ -32,6 +32,24 @@ class Leaderboard extends Component {
         }
     }
 
+    checkForLoading = () => {
+        if (this.state.loading) {
+            return (
+                <Loader
+                    type="TailSpin"
+                    color="white"
+                    height={100}
+                    width={100}
+                    className="spinner"
+                />
+            )
+        } else {
+            return (
+                <div></div>
+            )
+        }
+    }
+
     componentDidMount() {
         this.getStreamers()
     }
@@ -44,17 +62,7 @@ class Leaderboard extends Component {
                     <h1>Community Leaderboard</h1>
                 </div>
                 <div className="streamers">
-                {loading ? (
-                                <Loader
-                                type="TailSpin"
-                                color="white"
-                                height={100}
-                                width={100}
-                                className="spinner"
-                                />
-                            ) : (
-                                <div></div>
-                )}
+                {this.checkForLoading}
                     {streamers.map((streamer, index) => {
                         return (
                             <li className="streamer">
