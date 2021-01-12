@@ -52,7 +52,7 @@ class App extends Component {
                 <Route exact path={routes.LANDING} render={() => <Landing />} />
                 <Route exact path={routes.LOGIN} render={() => <Login doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
                 <Route exact path={routes.REGISTER} render={() => <Register doSetCurrentUser={this.doSetCurrentUser} doSetUserToken={this.doSetUserToken}/>} />
-                <Route exact path={routes.SEARCH} render={() => <Search doSetCurrentUser={this.doSetCurrentUser} currentUser={this.state.currentUser} userToken={this.state.userToken}/>} />
+                <Route exact path={routes.SEARCH} render={() => <Search doSetCurrentUser={this.doSetCurrentUser} userToken={this.state.userToken}/>} />
                 <Route exact path={routes.PROFILE} render={() => <Profile currentUser={this.state.currentUser}/>} />
                 <Route exact path={routes.EDITUSER} render={() => <EditUser doSetCurrentUser={this.doSetCurrentUser}/>}/>
                 <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
