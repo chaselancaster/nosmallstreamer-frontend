@@ -1,5 +1,6 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import UserContext from '../../UserContext';
 
 import streamerImg from '../../assets/streamer.png';
 import handshakeImg from '../../assets/hand-shake.png';
@@ -29,7 +30,10 @@ const checkCurrentUser = (user) => {
     }
 }
 
-const Landing = ({ currentUser }) => {
+const Landing = () => {
+
+    const user = useContext(UserContext)
+
     return (
     <div>
         {/* Hero Section */}
@@ -56,7 +60,7 @@ const Landing = ({ currentUser }) => {
                 </div>
             </div>
         {/* Get Started Section */}
-        {checkCurrentUser(currentUser)}
+        {checkCurrentUser(user)}
     </div>
       
     )
