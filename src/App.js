@@ -56,7 +56,7 @@ class App extends Component {
                 <Route exact path={routes.PROFILE} render={() => <Profile />} />
                 <Route exact path={routes.EDITUSER} render={() => <EditUser doSetCurrentUser={this.doSetCurrentUser}/>}/>
                 <Route exact path={routes.LEADERBOARD} render={() => <Leaderboard/>} />
-                <Route exact path={routes.WATCHLATER} render={() => <WatchLater currentUser={this.state.currentUser} doSetCurrentUser={this.doSetCurrentUser}/>} />
+                <Route exact path={routes.WATCHLATER} render={() => <WatchLater doSetCurrentUser={this.doSetCurrentUser}/>} />
             </UserContext.Provider>
           </Switch>
         </BrowserRouter>

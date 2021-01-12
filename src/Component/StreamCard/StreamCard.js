@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import { ReactComponent as ThumbsUp } from "../../assets/thumbsUp.svg";
 import { ReactComponent as ThumbsDown } from "../../assets/thumbsDown.svg";
 import { ReactComponent as PlusCircle } from '../../assets/plusCircle.svg';
+import UserContext from '../../UserContext';
 
 import './StreamCard.css';
 
 import * as routes from '../../constants/routes';
 import * as card from '../../constants/card';
 class StreamCard extends Component {
+
+    static contextType = UserContext
+
     state = {
         width: "325x",
         height: "225.jpg",
@@ -53,8 +57,9 @@ class StreamCard extends Component {
     }
 
     addToWatchLater = async (name, user_id) => {
+        const user = this.context
         try {
-            const watchLaterCall = await fetch(`${routes.HEROKU}/users/watchlater/add/${this.props.currentUser._id}/${name}/${user_id}`, {
+            const watchLaterCall = await fetch(`${routes.HEROKU}/users/watchlater/add/${user._id}/${name}/${user_id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
